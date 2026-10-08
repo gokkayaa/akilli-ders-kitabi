@@ -1,0 +1,1604 @@
+{
+ "id": "dbt",
+ "title": "Dil Bilgisi ve Telaffuz Kitabı",
+ "aspect": 0.6669,
+ "pages": {
+  "7": {
+   "img": "img/dbt/007.jpg",
+   "activities": []
+  },
+  "8": {
+   "img": "img/dbt/008.jpg",
+   "activities": [
+    {
+     "id": "dbt8-1",
+     "label": "1. etkinlik",
+     "rect": [
+      7.0,
+      20.2,
+      83.0,
+      73.1
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.001",
+       "rect": [
+        52.73,
+        20.94,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S001.mp3"
+      }
+     ],
+     "head": [
+      11.5,
+      20.65,
+      67.5,
+      6.2
+     ],
+     "tiles": [
+      [
+       18.5,
+       26.85,
+       69.5,
+       21.4
+      ],
+      [
+       18.5,
+       48.25,
+       69.5,
+       22.5
+      ],
+      [
+       18.5,
+       70.75,
+       69.5,
+       22.6
+      ]
+     ],
+     "cols": 2
+    }
+   ]
+  },
+  "9": {
+   "img": "img/dbt/009.jpg",
+   "activities": [
+    {
+     "id": "dbt9-2",
+     "label": "2. etkinlik",
+     "rect": [
+      7.0,
+      11.75,
+      86.0,
+      81.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.002",
+       "rect": [
+        32.14,
+        12.85,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S002.mp3"
+      }
+     ],
+     "head": [
+      9.3,
+      11.75,
+      64.2,
+      11.55
+     ],
+     "tiles": [
+      [
+       9.6,
+       23.3,
+       78.3,
+       34.35
+      ],
+      [
+       9.6,
+       57.65,
+       78.3,
+       34.95
+      ],
+      {
+       "r": [
+        11.0,
+        7.0,
+        79.5,
+        33.8
+       ],
+       "page": 10
+      },
+      {
+       "r": [
+        11.0,
+        41.4,
+        79.5,
+        34.4
+       ],
+       "page": 10
+      }
+     ],
+     "cols": 2
+    }
+   ]
+  },
+  "10": {
+   "img": "img/dbt/010.jpg",
+   "activities": [
+    {
+     "id": "dbt10-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      6.5,
+      81,
+      70
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 9,
+      "act": "dbt9-2"
+     }
+    }
+   ]
+  },
+  "11": {
+   "img": "img/dbt/011.jpg",
+   "activities": [
+    {
+     "id": "dbt11-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      7.4,
+      82,
+      40.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt11-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      48.0,
+      82,
+      44.0
+     ],
+     "items": [
+      {
+       "type": "line",
+       "from": [
+        24.4,
+        65.0
+       ],
+       "to": [
+        32.0,
+        80.5
+       ],
+       "g": "kitap",
+       "dot": [
+        24.4,
+        65.0
+       ],
+       "id": "dbt11-4-1"
+      },
+      {
+       "type": "line",
+       "from": [
+        45.2,
+        80.5
+       ],
+       "to": [
+        52.2,
+        58.1
+       ],
+       "g": "kitap",
+       "id": "dbt11-4-2"
+      },
+      {
+       "type": "line",
+       "from": [
+        65.3,
+        58.1
+       ],
+       "to": [
+        72.4,
+        65.4
+       ],
+       "g": "kitap",
+       "id": "dbt11-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.63,
+        59.96,
+        58.49
+       ],
+       "text": "ki",
+       "g": "kitap",
+       "id": "dbt11-4-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.37,
+        83.35,
+        65.78
+       ],
+       "text": "itap",
+       "g": "kitap",
+       "id": "dbt11-4-5"
+      },
+      {
+       "type": "line",
+       "from": [
+        24.4,
+        72.6
+       ],
+       "to": [
+        32.0,
+        58.1
+       ],
+       "g": "pencere",
+       "dot": [
+        24.4,
+        72.6
+       ],
+       "id": "dbt11-4-6"
+      },
+      {
+       "type": "line",
+       "from": [
+        45.2,
+        58.1
+       ],
+       "to": [
+        52.2,
+        72.9
+       ],
+       "g": "pencere",
+       "id": "dbt11-4-7"
+      },
+      {
+       "type": "line",
+       "from": [
+        65.3,
+        72.9
+       ],
+       "to": [
+        72.4,
+        88.0
+       ],
+       "g": "pencere",
+       "id": "dbt11-4-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        59.3,
+        63.52,
+        73.35
+       ],
+       "text": "re",
+       "g": "pencere",
+       "id": "dbt11-4-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.46,
+        83.44,
+        88.45
+       ],
+       "text": "encere",
+       "g": "pencere",
+       "id": "dbt11-4-10"
+      },
+      {
+       "type": "line",
+       "from": [
+        24.4,
+        80.2
+       ],
+       "to": [
+        32.0,
+        88.0
+       ],
+       "g": "sınıf",
+       "dot": [
+        24.4,
+        80.2
+       ],
+       "id": "dbt11-4-11"
+      },
+      {
+       "type": "line",
+       "from": [
+        45.2,
+        88.0
+       ],
+       "to": [
+        52.2,
+        88.0
+       ],
+       "g": "sınıf",
+       "id": "dbt11-4-12"
+      },
+      {
+       "type": "line",
+       "from": [
+        65.3,
+        88.0
+       ],
+       "to": [
+        72.4,
+        80.5
+       ],
+       "g": "sınıf",
+       "id": "dbt11-4-13"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.77,
+        63.22,
+        88.45
+       ],
+       "text": "nıf",
+       "g": "sınıf",
+       "id": "dbt11-4-14"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.15,
+        83.66,
+        80.93
+       ],
+       "text": "ınıf",
+       "g": "sınıf",
+       "id": "dbt11-4-15"
+      },
+      {
+       "type": "line",
+       "from": [
+        24.4,
+        87.8
+       ],
+       "to": [
+        32.0,
+        72.9
+       ],
+       "g": "zürafa",
+       "dot": [
+        24.4,
+        87.8
+       ],
+       "id": "dbt11-4-16"
+      },
+      {
+       "type": "line",
+       "from": [
+        45.2,
+        72.9
+       ],
+       "to": [
+        52.2,
+        65.4
+       ],
+       "g": "zürafa",
+       "id": "dbt11-4-17"
+      },
+      {
+       "type": "line",
+       "from": [
+        65.3,
+        65.4
+       ],
+       "to": [
+        72.4,
+        58.1
+       ],
+       "g": "zürafa",
+       "id": "dbt11-4-18"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.05,
+        60.79,
+        65.78
+       ],
+       "text": "ra",
+       "g": "zürafa",
+       "id": "dbt11-4-19"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.64,
+        83.08,
+        58.49
+       ],
+       "text": "ürafa",
+       "g": "zürafa",
+       "id": "dbt11-4-20"
+      }
+     ]
+    }
+   ]
+  },
+  "12": {
+   "img": "img/dbt/012.jpg",
+   "activities": [
+    {
+     "id": "dbt12-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      16.4,
+      86,
+      28.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.003",
+       "rect": [
+        53.75,
+        17.81,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S003.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt12-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      47.8,
+      86,
+      43.2
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.004",
+       "rect": [
+        34.66,
+        49.6,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S004.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "13": {
+   "img": "img/dbt/013.jpg",
+   "activities": [
+    {
+     "id": "dbt13-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      7.4,
+      82,
+      40.0
+     ],
+     "items": [
+      {
+       "type": "ellipse",
+       "rect": [
+        48.5,
+        20.4,
+        10.5,
+        2.9
+       ],
+       "g": "F",
+       "id": "dbt13-3-1"
+      },
+      {
+       "type": "text",
+       "rect": [
+        36.9,
+        43.4,
+        3.2,
+        2.8
+       ],
+       "text": "F",
+       "g": "F",
+       "id": "dbt13-3-2"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        75.5,
+        20.4,
+        8.8,
+        2.9
+       ],
+       "g": "E",
+       "id": "dbt13-3-3"
+      },
+      {
+       "type": "text",
+       "rect": [
+        43.7,
+        43.4,
+        3.2,
+        2.8
+       ],
+       "text": "E",
+       "g": "E",
+       "id": "dbt13-3-4"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        65.2,
+        36.2,
+        8.0,
+        2.9
+       ],
+       "g": "R",
+       "id": "dbt13-3-5"
+      },
+      {
+       "type": "text",
+       "rect": [
+        50.4,
+        43.4,
+        3.2,
+        2.8
+       ],
+       "text": "R",
+       "g": "R",
+       "id": "dbt13-3-6"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        38.4,
+        36.2,
+        8.8,
+        2.9
+       ],
+       "g": "İ",
+       "id": "dbt13-3-7"
+      },
+      {
+       "type": "text",
+       "rect": [
+        57.1,
+        43.4,
+        3.2,
+        2.8
+       ],
+       "text": "İ",
+       "g": "İ",
+       "id": "dbt13-3-8"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        21.7,
+        36.2,
+        8.8,
+        2.9
+       ],
+       "g": "N",
+       "id": "dbt13-3-9"
+      },
+      {
+       "type": "text",
+       "rect": [
+        63.9,
+        43.4,
+        3.2,
+        2.8
+       ],
+       "text": "N",
+       "g": "N",
+       "id": "dbt13-3-10"
+      }
+     ]
+    },
+    {
+     "id": "dbt13-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      49.0,
+      84,
+      38.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        62.97,
+        78.11,
+        61.49
+       ],
+       "text": "sorabilirsin.",
+       "id": "dbt13-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        27.09,
+        35.64,
+        68.13
+       ],
+       "text": "öğrenci",
+       "id": "dbt13-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        59.2,
+        75.5,
+        81.3
+       ],
+       "text": "Rica ederim",
+       "id": "dbt13-4-3"
+      }
+     ]
+    }
+   ]
+  },
+  "14": {
+   "img": "img/dbt/014.jpg",
+   "activities": [
+    {
+     "id": "dbt14-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      12.0,
+      88,
+      10.6
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.005",
+       "rect": [
+        35.13,
+        13.61,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S005.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt14-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      25.4,
+      88,
+      23.4
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.006",
+       "rect": [
+        40.44,
+        26.9,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S006.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt14-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      50.8,
+      88,
+      25.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.007",
+       "rect": [
+        47.34,
+        52.45,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S007.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "15": {
+   "img": "img/dbt/015.jpg",
+   "activities": [
+    {
+     "id": "dbt15-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      5.0,
+      82,
+      60.6
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.008",
+       "rect": [
+        50.96,
+        7.31,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S008.mp3"
+      }
+     ],
+     "head": [
+      9,
+      7.0,
+      82,
+      7.4
+     ],
+     "tiles": [
+      [
+       21,
+       15.0,
+       57,
+       26.4
+      ],
+      [
+       9,
+       41.5,
+       73,
+       23.6
+      ]
+     ],
+     "cols": 2,
+     "nums": false
+    },
+    {
+     "id": "dbt15-5",
+     "label": "5. etkinlik",
+     "rect": [
+      8,
+      66.0,
+      82,
+      26.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.009",
+       "rect": [
+        44.24,
+        67.63,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S009.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "16": {
+   "img": "img/dbt/016.jpg",
+   "activities": [
+    {
+     "id": "dbt16-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      20.8,
+      88,
+      28.4
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.010",
+       "rect": [
+        53.2,
+        22.63,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S010.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt16-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      49.6,
+      88,
+      39.6
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        58.63,
+        87.93,
+        78.11
+       ],
+       "text": "……lıyım.",
+       "id": "dbt16-2-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.54,
+        88.11,
+        86.34
+       ],
+       "text": "Ben ……’da yaşıyorum.",
+       "id": "dbt16-2-2"
+      }
+     ]
+    }
+   ]
+  },
+  "17": {
+   "img": "img/dbt/017.jpg",
+   "activities": [
+    {
+     "id": "dbt17-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      11.4,
+      82,
+      21.4
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt17-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      33.4,
+      82,
+      13.8
+     ],
+     "items": [
+      {
+       "type": "fill",
+       "rect": [
+        58.6,
+        37.2,
+        11.8,
+        2.3
+       ],
+       "id": "dbt17-4-1"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        30.5,
+        40.6,
+        13.8,
+        2.3
+       ],
+       "id": "dbt17-4-2"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        70.5,
+        40.6,
+        13.8,
+        2.3
+       ],
+       "id": "dbt17-4-3"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        34.4,
+        44.4,
+        15.6,
+        2.3
+       ],
+       "id": "dbt17-4-4"
+      }
+     ]
+    },
+    {
+     "id": "dbt17-5",
+     "label": "5. etkinlik",
+     "rect": [
+      8,
+      47.4,
+      82,
+      27.6
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        62.78,
+        84.01,
+        57.78
+       ],
+       "text": "Sen Kongolusun.",
+       "id": "dbt17-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.78,
+        84.01,
+        61.6
+       ],
+       "text": "Biz Gineliyiz.",
+       "id": "dbt17-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.78,
+        84.01,
+        65.36
+       ],
+       "text": "Ben Suriyeliyim.",
+       "id": "dbt17-5-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.78,
+        84.01,
+        69.12
+       ],
+       "text": "O Tunuslu.",
+       "id": "dbt17-5-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.78,
+        84.01,
+        72.94
+       ],
+       "text": "Biz Faslıyız.",
+       "id": "dbt17-5-5"
+      }
+     ]
+    },
+    {
+     "id": "dbt17-6",
+     "label": "6. etkinlik",
+     "rect": [
+      8,
+      75.4,
+      82,
+      16.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        53.2,
+        86.0,
+        80.8
+       ],
+       "text": "……, sen nerelisin?",
+       "id": "dbt17-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.2,
+        86.0,
+        83.8
+       ],
+       "text": "……lıyım.",
+       "id": "dbt17-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.2,
+        86.0,
+        86.9
+       ],
+       "text": "Nerede yaşıyorsun?",
+       "id": "dbt17-6-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.2,
+        86.0,
+        89.9
+       ],
+       "text": "……’da yaşıyorum.",
+       "id": "dbt17-6-4"
+      }
+     ]
+    }
+   ]
+  },
+  "18": {
+   "img": "img/dbt/018.jpg",
+   "activities": [
+    {
+     "id": "dbt18-7",
+     "label": "7. ve 8. etkinlik",
+     "rect": [
+      8,
+      11.6,
+      86,
+      21.2
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt18-9",
+     "label": "9. etkinlik",
+     "rect": [
+      8,
+      33.0,
+      86,
+      20.4
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        67.71,
+        80.48,
+        42.98
+       ],
+       "text": "Arapça",
+       "id": "dbt18-9-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        43.26,
+        56.04,
+        45.33
+       ],
+       "text": "Pakistanlı",
+       "id": "dbt18-9-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.83,
+        26.56,
+        47.68
+       ],
+       "text": "Kamerun",
+       "id": "dbt18-9-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.71,
+        80.48,
+        47.68
+       ],
+       "text": "Fransızca",
+       "id": "dbt18-9-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        43.26,
+        56.04,
+        50.03
+       ],
+       "text": "Boşnak",
+       "id": "dbt18-9-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.83,
+        26.56,
+        52.38
+       ],
+       "text": "İngiltere",
+       "id": "dbt18-9-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.71,
+        80.48,
+        52.38
+       ],
+       "text": "İngilizce",
+       "id": "dbt18-9-7"
+      }
+     ]
+    },
+    {
+     "id": "dbt18-10",
+     "label": "10. etkinlik",
+     "rect": [
+      8,
+      53.8,
+      86,
+      38.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        46.12,
+        60.48,
+        69.07
+       ],
+       "text": "Kosovalı.",
+       "g": "una",
+       "id": "dbt18-10-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.19,
+        60.31,
+        70.65
+       ],
+       "text": "Una Arnavut.",
+       "g": "una",
+       "id": "dbt18-10-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.19,
+        60.31,
+        72.24
+       ],
+       "text": "Una, Arnavutça konuşuyor.",
+       "g": "una",
+       "id": "dbt18-10-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        72.82,
+        86.61,
+        69.07
+       ],
+       "text": "Kırgızistanlı.",
+       "g": "aziz",
+       "id": "dbt18-10-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.67,
+        86.78,
+        70.65
+       ],
+       "text": "Aziz Kırgız.",
+       "g": "aziz",
+       "id": "dbt18-10-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.67,
+        86.78,
+        72.24
+       ],
+       "text": "Aziz, Kırgızca konuşuyor.",
+       "g": "aziz",
+       "id": "dbt18-10-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        25.73,
+        33.7,
+        86.87
+       ],
+       "text": "Tanzanyalı.",
+       "g": "fat",
+       "id": "dbt18-10-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.71,
+        33.83,
+        88.45
+       ],
+       "text": "Fatoumata Tanzanyalı.",
+       "g": "fat",
+       "id": "dbt18-10-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.71,
+        33.83,
+        90.04
+       ],
+       "text": "Fatoumata, Svahilice konuşuyor.",
+       "g": "fat",
+       "id": "dbt18-10-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        48.28,
+        60.53,
+        86.87
+       ],
+       "text": "Tunuslu.",
+       "g": "has",
+       "id": "dbt18-10-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.19,
+        60.84,
+        88.45
+       ],
+       "text": "Hasan Arap.",
+       "g": "has",
+       "id": "dbt18-10-11"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.19,
+        60.84,
+        90.04
+       ],
+       "text": "Hasan, Arapça konuşuyor.",
+       "g": "has",
+       "id": "dbt18-10-12"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.57,
+        86.87,
+        86.87
+       ],
+       "text": "İspanyalı.",
+       "g": "sof",
+       "id": "dbt18-10-13"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.67,
+        86.78,
+        88.45
+       ],
+       "text": "Sofia İspanyol.",
+       "g": "sof",
+       "id": "dbt18-10-14"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.67,
+        86.78,
+        90.04
+       ],
+       "text": "Sofia, İspanyolca konuşuyor.",
+       "g": "sof",
+       "id": "dbt18-10-15"
+      }
+     ]
+    }
+   ]
+  },
+  "19": {
+   "img": "img/dbt/019.jpg",
+   "activities": [
+    {
+     "id": "dbt19-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      17.0,
+      84,
+      24.6
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.011",
+       "rect": [
+        51.11,
+        17.84,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S011.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt19-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      42.4,
+      84,
+      27.6
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt19-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      70.2,
+      84,
+      21.4
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.012",
+       "rect": [
+        32.94,
+        74.31,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S012.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "20": {
+   "img": "img/dbt/020.jpg",
+   "activities": [
+    {
+     "id": "dbt20-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      6.6,
+      84,
+      39.4
+     ],
+     "items": [
+      {
+       "type": "line",
+       "from": [
+        21.0,
+        24.3
+       ],
+       "to": [
+        41.0,
+        30.3
+       ],
+       "g": "b",
+       "dot": [
+        21.0,
+        24.3
+       ],
+       "id": "dbt20-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.76,
+        47.49,
+        37.46
+       ],
+       "text": "on bir yaşındayım.",
+       "g": "b",
+       "id": "dbt20-4-2"
+      },
+      {
+       "type": "line",
+       "from": [
+        61.2,
+        24.3
+       ],
+       "to": [
+        81.4,
+        30.3
+       ],
+       "g": "e",
+       "dot": [
+        61.2,
+        24.3
+       ],
+       "id": "dbt20-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        74.14,
+        88.77,
+        37.46
+       ],
+       "text": "on üç yaşındayım.",
+       "g": "e",
+       "id": "dbt20-4-4"
+      },
+      {
+       "type": "line",
+       "from": [
+        81.3,
+        24.3
+       ],
+       "to": [
+        61.4,
+        30.3
+       ],
+       "g": "h",
+       "dot": [
+        81.3,
+        24.3
+       ],
+       "id": "dbt20-4-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.67,
+        68.24,
+        37.46
+       ],
+       "text": "on iki yaşındayım.",
+       "g": "h",
+       "id": "dbt20-4-6"
+      },
+      {
+       "type": "text",
+       "rect": [
+        15.2,
+        43.2,
+        74,
+        2.4
+       ],
+       "text": "Merhaba. Benim adım ……. Ben …… yaşındayım.",
+       "align": "l",
+       "g": "kendi",
+       "id": "dbt20-4-7"
+      }
+     ]
+    },
+    {
+     "id": "dbt20-t1",
+     "label": "Telaffuz 1",
+     "rect": [
+      8,
+      48.4,
+      84,
+      27.6
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.013",
+       "rect": [
+        34.91,
+        53.69,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S013.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt20-t2",
+     "label": "Telaffuz 2",
+     "rect": [
+      8,
+      76.4,
+      84,
+      16.4
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.014",
+       "rect": [
+        56.59,
+        77.38,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S014.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "21": {
+   "img": "img/dbt/021.jpg",
+   "activities": [
+    {
+     "id": "dbt21-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      5.0,
+      84,
+      60.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.015",
+       "rect": [
+        50.84,
+        7.19,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S015.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt21-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      65.6,
+      84,
+      26.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.016",
+       "rect": [
+        44.53,
+        66.5,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S016.mp3"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
