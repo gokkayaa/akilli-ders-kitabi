@@ -264,12 +264,18 @@ function groupsOf(A){
   return gs;
 }
 /* steps on the visible spread: activities and in-book cross references, in reading order */
-function spreadSteps(){
+function spreadOf(book, page){
+  const list = pagesOf(book);
+  if(!S.two) return [page];
+  const left = page % 2 === 0 ? page : page - 1;
+  return [left, left + 1].filter(n => list.includes(n));
+}
+function spreadSteps(book = S.book, pages = viewPages()){
   const out = [];
-  viewPages().forEach((n, pi) => {
-    const P = S.books[S.book].pages[n], here = [];
-    P.activities.filter(A => !A.skip).forEach(A => here.push({kind:'act', A, book:S.book, n, y:A.rect[1], x:A.rect[0]}));
-    (P.links || []).forEach(L => here.push({kind:'link', L, book:S.book, n, y:L.rect[1], x:L.rect[0]}));
+  pages.forEach(n => {
+    const P = S.books[book].pages[n], here = [];
+    P.activities.filter(A => !A.skip).forEach(A => here.push({kind:'act', A, book, n, y:A.rect[1], x:A.rect[0]}));
+    (P.links || []).forEach(L => here.push({kind:'link', L, book, n, y:L.rect[1], x:L.rect[0]}));
     here.sort((a, b) => Math.abs(a.y - b.y) < 3 ? a.x - b.x : a.y - b.y);
     out.push(...here);
   });
@@ -623,7 +629,27 @@ function render(){
 function go(book, page, keepBack){
   if(S.zoom){ S.zoom = null; $('#zoom').hidden = true; $('#zoom').classList.remove('in'); $('#zbar').hidden = true; $('#board').innerHTML = ''; }
   if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
-  S.book = book; S.page = page; S.cursor = -1; store.set('last-' + book, page); savePos(); render();
+  S.book = book; S.page = page; S.cursor = -1; store.set('last-' + book, page); savePos();
+  if(!keepBack) restoreReturn();
+  render();
+}
+/* Opened in the telaffuz book without knowing where we came from (e.g. the lesson resumed here):
+   find the ders kitabı reference whose section covers these pages, so → returns to it at the end. */
+function restoreReturn(){
+  if(S.back.length) return;
+  const here = viewPages();
+  const actPage = (book, id) => pagesOf(book).find(n => S.books[book].pages[n].activities.some(A => A.id === id));
+  for(const dk of pagesOf('dk').filter(() => S.book !== 'dk')){
+    for(const L of (S.books.dk.pages[dk].links || [])){
+      if(L.go.book !== S.book || !L.until) continue;
+      const end = L.until.act ? actPage(L.go.book, L.until.act) : L.until.page;
+      if(here.some(p => p >= L.go.page && p <= end)){
+        const sp = spreadOf('dk', dk), k = spreadSteps('dk', sp).findIndex(o => o.kind === 'link' && o.L === L);
+        S.back.push({book:'dk', page:dk, cursor:k, until:L.until, to:{book:L.go.book, page:L.go.page}});
+        return;
+      }
+    }
+  }
 }
 
 /* ---------- ink ---------- */
