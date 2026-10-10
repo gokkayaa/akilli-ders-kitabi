@@ -720,8 +720,6 @@ function render(){
 function go(book, page, keepBack){
   if(S.zoom){ S.zoom = null; $('#zoom').hidden = true; $('#zoom').classList.remove('in'); $('#zbar').hidden = true; $('#board').innerHTML = ''; }
   if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
-  if(isDers(book)) S.ders = book;
-  else { const u = unitOf(book, page); if(u && !(S.books[S.ders].units || []).some(x => x.no === u.no)){ const d = Object.keys(SERIES).find(k => S.books[k] && (S.books[k].units || []).some(x => x.no === u.no)); if(d) S.ders = d; } }
   S.book = book; S.page = page; S.cursor = -1; store.set('last-' + book + (isDers(book) ? '' : '-' + S.ders), page); savePos();
   if(!keepBack) restoreReturn();
   render();
@@ -848,11 +846,12 @@ function openPicker(){
 function pickClass(c){
   S.cls = c; store.set('cls', c); $('#clsBtn').textContent = c; $('#picker').hidden = true;
   S.back = []; S.revealed.clear(); S.ink = {};
-  const st0 = startOf(seriesOf(c)), p = pos[c] || st0;
-  S.ders = p.ders && S.books[p.ders] ? p.ders : seriesOf(c);
-  if(!(S.books[p.book] && S.books[p.book].pages[p.page])){ go(st0.book, st0.page); showWhere(); return; }
+  S.ders = seriesOf(c);
+  const st0 = startOf(S.ders), own = (b, n) => (b === S.ders || b === 'dbt') && S.books[b] && pagesOf(b).includes(n);
+  const p = pos[c] && own(pos[c].book, pos[c].page) ? pos[c] : st0;
+  if(p === st0){ go(st0.book, st0.page); showWhere(); return; }
   S.restoring = true;
-  S.back = (p.back || []).filter(b => S.books[b.book] && S.books[b.book].pages[b.page]);
+  S.back = (p.back || []).filter(b => own(b.book, b.page));
   go(p.book, p.page, S.back.length > 0);
   if(p.step){
     const k = spreadSteps().findIndex(o => stepId(o) === p.step);
@@ -872,7 +871,7 @@ function openToc(){
 }
 function drawToc(){
   const tabs = $('#tocTabs'); tabs.innerHTML = '';
-  ['dk', 'dk2', 'dbt'].filter(b => S.books[b]).forEach(b => {
+  [S.ders, 'dbt'].filter(b => S.books[b]).forEach(b => {
     const t = document.createElement('button'); t.setAttribute('role', 'tab'); t.setAttribute('aria-selected', b === tocTab);
     t.innerHTML = `<span class="tag" style="background:${BOOK_COLOR[b]}"></span>${BOOK_TITLE[b]}`;
     t.addEventListener('click', () => { tocTab = b; drawToc(); $('#tocBody').scrollTop = 0; });
@@ -881,10 +880,10 @@ function drawToc(){
   const body = $('#tocBody'), B = S.books[tocTab], p = pos[S.cls] || {};
   body.innerHTML = '';
   const here = tocTab === S.book ? viewPages() : [];
-  for(const u of B.units){
+  const mine = S.books[S.ders].units.map(u => u.no);
+  for(const u of B.units.filter(u => mine.includes(u.no))){
     const sec = document.createElement('section'); sec.className = 'tunit';
-    const owner = isDers(tocTab) ? '' : Object.keys(SERIES).filter(d => S.books[d] && S.books[d].units.some(x => x.no === u.no)).map(d => SERIES[d].name).join(', ');
-    sec.innerHTML = `<h3>${u.no}. Ünite · ${u.title}${owner ? `<small>${owner}</small>` : ''}</h3><div class="thumbs"></div>`;
+    sec.innerHTML = `<h3>${u.no}. Ünite · ${u.title}</h3><div class="thumbs"></div>`;
     allPages(tocTab).filter(n => n >= u.from && n <= u.to).forEach(n => {
       const b = document.createElement('button'); b.className = 'thumb' + (here.includes(n) ? ' cur' : '') + (!here.length && p[tocTab] === n ? ' mark' : '');
       b.innerHTML = `<img loading="lazy" src="${B.pages[n].img.replace(/\/(\d+\.jpg)$/, '/t/$1')}" alt=""><b>${n}</b>`;
