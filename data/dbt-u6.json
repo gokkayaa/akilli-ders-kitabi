@@ -1,0 +1,2292 @@
+{
+ "id": "dbt-u6",
+ "title": "Dil Bilgisi ve Telaffuz Kitabı",
+ "aspect": 0.6669,
+ "units": [
+  {
+   "no": 6,
+   "title": "Alışveriş Zamanı",
+   "from": 92,
+   "to": 107
+  }
+ ],
+ "pages": {
+  "92": {
+   "img": "img/dbt/092.jpg",
+   "activities": []
+  },
+  "93": {
+   "img": "img/dbt/093.jpg",
+   "activities": [
+    {
+     "id": "dbt93-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      22.5,
+      84,
+      57.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.083",
+       "rect": [
+        50.45,
+        23.99,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S083.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt93-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      79.5,
+      84,
+      15.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "94": {
+   "img": "img/dbt/094.jpg",
+   "activities": [
+    {
+     "id": "dbt94-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      7.0,
+      86,
+      35.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        15.02,
+        24.58,
+        39.51
+       ],
+       "text": "üzüm",
+       "id": "dbt94-3-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        30.75,
+        54.67,
+        39.51
+       ],
+       "text": "bir kilo",
+       "id": "dbt94-3-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        59.12,
+        88.85,
+        39.51
+       ],
+       "text": "Bir kilo üzüm almak istiyorum.",
+       "id": "dbt94-3-3"
+      }
+     ]
+    },
+    {
+     "id": "dbt94-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      42.5,
+      86,
+      47.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        15.42,
+        46.78,
+        56.43
+       ],
+       "text": "İzo limon almak istiyor.",
+       "g": "a",
+       "id": "dbt94-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.55,
+        86.87,
+        52.2
+       ],
+       "text": "Temel hangi meyveyi almak istiyor?",
+       "g": "b",
+       "id": "dbt94-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        59.87,
+        74.71,
+        56.43
+       ],
+       "text": "elma",
+       "g": "b",
+       "id": "dbt94-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        77.84,
+        88.46,
+        56.43
+       ],
+       "text": "mak istiyor.",
+       "g": "b",
+       "id": "dbt94-4-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.42,
+        46.78,
+        65.31
+       ],
+       "text": "Temel kaç kilo havuç almak istiyor?",
+       "g": "c",
+       "id": "dbt94-4-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.42,
+        46.78,
+        69.59
+       ],
+       "text": "Temel üç kilo havuç almak istiyor.",
+       "g": "c",
+       "id": "dbt94-4-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.55,
+        86.87,
+        65.31
+       ],
+       "text": "İzo hangi meyveyi istiyor?",
+       "g": "d",
+       "id": "dbt94-4-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.55,
+        86.87,
+        69.59
+       ],
+       "text": "İzo incir istiyor.",
+       "g": "d",
+       "id": "dbt94-4-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.42,
+        46.78,
+        78.17
+       ],
+       "text": "İzo şeftali almak istiyor mu?",
+       "g": "e",
+       "id": "dbt94-4-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        18.66,
+        47.22,
+        82.4
+       ],
+       "text": "İzo şeftali almak istiyor.",
+       "g": "e",
+       "id": "dbt94-4-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        19.04,
+        47.62,
+        86.63
+       ],
+       "text": "İzo şeftali almak istemiyor.",
+       "g": "e",
+       "id": "dbt94-4-11"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.55,
+        86.87,
+        78.17
+       ],
+       "text": "İzo kaç kilo domates almak istiyor?",
+       "g": "f",
+       "id": "dbt94-4-12"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.55,
+        86.87,
+        82.4
+       ],
+       "text": "İzo beş kilo domates almak istiyor.",
+       "g": "f",
+       "id": "dbt94-4-13"
+      }
+     ]
+    }
+   ]
+  },
+  "95": {
+   "img": "img/dbt/095.jpg",
+   "activities": [
+    {
+     "id": "dbt95-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      8,
+      2.5,
+      84,
+      51.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        32.78,
+        44.45,
+        26.65
+       ],
+       "text": "armut",
+       "g": "a",
+       "id": "dbt95-5a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        32.73,
+        44.45,
+        31.7
+       ],
+       "text": "1 kilo",
+       "g": "a",
+       "id": "dbt95-5a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.91,
+        64.58,
+        31.7
+       ],
+       "text": "3 kilo",
+       "g": "b",
+       "id": "dbt95-5a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.04,
+        84.71,
+        26.65
+       ],
+       "text": "havuç",
+       "g": "c",
+       "id": "dbt95-5a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.04,
+        84.71,
+        31.7
+       ],
+       "text": "2 kilo",
+       "g": "c",
+       "id": "dbt95-5a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        22.69,
+        34.36,
+        51.44
+       ],
+       "text": "1 kilo",
+       "g": "d",
+       "id": "dbt95-5a-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        42.82,
+        54.49,
+        46.39
+       ],
+       "text": "maydanoz",
+       "g": "e",
+       "id": "dbt95-5a-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        42.82,
+        54.49,
+        51.44
+       ],
+       "text": "1 demet",
+       "g": "e",
+       "id": "dbt95-5a-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.95,
+        74.67,
+        46.39
+       ],
+       "text": "marul",
+       "g": "f",
+       "id": "dbt95-5a-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.95,
+        74.67,
+        51.44
+       ],
+       "text": "1 tane",
+       "g": "f",
+       "id": "dbt95-5a-10"
+      }
+     ]
+    },
+    {
+     "id": "dbt95-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      8,
+      54.0,
+      84,
+      41.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        54.76,
+        82.91,
+        63.54
+       ],
+       "text": "Üzüm almak istiyorum.",
+       "g": "1",
+       "id": "dbt95-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.75,
+        83.96,
+        68.07
+       ],
+       "text": "Limon almak ister misin?",
+       "g": "2",
+       "id": "dbt95-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.76,
+        82.91,
+        70.53
+       ],
+       "text": "Hayır, limon istemiyorum.",
+       "g": "2",
+       "id": "dbt95-5b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.75,
+        83.96,
+        75.06
+       ],
+       "text": "Salatalık mı domates mi? Hangisinden almak istiyorsun?",
+       "g": "3",
+       "id": "dbt95-5b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.76,
+        82.91,
+        77.47
+       ],
+       "text": "Domates istiyorum.",
+       "g": "3",
+       "id": "dbt95-5b-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.75,
+        83.96,
+        81.99
+       ],
+       "text": "Kaç kilo üzüm almak istiyorsun?",
+       "g": "4",
+       "id": "dbt95-5b-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.76,
+        82.91,
+        84.46
+       ],
+       "text": "2 kilo üzüm almak istiyorum.",
+       "g": "4",
+       "id": "dbt95-5b-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.75,
+        83.96,
+        88.98
+       ],
+       "text": "Bir kilo limon kaç lira?",
+       "g": "5",
+       "id": "dbt95-5b-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.76,
+        82.91,
+        91.39
+       ],
+       "text": "Bir kilo limon 20 lira.",
+       "g": "5",
+       "id": "dbt95-5b-9"
+      }
+     ]
+    }
+   ]
+  },
+  "96": {
+   "img": "img/dbt/096.jpg",
+   "activities": [
+    {
+     "id": "dbt96-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      17.0,
+      84,
+      49.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.084",
+       "rect": [
+        53.27,
+        17.94,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S084.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt96-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      67.0,
+      84,
+      27.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "97": {
+   "img": "img/dbt/097.jpg",
+   "activities": [
+    {
+     "id": "dbt97-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      7.5,
+      84,
+      25.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt97-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      33.5,
+      84,
+      17.5
+     ],
+     "items": [
+      {
+       "type": "text",
+       "rect": [
+        11.2,
+        36.9,
+        2.8,
+        2.4
+       ],
+       "text": "8",
+       "id": "dbt97-4-1"
+      },
+      {
+       "type": "text",
+       "rect": [
+        53.5,
+        36.9,
+        2.8,
+        2.4
+       ],
+       "text": "7",
+       "id": "dbt97-4-2"
+      },
+      {
+       "type": "text",
+       "rect": [
+        37.9,
+        40.6,
+        2.8,
+        2.4
+       ],
+       "text": "4",
+       "id": "dbt97-4-3"
+      },
+      {
+       "type": "text",
+       "rect": [
+        11.2,
+        44.3,
+        2.8,
+        2.4
+       ],
+       "text": "5",
+       "id": "dbt97-4-4"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.5,
+        44.3,
+        2.8,
+        2.4
+       ],
+       "text": "2",
+       "id": "dbt97-4-5"
+      },
+      {
+       "type": "text",
+       "rect": [
+        11.2,
+        48.1,
+        2.8,
+        2.4
+       ],
+       "text": "3",
+       "id": "dbt97-4-6"
+      },
+      {
+       "type": "text",
+       "rect": [
+        57.5,
+        48.1,
+        2.8,
+        2.4
+       ],
+       "text": "6",
+       "id": "dbt97-4-7"
+      }
+     ]
+    },
+    {
+     "id": "dbt97-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      8,
+      52.5,
+      84,
+      41.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        10.34,
+        24.55,
+        91.58
+       ],
+       "text": "bir paket makarna",
+       "g": "r",
+       "id": "dbt97-5a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        28.33,
+        41.85,
+        91.58
+       ],
+       "text": "iki şişe su",
+       "g": "r",
+       "id": "dbt97-5a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        46.65,
+        62.07,
+        80.52
+       ],
+       "text": "Bir paket makarna ve iki",
+       "g": "r",
+       "id": "dbt97-5a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        46.65,
+        62.07,
+        83.17
+       ],
+       "text": "şişe su almak istiyoruz.",
+       "g": "r",
+       "id": "dbt97-5a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        46.65,
+        62.07,
+        86.22
+       ],
+       "text": "Bir paket makarna ile iki",
+       "g": "r",
+       "id": "dbt97-5a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        46.65,
+        62.07,
+        88.87
+       ],
+       "text": "şişe su almak istiyoruz.",
+       "g": "r",
+       "id": "dbt97-5a-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.07,
+        84.49,
+        80.52
+       ],
+       "text": "Bir paket makarna ve",
+       "g": "r",
+       "id": "dbt97-5a-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.07,
+        84.49,
+        83.17
+       ],
+       "text": "iki şişe su alalım.",
+       "g": "r",
+       "id": "dbt97-5a-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.07,
+        84.49,
+        86.22
+       ],
+       "text": "Bir paket makarna ile",
+       "g": "r",
+       "id": "dbt97-5a-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.07,
+        84.49,
+        88.87
+       ],
+       "text": "iki şişe su alalım.",
+       "g": "r",
+       "id": "dbt97-5a-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.17,
+        25.95,
+        20.71
+       ],
+       "text": "bir koli yumurta",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-11"
+      },
+      {
+       "type": "blank",
+       "line": [
+        29.91,
+        42.64,
+        20.71
+       ],
+       "text": "bir paket bisküvi",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-12"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        10.31
+       ],
+       "text": "Bir koli yumurta ve bir paket",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-13"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        12.96
+       ],
+       "text": "bisküvi almak istiyoruz.",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-14"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        16.01
+       ],
+       "text": "Bir koli yumurta ile bir",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-15"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        18.66
+       ],
+       "text": "paket bisküvi almak istiyoruz.",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-16"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        10.31
+       ],
+       "text": "Bir koli yumurta ve bir",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-17"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        12.96
+       ],
+       "text": "paket bisküvi alalım.",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-18"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        16.01
+       ],
+       "text": "Bir koli yumurta ile bir",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-19"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        18.66
+       ],
+       "text": "paket bisküvi alalım.",
+       "g": "r1",
+       "page": 98,
+       "id": "dbt97-5a-20"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.17,
+        25.95,
+        38.87
+       ],
+       "text": "bir kilo domates",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-21"
+      },
+      {
+       "type": "blank",
+       "line": [
+        29.91,
+        42.64,
+        38.87
+       ],
+       "text": "üç kutu meyve suyu",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-22"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        28.47
+       ],
+       "text": "Bir kilo domates ve üç kutu",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-23"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        31.119999999999997
+       ],
+       "text": "meyve suyu almak istiyoruz.",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-24"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        34.17
+       ],
+       "text": "Bir kilo domates ile üç kutu",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-25"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        36.82
+       ],
+       "text": "meyve suyu almak istiyoruz.",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-26"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        28.47
+       ],
+       "text": "Bir kilo domates ve üç",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-27"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        31.119999999999997
+       ],
+       "text": "kutu meyve suyu alalım.",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-28"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        34.17
+       ],
+       "text": "Bir kilo domates ile üç",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-29"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        36.82
+       ],
+       "text": "kutu meyve suyu alalım.",
+       "g": "r2",
+       "page": 98,
+       "id": "dbt97-5a-30"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.17,
+        25.95,
+        56.199999999999996
+       ],
+       "text": "bir kilo peynir",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-31"
+      },
+      {
+       "type": "blank",
+       "line": [
+        29.91,
+        42.64,
+        56.199999999999996
+       ],
+       "text": "üç tane ekmek",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-32"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        45.8
+       ],
+       "text": "Bir kilo peynir ve üç tane",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-33"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        48.449999999999996
+       ],
+       "text": "ekmek almak istiyoruz.",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-34"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        51.5
+       ],
+       "text": "Bir kilo peynir ile üç",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-35"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.16,
+        64.58,
+        54.15
+       ],
+       "text": "tane ekmek almak istiyoruz.",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-36"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        45.8
+       ],
+       "text": "Bir kilo peynir ve",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-37"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        48.449999999999996
+       ],
+       "text": "üç tane ekmek alalım.",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-38"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        51.5
+       ],
+       "text": "Bir kilo peynir ile",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-39"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.59,
+        87.0,
+        54.15
+       ],
+       "text": "üç tane ekmek alalım.",
+       "g": "r3",
+       "page": 98,
+       "id": "dbt97-5a-40"
+      }
+     ],
+     "tiles": [
+      [
+       8,
+       52.5,
+       84,
+       41.0
+      ],
+      {
+       "r": [
+        10,
+        6.0,
+        82,
+        51.5
+       ],
+       "page": 98
+      }
+     ],
+     "cols": 2,
+     "nums": false
+    }
+   ]
+  },
+  "98": {
+   "img": "img/dbt/098.jpg",
+   "activities": [
+    {
+     "id": "dbt98-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      10,
+      6.0,
+      82,
+      51.5
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 97,
+      "act": "dbt97-5a"
+     }
+    },
+    {
+     "id": "dbt98-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      10,
+      59.0,
+      82,
+      22.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "99": {
+   "img": "img/dbt/099.jpg",
+   "activities": [
+    {
+     "id": "dbt99-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      13.0,
+      84,
+      17.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.085",
+       "rect": [
+        32.02,
+        13.69,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S085.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt99-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      30.5,
+      84,
+      44.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.086",
+       "rect": [
+        37.33,
+        30.8,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S086.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt99-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      74.5,
+      84,
+      19.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.087",
+       "rect": [
+        53.21,
+        74.89,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S087.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "100": {
+   "img": "img/dbt/100.jpg",
+   "activities": [
+    {
+     "id": "dbt100-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      6.5,
+      82,
+      47.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.088",
+       "rect": [
+        52.94,
+        7.39,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S088.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt100-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      10,
+      54.5,
+      41,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        19.82,
+        42.56,
+        71.47
+       ],
+       "text": "Nar",
+       "id": "dbt100-5a-1"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.089",
+       "rect": [
+        37.34,
+        57.59,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S089.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt100-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      51,
+      54.5,
+      41,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        66.8
+       ],
+       "text": "Küçük, siyah ya da yeşil,",
+       "g": "b",
+       "id": "dbt100-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        68.63
+       ],
+       "text": "Tabağımda sabah gelir.",
+       "g": "b",
+       "id": "dbt100-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        70.48
+       ],
+       "text": "Bil bakalım ne? – Zeytin",
+       "g": "b",
+       "id": "dbt100-5b-3"
+      }
+     ]
+    }
+   ]
+  },
+  "101": {
+   "img": "img/dbt/101.jpg",
+   "activities": [
+    {
+     "id": "dbt101-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      22.0,
+      84,
+      50.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.090",
+       "rect": [
+        50.77,
+        22.51,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S090.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt101-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      74.0,
+      84,
+      19.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        53.35,
+        74.05,
+        21.77
+       ],
+       "text": "Bence en lezzetli tatlı sütlaç.",
+       "page": 102,
+       "id": "dbt101-2-1"
+      }
+     ],
+     "tiles": [
+      [
+       8,
+       74.0,
+       84,
+       19.5
+      ],
+      {
+       "r": [
+        10,
+        6.0,
+        84,
+        18.5
+       ],
+       "page": 102
+      }
+     ],
+     "cols": 1,
+     "nums": false
+    }
+   ]
+  },
+  "102": {
+   "img": "img/dbt/102.jpg",
+   "activities": [
+    {
+     "id": "dbt102-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      6.0,
+      84,
+      18.5
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 101,
+      "act": "dbt101-2"
+     }
+    },
+    {
+     "id": "dbt102-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      25.5,
+      84,
+      47.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt102-4a",
+     "label": "4. etkinlik (a)",
+     "rect": [
+      10,
+      74.0,
+      84,
+      19.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        10.37
+       ],
+       "text": "En ucuz menü 1. menü.",
+       "page": 103,
+       "id": "dbt102-4a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        15.25
+       ],
+       "text": "En pahalı menü 3. menü.",
+       "page": 103,
+       "id": "dbt102-4a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        20.18
+       ],
+       "text": "2. ve 3. menüler 1. menüden daha pahalı.",
+       "page": 103,
+       "id": "dbt102-4a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        25.06
+       ],
+       "text": "3. menü 2. menüden daha pahalı.",
+       "page": 103,
+       "id": "dbt102-4a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        29.99
+       ],
+       "text": "1. ve 2. menüler 3. menüden daha ucuz.",
+       "page": 103,
+       "id": "dbt102-4a-5"
+      }
+     ],
+     "tiles": [
+      [
+       10,
+       74.0,
+       84,
+       19.5
+      ],
+      {
+       "r": [
+        8,
+        6.0,
+        86,
+        31.5
+       ],
+       "page": 103
+      }
+     ],
+     "cols": 1,
+     "nums": false
+    }
+   ]
+  },
+  "103": {
+   "img": "img/dbt/103.jpg",
+   "activities": [
+    {
+     "id": "dbt103-4a",
+     "label": "4. etkinlik (a)",
+     "rect": [
+      8,
+      6.0,
+      86,
+      31.5
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 102,
+      "act": "dbt102-4a"
+     }
+    },
+    {
+     "id": "dbt103-4b",
+     "label": "4. etkinlik (b)",
+     "rect": [
+      8,
+      38.0,
+      86,
+      33.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        11.1,
+        31.89,
+        57.61
+       ],
+       "text": "Menemen",
+       "g": "n",
+       "id": "dbt103-4b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        38.19,
+        58.99,
+        57.61
+       ],
+       "text": "Tavuk",
+       "g": "n",
+       "id": "dbt103-4b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.37,
+        86.17,
+        57.61
+       ],
+       "text": "Börek",
+       "g": "n",
+       "id": "dbt103-4b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.31,
+        86.08,
+        63.31
+       ],
+       "text": "Börek",
+       "id": "dbt103-4b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.31,
+        86.08,
+        66.72
+       ],
+       "text": "Menemen",
+       "id": "dbt103-4b-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.31,
+        86.08,
+        70.12
+       ],
+       "text": "Tavuk",
+       "id": "dbt103-4b-6"
+      }
+     ]
+    },
+    {
+     "id": "dbt103-4c",
+     "label": "4. etkinlik (c)",
+     "rect": [
+      8,
+      73.0,
+      86,
+      20.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        31.45,
+        50.35,
+        82.46
+       ],
+       "text": "en lezzetli 3. menü.",
+       "id": "dbt103-4c-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        64.45,
+        86.21,
+        82.46
+       ],
+       "text": "yiyecek tavuk.",
+       "id": "dbt103-4c-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        24.8,
+        51.72,
+        90.1
+       ],
+       "text": "Bana göre en sağlıklı 3. menü.",
+       "id": "dbt103-4c-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.62,
+        84.54,
+        90.1
+       ],
+       "text": "Bence 2. menüyü yiyelim.",
+       "id": "dbt103-4c-4"
+      }
+     ]
+    }
+   ]
+  },
+  "104": {
+   "img": "img/dbt/104.jpg",
+   "activities": [
+    {
+     "id": "dbt104-1",
+     "label": "1. etkinlik",
+     "rect": [
+      10,
+      15.0,
+      82,
+      44.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.091",
+       "rect": [
+        53.27,
+        15.57,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S091.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt104-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      59.5,
+      82,
+      34.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        15.46,
+        46.65,
+        91.98
+       ],
+       "text": "Evet, cevizli baklava yemek isterim.",
+       "id": "dbt104-2-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        58.04,
+        87.71,
+        91.98
+       ],
+       "text": "çayımı şekersiz içerim.",
+       "id": "dbt104-2-2"
+      }
+     ]
+    }
+   ]
+  },
+  "105": {
+   "img": "img/dbt/105.jpg",
+   "activities": [
+    {
+     "id": "dbt105-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      7.5,
+      84,
+      37.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt105-4a",
+     "label": "4. etkinlik (a)",
+     "rect": [
+      8,
+      45.5,
+      84,
+      17.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        23.13,
+        30.57,
+        61.43
+       ],
+       "text": "şekersiz",
+       "g": "s",
+       "id": "dbt105-4a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.19,
+        41.64,
+        56.26
+       ],
+       "text": "ıspanak",
+       "g": "w0",
+       "id": "dbt105-4a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.19,
+        41.64,
+        58.84
+       ],
+       "text": "ıspanaklı",
+       "g": "w0",
+       "id": "dbt105-4a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.19,
+        41.64,
+        61.43
+       ],
+       "text": "ıspanaksız",
+       "g": "w0",
+       "id": "dbt105-4a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        45.24,
+        52.690000000000005,
+        56.26
+       ],
+       "text": "çilek",
+       "g": "w1",
+       "id": "dbt105-4a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        45.24,
+        52.690000000000005,
+        58.84
+       ],
+       "text": "çilekli",
+       "g": "w1",
+       "id": "dbt105-4a-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        45.24,
+        52.690000000000005,
+        61.43
+       ],
+       "text": "çileksiz",
+       "g": "w1",
+       "id": "dbt105-4a-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        56.34,
+        63.790000000000006,
+        56.26
+       ],
+       "text": "havuç",
+       "g": "w2",
+       "id": "dbt105-4a-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        56.34,
+        63.790000000000006,
+        58.84
+       ],
+       "text": "havuçlu",
+       "g": "w2",
+       "id": "dbt105-4a-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        56.34,
+        63.790000000000006,
+        61.43
+       ],
+       "text": "havuçsuz",
+       "g": "w2",
+       "id": "dbt105-4a-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.4,
+        74.85000000000001,
+        56.26
+       ],
+       "text": "üzüm",
+       "g": "w3",
+       "id": "dbt105-4a-11"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.4,
+        74.85000000000001,
+        58.84
+       ],
+       "text": "üzümlü",
+       "g": "w3",
+       "id": "dbt105-4a-12"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.4,
+        74.85000000000001,
+        61.43
+       ],
+       "text": "üzümsüz",
+       "g": "w3",
+       "id": "dbt105-4a-13"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.46,
+        85.91,
+        56.26
+       ],
+       "text": "elma",
+       "g": "w4",
+       "id": "dbt105-4a-14"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.46,
+        85.91,
+        58.84
+       ],
+       "text": "elmalı",
+       "g": "w4",
+       "id": "dbt105-4a-15"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.46,
+        85.91,
+        61.43
+       ],
+       "text": "elmasız",
+       "g": "w4",
+       "id": "dbt105-4a-16"
+      }
+     ]
+    },
+    {
+     "id": "dbt105-4b",
+     "label": "4. etkinlik (b)",
+     "rect": [
+      8,
+      63.5,
+      84,
+      30.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        45.24,
+        52.69,
+        74.06
+       ],
+       "text": "börek",
+       "g": "n",
+       "id": "dbt105-4b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        56.34,
+        63.79,
+        74.06
+       ],
+       "text": "tavuk",
+       "g": "n",
+       "id": "dbt105-4b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.4,
+        74.85,
+        74.06
+       ],
+       "text": "köfte",
+       "g": "n",
+       "id": "dbt105-4b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.26,
+        84.45,
+        77.29
+       ],
+       "text": "Köfte acı mı?",
+       "g": "k",
+       "id": "dbt105-4b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.26,
+        84.45,
+        79.88
+       ],
+       "text": "Hayır, köfte acı değil, tuzlu.",
+       "g": "k",
+       "id": "dbt105-4b-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.26,
+        84.45,
+        82.34
+       ],
+       "text": "Tavuk sıcak mı?",
+       "g": "t",
+       "id": "dbt105-4b-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.26,
+        84.45,
+        84.93
+       ],
+       "text": "Evet, tavuk sıcak.",
+       "g": "t",
+       "id": "dbt105-4b-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.78,
+        44.14,
+        87.46
+       ],
+       "text": "Bu börek ıspanaklı mı",
+       "g": "b",
+       "id": "dbt105-4b-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        13.0,
+        44.14,
+        90.04
+       ],
+       "text": "Evet, bu börek ıspanaklı.",
+       "g": "b",
+       "id": "dbt105-4b-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.04,
+        84.41,
+        87.46
+       ],
+       "text": "Bu kek havuçlu mu",
+       "g": "e",
+       "id": "dbt105-4b-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.26,
+        84.41,
+        90.04
+       ],
+       "text": "Evet, bu kek havuçlu.",
+       "g": "e",
+       "id": "dbt105-4b-11"
+      }
+     ]
+    }
+   ]
+  },
+  "106": {
+   "img": "img/dbt/106.jpg",
+   "activities": [
+    {
+     "id": "dbt106-1",
+     "label": "1. etkinlik",
+     "rect": [
+      10,
+      13.0,
+      82,
+      21.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.092",
+       "rect": [
+        35.42,
+        13.65,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S092.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt106-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      34.0,
+      82,
+      30.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.093",
+       "rect": [
+        39.52,
+        34.94,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S093.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt106-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      66.0,
+      82,
+      27.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.094",
+       "rect": [
+        55.19,
+        67.35,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S094.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "107": {
+   "img": "img/dbt/107.jpg",
+   "activities": [
+    {
+     "id": "dbt107-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      6.0,
+      84,
+      57.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.095",
+       "rect": [
+        50.85,
+        7.39,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S095.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt107-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      8,
+      65.0,
+      41,
+      23.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.096",
+       "rect": [
+        35.23,
+        68.53,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S096.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt107-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      50,
+      65.0,
+      39,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        76.62
+       ],
+       "text": "Sabah oldu kalktım ben,",
+       "g": "b",
+       "id": "dbt107-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        78.44
+       ],
+       "text": "Sofrada peynir, zeytin hemen.",
+       "g": "b",
+       "id": "dbt107-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        80.26
+       ],
+       "text": "Ekmek geldi tabağıma,",
+       "g": "b",
+       "id": "dbt107-5b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        82.08
+       ],
+       "text": "Çay da doldu bardağıma.",
+       "g": "b",
+       "id": "dbt107-5b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        83.96
+       ],
+       "text": "Afiyetle yedim hepsini,",
+       "g": "b",
+       "id": "dbt107-5b-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        85.78
+       ],
+       "text": "Başladım güzel bir güne.",
+       "g": "b",
+       "id": "dbt107-5b-6"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

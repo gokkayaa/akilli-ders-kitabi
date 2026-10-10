@@ -135,7 +135,7 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 #toast{position:fixed;left:50%;top:calc(50px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:70;background:var(--rail);color:#fff;font-weight:700;padding:6px 16px;border-radius:99px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 /* İzo: where are we */
 .tool.izo img{width:34px;height:34px;object-fit:contain}
-#where{position:fixed;inset:0;z-index:65;background:var(--dim);display:grid;place-items:center;padding:16px;animation:fadein .3s ease}
+#where,#end{position:fixed;inset:0;z-index:65;background:var(--dim);display:grid;place-items:center;padding:16px;animation:fadein .3s ease}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
 .wcard{display:flex;align-items:flex-end;gap:2vw;background:var(--paper);color:var(--text);border-radius:28px;padding:3vh 4vw 3vh 2vw;box-shadow:0 30px 60px rgba(0,0,0,.5);max-width:94vw}
 .wizo{height:min(52vh,420px);width:auto;animation:wave 1.6s ease-in-out infinite;transform-origin:50% 90%}
@@ -147,9 +147,43 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 .wgo{font-size:min(3.4vw,36px);font-weight:700;color:var(--muted);margin-bottom:1vh!important}
 .wrow{display:flex;align-items:center;gap:1.4vw;flex-wrap:wrap}
 .wbk{font-size:min(2.8vw,30px);font-weight:800;color:#fff;border-radius:14px;padding:.2em .7em}
-.wbk.dk{background:#f07d1a}.wbk.dbt{background:#3a9a8f}
+.wbk.dk{background:#f07d1a}.wbk.dk2{background:#8e3fb0}.wbk.dbt{background:#3a9a8f}
 .wpg{font-size:min(9vw,104px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
 .wpg small{font-size:.45em;color:var(--muted);margin-right:.15em}
+/* class picker: one group per book */
+.pgrp{margin-top:12px;text-align:left}
+.pgrp h3{margin:0 0 6px;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.pgrp h3 i{width:12px;height:12px;border-radius:4px;background:var(--brand)}
+.pgrp.dk2 h3 i{background:#8e3fb0}
+.pgrp.dk2 .grid button{background:#f4ecf8;border-color:#8e3fb0}
+.pgrp.dk2 .grid button b{color:#6d2a8c}
+.card.wide{max-width:640px}
+/* contents: tabs per book, units, page thumbnails */
+#toc{position:fixed;inset:0;z-index:62;background:var(--dim);display:flex;justify-content:center;padding:16px;animation:fadein .25s ease}
+.tcard{background:var(--paper);color:var(--text);border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(1100px,100%);display:flex;flex-direction:column;overflow:hidden}
+.thead{display:flex;align-items:center;gap:8px;padding:10px 10px 0 14px;border-bottom:2px solid #e3e8eb;flex-wrap:wrap}
+.thead h2{margin:0 10px 8px 0;font-size:22px}
+.tabs{display:flex;gap:6px;flex:1;flex-wrap:wrap}
+.tabs button{font-weight:800;font-size:16px;padding:6px 14px 8px;border-radius:12px 12px 0 0;color:var(--muted);background:#eef2f4;margin-bottom:-2px;border:2px solid transparent;border-bottom:0}
+.tabs button[aria-selected="true"]{background:var(--paper);color:var(--text);border-color:#e3e8eb}
+.tabs button .tag{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:1px}
+.tclose{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:8px;background:#eef2f4;color:var(--text)}
+.tclose svg{width:22px;height:22px}
+.tbody{overflow:auto;padding:12px 16px 20px;-webkit-overflow-scrolling:touch}
+.tunit h3{margin:10px 0 8px;font-size:20px;display:flex;align-items:baseline;gap:10px}
+.tunit h3 small{font-size:15px;color:var(--muted);font-weight:700}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:12px}
+.thumb{display:flex;flex-direction:column;align-items:center;gap:2px;border-radius:8px;padding:4px}
+.thumb img{width:100%;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.25);background:#f2f4f5}
+.thumb b{font-size:16px;line-height:1.2}
+.thumb.cur{background:var(--brand)}
+.thumb.cur b{color:#fff}
+.thumb.mark b::after{content:" •";color:var(--brand)}
+/* unit finished */
+#end .wcard{align-items:center}
+.ebtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:1vh}
+.ebtns button{font-weight:800;font-size:min(2.6vw,24px);padding:.3em 1em;border-radius:14px;background:#eef2f4;color:var(--text)}
+.ebtns button.go{background:var(--brand);color:#fff}
 #loading{position:fixed;inset:0;display:grid;place-items:center;color:#fff;font-size:20px;font-weight:700}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -164,6 +198,7 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 <nav id="rail" class="v" aria-label="Araçlar">
   <button class="tool txt" id="clsBtn" title="Sınıf">7A</button>
   <button class="tool txt" id="bookBtn" title="Kitap değiştir">DK</button>
+  <button class="tool" id="tocBtn" title="İçindekiler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></button>
   <button class="tool izo" id="whereBtn" title="Neredeyiz?"><img src="assets/izo.png" alt="İzo"></button>
   <div class="sep"></div>
   <button class="tool" data-tool="pen" aria-pressed="false" title="Kalem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.2-4.6L16.5 4.1a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/><path d="M14.5 6l3.5 3.5"/></svg><span class="cdot" id="penDot" style="background:#d0202a"></span></button>
@@ -199,10 +234,10 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 </div>
 
 <div id="picker" hidden>
-  <div class="card">
+  <div class="card wide">
     <h2>Hangi sınıf?</h2>
-    <p>Kitap, sınıfın kaldığı sayfada açılır.</p>
-    <div class="grid" id="pickGrid"></div>
+    <p>Kitap, sınıfın kaldığı yerde açılır.</p>
+    <div id="pickGrid"></div>
   </div>
 </div>
 <div id="toast" hidden></div>
@@ -212,16 +247,44 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
     <div class="wtx">
       <p class="whi">Merhaba <b id="wCls">7A</b>!</p>
       <p class="wgo">Haydi, kitabını aç!</p>
-      <div class="wrow" id="wDk"><span class="wbk dk">Ders Kitabı</span><span class="wpg"></span></div>
+      <div class="wrow" id="wDk"><span class="wbk dk" id="wDkName">Ders Kitabı</span><span class="wpg"></span></div>
       <div class="wrow" id="wDbt"><span class="wbk dbt">Dil Bilgisi ve Telaffuz</span><span class="wpg"></span></div>
+    </div>
+  </div>
+</div>
+
+<div id="toc" hidden>
+  <div class="tcard" role="dialog" aria-label="İçindekiler">
+    <div class="thead"><h2>İçindekiler</h2><div class="tabs" id="tocTabs" role="tablist"></div>
+      <button class="tclose" id="tocClose" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="tbody" id="tocBody"></div>
+  </div>
+</div>
+<div id="end" hidden>
+  <div class="wcard">
+    <img class="wizo" src="assets/izo.png" alt="">
+    <div class="wtx">
+      <p class="whi">Aferin <b id="eCls">7A</b>!</p>
+      <p class="wgo" id="eTx">1. Ünite bitti.</p>
+      <div class="ebtns"><button class="go" id="eToc">İçindekiler</button><button id="eStay">Kitaba dön</button></div>
     </div>
   </div>
 </div>
 
 <script>
 (() => {
-const CLASSES = ['7A','7B','7C','7D'];
-const START = {book:'dk', page:16};
+/* Two ders kitabı, one shared dil bilgisi ve telaffuz kitabı. A class always opens its own book. */
+const SERIES = {
+  dk:  {name:'Ders Kitabı 1', color:'#f07d1a', classes:['7A','7B','7C','7D'], start:16},
+  dk2: {name:'Ders Kitabı 2', color:'#8e3fb0', classes:['7E','7F','8A','8B','8C'], start:7}
+};
+const DATA = {dk:['dk'], dk2:['dk2'], dbt:['dbt', 'dbt-u6']};
+const BOOK_TITLE = {dk:'Ders Kitabı 1', dk2:'Ders Kitabı 2', dbt:'Dil Bilgisi ve Telaffuz'};
+const BOOK_COLOR = {dk:'#f07d1a', dk2:'#8e3fb0', dbt:'#3a9a8f'};
+const CLASSES = Object.values(SERIES).flatMap(x => x.classes);
+const seriesOf = c => Object.keys(SERIES).find(k => SERIES[k].classes.includes(c));
+const isDers = b => b in SERIES;
+const startOf = d => ({book:d, page:SERIES[d].start});
 const $ = s => document.querySelector(s);
 const SVGNS = 'http://www.w3.org/2000/svg';
 const LINE_COLORS = ['#1d5fc0', '#d0202a', '#1f8a3a', '#8e3fb0', '#e07a00', '#00838c', '#c2185b', '#5d4037'];
@@ -237,11 +300,19 @@ const store = {
   set(k, v){ try{ localStorage.setItem('adk:'+k, JSON.stringify(v)); }catch(e){} }
 };
 /* cursor = index into spreadSteps() of the last step taken on this spread (-1 = none) */
-const S = { books:{}, book:'dk', page:16, cls:null, revealed:new Set(), tool:null, color:'#d0202a', ink:{}, back:[], two:true, cursor:-1, zoom:null };
+const S = { books:{}, book:'dk', ders:'dk', page:16, cls:null, revealed:new Set(), tool:null, color:'#d0202a', ink:{}, back:[], two:true, cursor:-1, zoom:null };
 let pos = store.get('pos', {});
 
-const pagesOf = b => Object.keys(S.books[b].pages).map(Number).sort((a,b)=>a-b);
-const bookName = b => b === 'dk' ? 'Ders kitabı' : 'Telaffuz';
+const allPages = b => Object.keys(S.books[b].pages).map(Number).sort((a,b)=>a-b);
+const unitOf = (b, n) => (S.books[b].units || []).find(u => n >= u.from && n <= u.to);
+/* the telaffuz book is shared: only the units of the ders kitabı in use are paged through */
+const pagesOf = b => {
+  const all = allPages(b);
+  if(isDers(b) || !S.books[S.ders]) return all;
+  const nos = (S.books[S.ders].units || []).map(u => u.no);
+  return all.filter(n => { const u = unitOf(b, n); return u && nos.includes(u.no); });
+};
+const bookName = b => isDers(b) ? 'Ders kitabı' : 'Telaffuz';
 function viewPages(){
   const list = pagesOf(S.book), p = S.page;
   if(!S.two) return [p];
@@ -249,9 +320,9 @@ function viewPages(){
   return [left, left + 1].filter(n => list.includes(n));
 }
 /* answer groups of an activity, in order: items sharing "g" open together */
-function groupsOf(A){
+function groupsOf(A, items = A.items){
   const gs = [], idx = {};
-  A.items.forEach(it => { const g = A.id + ':' + (it.g || it.id); if(!(g in idx)){ idx[g] = gs.length; gs.push({id:g, items:[]}); } gs[idx[g]].items.push(it); });
+  items.forEach(it => { const g = A.id + ':' + (it.g || it.id); if(!(g in idx)){ idx[g] = gs.length; gs.push({id:g, items:[]}); } gs[idx[g]].items.push(it); });
   return gs;
 }
 /* steps on the visible spread: activities and in-book cross references, in reading order */
@@ -280,7 +351,7 @@ const stepId = o => o ? (o.kind === 'act' ? 'a:' + o.A.id : 'l:' + o.n + ':' + o
 function savePos(){
   if(!S.cls || S.restoring) return;
   const p = pos[S.cls] || {}, st = spreadSteps();
-  p.book = S.book; p.page = S.page; p[S.book] = S.page;
+  p.book = S.book; p.page = S.page; p[S.book] = S.page; p.ders = S.ders;
   p.step = S.cursor >= 0 ? stepId(st[S.cursor]) : null;
   p.open = !!S.zoom;
   p.back = S.back.map(b => ({book:b.book, page:b.page, cursor:b.cursor, until:b.until, to:b.to}));
@@ -291,9 +362,11 @@ function showWhere(){
   const p = pos[S.cls] || {};
   $('#wCls').textContent = S.cls;
   const put = (id, n) => { const r = $(id); r.hidden = !n; if(n) r.querySelector('.wpg').innerHTML = '<small>s.</small>' + n; };
-  put('#wDk', p.dk || (S.book === 'dk' ? S.page : null));
-  let dbt = p.dbt || null;
-  if(!dbt){ const dk = p.dk || START.page; pagesOf('dk').filter(n => n <= dk).forEach(n => (S.books.dk.pages[n].links || []).forEach(L => { if(L.go.book === 'dbt') dbt = L.go.page; })); }
+  const d = S.ders;
+  $('#wDkName').textContent = SERIES[d].name; $('#wDkName').className = 'wbk ' + d;
+  put('#wDk', p[d] || (S.book === d ? S.page : null));
+  let dbt = p.dbt && pagesOf('dbt').includes(p.dbt) ? p.dbt : null;
+  if(!dbt){ const dk = p[d] || SERIES[d].start; pagesOf(d).filter(n => n <= dk).forEach(n => (S.books[d].pages[n].links || []).forEach(L => { if(L.go.book === 'dbt') dbt = L.go.page; })); }
   put('#wDbt', dbt);
   $('#where').hidden = false;
 }
@@ -309,9 +382,14 @@ function buildPage(book, n, inZoom){
   svg.setAttribute('class','lines'); svg.setAttribute('viewBox',`0 0 100 ${(100*ky).toFixed(3)}`); svg.setAttribute('preserveAspectRatio','none');
   el.appendChild(svg);
   const mk = (tag, attrs, g, cls) => { const e = document.createElementNS(SVGNS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); e.dataset.g = g; if(cls) e.setAttribute('class', cls); svg.appendChild(e); return e; };
-  for(const A of P.activities){
+  /* an activity running over two pages keeps all its answers; each answer is drawn on the page it sits on ("page") */
+  if(!B.foreign){ B.foreign = {}; for(const k in B.pages) for(const A of B.pages[k].activities){ const by = {};
+    A.items.forEach(it => { if(it.page && it.page !== +k) (by[it.page] = by[it.page] || []).push(it); });
+    for(const q in by) (B.foreign[q] = B.foreign[q] || []).push([A, by[q]]); } }
+  const sets = [...P.activities.map(A => [A, A.items.filter(it => !it.page || it.page === n), true]), ...(B.foreign[n] || []).map(([A, its]) => [A, its, false])];
+  for(const [A, items, own] of sets){
     const lineGroups = groupsOf(A).filter(G => G.items.some(i => i.type === 'line')).map(G => G.id);
-    for(const G of groupsOf(A)){
+    for(const G of groupsOf(A, items)){
       let dotAt = null, keep = false;
       const col = lineGroups.length > 1 ? LINE_COLORS[lineGroups.indexOf(G.id) % LINE_COLORS.length] : null;
       for(const it of G.items){
@@ -355,7 +433,7 @@ function buildPage(book, n, inZoom){
       }
       if(dotAt) addDot(el, G.id, dotAt[0], dotAt[1], keep);
     }
-    for(const a of (A.audio || [])){
+    if(own) for(const a of (A.audio || [])){
       const [ax,ay,aw,ah] = a.rect;
       const b = document.createElement('button');
       b.className = 'aud' + (a.src ? '' : ' miss'); b.dataset.src = a.src || ''; b.setAttribute('aria-label','Dinle ' + a.code);
@@ -464,7 +542,7 @@ function next(){
     return;
   }
   const list = pagesOf(S.book), vp = viewPages(), t = list.find(p => p > vp[vp.length-1]);
-  if(t != null) go(S.book, t);
+  if(t != null) go(S.book, t); else if(isDers(S.book)) showEnd();
 }
 function prev(){
   if(S.zoom){
@@ -503,7 +581,7 @@ function doReturn(shift = 0){
 function updNav(){
   const list = pagesOf(S.book), vp = viewPages(), st = spreadSteps();
   const atStart = !S.zoom && S.cursor < 0 && !list.some(p => p < vp[0]) && !S.back.length;
-  const atEnd = !S.zoom && S.cursor >= st.length - 1 && !list.some(p => p > vp[vp.length-1]) && !returnDue();
+  const atEnd = !S.zoom && S.cursor >= st.length - 1 && !list.some(p => p > vp[vp.length-1]) && !returnDue() && !isDers(S.book);
   $('#prev').disabled = atStart; $('#next').disabled = atEnd;
   savePos();
   const last = S.back[S.back.length-1], bk = $('#back');
@@ -625,15 +703,17 @@ function render(){
   $('#bbar').style.right = vert ? '16px' : (innerWidth - $('#rail').getBoundingClientRect().left + 10) + 'px';
   $('#bbar').style.justifyContent = vert ? 'center' : 'flex-start';
   $('#prev').style.left = '6px'; $('#next').style.right = vert ? (RAIL + 14) + 'px' : '6px';
-  $('#bookBtn').textContent = S.book === 'dk' ? 'DK' : 'T';
-  $('#bookBtn').title = S.book === 'dk' ? 'Telaffuz kitabına geç' : 'Ders kitabına geç';
+  $('#bookBtn').textContent = isDers(S.book) ? 'DK' : 'T';
+  $('#bookBtn').title = isDers(S.book) ? 'Telaffuz kitabına geç' : 'Ders kitabına geç';
   $('#loading').hidden = true;
   updNav();
 }
 function go(book, page, keepBack){
   if(S.zoom){ S.zoom = null; $('#zoom').hidden = true; $('#zoom').classList.remove('in'); $('#zbar').hidden = true; $('#board').innerHTML = ''; }
   if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
-  S.book = book; S.page = page; S.cursor = -1; store.set('last-' + book, page); savePos();
+  if(isDers(book)) S.ders = book;
+  else { const u = unitOf(book, page); if(u && !(S.books[S.ders].units || []).some(x => x.no === u.no)){ const d = Object.keys(SERIES).find(k => S.books[k] && (S.books[k].units || []).some(x => x.no === u.no)); if(d) S.ders = d; } }
+  S.book = book; S.page = page; S.cursor = -1; store.set('last-' + book + (isDers(book) ? '' : '-' + S.ders), page); savePos();
   if(!keepBack) restoreReturn();
   render();
 }
@@ -643,13 +723,14 @@ function restoreReturn(){
   if(S.back.length) return;
   const here = viewPages();
   const actPage = (book, id) => pagesOf(book).find(n => S.books[book].pages[n].activities.some(A => A.id === id));
-  for(const dk of pagesOf('dk').filter(() => S.book !== 'dk')){
-    for(const L of (S.books.dk.pages[dk].links || [])){
+  const D = S.ders;
+  for(const dk of pagesOf(D).filter(() => !isDers(S.book))){
+    for(const L of (S.books[D].pages[dk].links || [])){
       if(L.go.book !== S.book || !L.until) continue;
       const end = L.until.act ? actPage(L.go.book, L.until.act) : L.until.page;
       if(here.some(p => p >= L.go.page && p <= end)){
-        const sp = spreadOf('dk', dk), k = spreadSteps('dk', sp).findIndex(o => o.kind === 'link' && o.L === L);
-        S.back.push({book:'dk', page:dk, cursor:k, until:L.until, to:{book:L.go.book, page:L.go.page}});
+        const sp = spreadOf(D, dk), k = spreadSteps(D, sp).findIndex(o => o.kind === 'link' && o.L === L);
+        S.back.push({book:D, page:dk, cursor:k, until:L.until, to:{book:L.go.book, page:L.go.page}});
         return;
       }
     }
@@ -743,17 +824,24 @@ $('#tGo').addEventListener('click', () => {
 
 /* ---------- class picker ---------- */
 function openPicker(){
-  const g = $('#pickGrid'); g.innerHTML = '';
-  CLASSES.forEach(c => { const p = pos[c], b = document.createElement('button');
-    b.innerHTML = `<b>${c}</b><small>${p ? `${bookName(p.book)} s.${p.page}` : 'Yeni başlıyor'}</small>`;
-    b.addEventListener('click', () => pickClass(c)); g.appendChild(b); });
+  const box = $('#pickGrid'); box.innerHTML = '';
+  for(const d in SERIES){
+    if(!S.books[d]) continue;
+    const sec = document.createElement('div'); sec.className = 'pgrp ' + d;
+    sec.innerHTML = `<h3><i style="background:${SERIES[d].color}"></i>${SERIES[d].name}</h3><div class="grid"></div>`;
+    SERIES[d].classes.forEach(c => { const p = pos[c], b = document.createElement('button');
+      b.innerHTML = `<b>${c}</b><small>${p ? `${bookName(p.book)} s.${p.page}` : 'Yeni başlıyor'}</small>`;
+      b.addEventListener('click', () => pickClass(c)); sec.lastChild.appendChild(b); });
+    box.appendChild(sec);
+  }
   $('#picker').hidden = false;
 }
 function pickClass(c){
   S.cls = c; store.set('cls', c); $('#clsBtn').textContent = c; $('#picker').hidden = true;
   S.back = []; S.revealed.clear(); S.ink = {};
-  const p = pos[c] || START;
-  if(!(S.books[p.book] && S.books[p.book].pages[p.page])){ go(START.book, START.page); showWhere(); return; }
+  const st0 = startOf(seriesOf(c)), p = pos[c] || st0;
+  S.ders = p.ders && S.books[p.ders] ? p.ders : seriesOf(c);
+  if(!(S.books[p.book] && S.books[p.book].pages[p.page])){ go(st0.book, st0.page); showWhere(); return; }
   S.restoring = true;
   S.back = (p.back || []).filter(b => S.books[b.book] && S.books[b.book].pages[b.page]);
   go(p.book, p.page, S.back.length > 0);
@@ -767,6 +855,43 @@ function pickClass(c){
   showWhere();
 }
 
+/* ---------- contents: jump straight to any page ---------- */
+let tocTab = null;
+function openToc(){
+  tocTab = S.book; $('#toc').hidden = false; drawToc();
+  const cur = $('#tocBody .thumb.cur'); if(cur) cur.scrollIntoView({block:'center'});
+}
+function drawToc(){
+  const tabs = $('#tocTabs'); tabs.innerHTML = '';
+  ['dk', 'dk2', 'dbt'].filter(b => S.books[b]).forEach(b => {
+    const t = document.createElement('button'); t.setAttribute('role', 'tab'); t.setAttribute('aria-selected', b === tocTab);
+    t.innerHTML = `<span class="tag" style="background:${BOOK_COLOR[b]}"></span>${BOOK_TITLE[b]}`;
+    t.addEventListener('click', () => { tocTab = b; drawToc(); $('#tocBody').scrollTop = 0; });
+    tabs.appendChild(t);
+  });
+  const body = $('#tocBody'), B = S.books[tocTab], p = pos[S.cls] || {};
+  body.innerHTML = '';
+  const here = tocTab === S.book ? viewPages() : [];
+  for(const u of B.units){
+    const sec = document.createElement('section'); sec.className = 'tunit';
+    const owner = isDers(tocTab) ? '' : Object.keys(SERIES).filter(d => S.books[d] && S.books[d].units.some(x => x.no === u.no)).map(d => SERIES[d].name).join(', ');
+    sec.innerHTML = `<h3>${u.no}. Ünite · ${u.title}${owner ? `<small>${owner}</small>` : ''}</h3><div class="thumbs"></div>`;
+    allPages(tocTab).filter(n => n >= u.from && n <= u.to).forEach(n => {
+      const b = document.createElement('button'); b.className = 'thumb' + (here.includes(n) ? ' cur' : '') + (!here.length && p[tocTab] === n ? ' mark' : '');
+      b.innerHTML = `<img loading="lazy" src="${B.pages[n].img.replace(/\/(\d+\.jpg)$/, '/t/$1')}" alt=""><b>${n}</b>`;
+      b.addEventListener('click', () => { $('#toc').hidden = true; S.back = []; S.revealed.clear(); go(tocTab, n); toast(`${BOOK_TITLE[tocTab]} s.${n}`); });
+      sec.lastChild.appendChild(b);
+    });
+    body.appendChild(sec);
+  }
+}
+/* ---------- end of the unit ---------- */
+function showEnd(){
+  const u = unitOf(S.book, S.page);
+  $('#eCls').textContent = S.cls || ''; $('#eTx').textContent = u ? `${u.no}. Ünite bitti.` : 'Ünite bitti.';
+  $('#end').hidden = false;
+}
+
 /* ---------- wiring ---------- */
 $('#prev').addEventListener('click', prev);
 $('#next').addEventListener('click', next);
@@ -775,9 +900,10 @@ $('#zClose').addEventListener('click', closeZoom);
 $('#zoom').addEventListener('click', e => { if(e.target.id === 'zoom' && !S.tool) closeZoom(); });
 $('#back').addEventListener('click', () => { if(S.back.length) doReturn(); });
 $('#bookBtn').addEventListener('click', () => {
-  const b = S.book === 'dk' ? 'dbt' : 'dk', last = store.get('last-' + b, null);
+  const b = isDers(S.book) ? 'dbt' : S.ders, p = pos[S.cls] || {};
+  const last = isDers(b) ? p[b] : (p.dbt && pagesOf('dbt').includes(p.dbt) ? p.dbt : null);
   S.back.push({book:S.book, page:S.page, cursor:S.cursor, until:null, to:{book:b, page:0}});
-  go(b, last && S.books[b].pages[last] ? last : pagesOf(b)[0], true); updNav();
+  go(b, last && pagesOf(b).includes(last) ? last : pagesOf(b)[0], true); updNav();
 });
 document.querySelectorAll('.tool[data-tool]').forEach(b => b.addEventListener('click', () => setTool(b.dataset.tool)));
 $('#pens').addEventListener('click', e => {
@@ -795,9 +921,16 @@ $('#fsBtn').addEventListener('click', () => {
 });
 $('#clsBtn').addEventListener('click', openPicker);
 $('#whereBtn').addEventListener('click', showWhere);
+$('#tocBtn').addEventListener('click', openToc);
+$('#tocClose').addEventListener('click', () => $('#toc').hidden = true);
+$('#toc').addEventListener('click', e => { if(e.target.id === 'toc') $('#toc').hidden = true; });
+$('#eToc').addEventListener('click', () => { $('#end').hidden = true; openToc(); });
+$('#eStay').addEventListener('click', () => $('#end').hidden = true);
+$('#end').addEventListener('click', e => { if(e.target.id === 'end') $('#end').hidden = true; });
 $('#where').addEventListener('click', () => $('#where').hidden = true);
 addEventListener('keydown', e => {
   if(!$('#picker').hidden) return;
+  if(!$('#toc').hidden || !$('#end').hidden){ if(e.key === 'Escape'){ $('#toc').hidden = true; $('#end').hidden = true; } return; }
   if(!$('#where').hidden){ if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){ e.preventDefault(); $('#where').hidden = true; } return; }
   if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){ e.preventDefault(); next(); }
   else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); prev(); }
@@ -806,10 +939,23 @@ addEventListener('keydown', e => {
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { const z = S.zoom; render(); if(z){ S.zoom = z; reZoom(); } if(S.tool === 'pen') placePens(); }, 120); });
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(() => fit(document));
 
-Promise.all(['dk','dbt'].map(id => fetch('data/' + id + '.json').then(r => r.json()))).then(([dk, dbt]) => {
-  S.books = {dk, dbt};
+/* each book may come in several files (one per unit); a missing file is simply skipped */
+const getJSON = f => fetch('data/' + f + '.json').then(r => r.ok ? r.json() : null).catch(() => null);
+Promise.all(Object.entries(DATA).map(([id, files]) => Promise.all(files.map(getJSON)).then(parts => {
+  parts = parts.filter(Boolean); if(!parts.length) return;
+  const B = {...parts[0], pages:{}, units:[]};
+  parts.forEach(x => { Object.assign(B.pages, x.pages); B.units.push(...(x.units || [])); });
+  B.units.sort((a, b) => a.from - b.from);
+  S.books[id] = B;
+}))).then(() => {
+  if(!S.books.dk || !S.books.dbt) throw 0;
+  /* review hook for checking answers: #rev=book:page opens that spread with every answer shown */
+  const rv = /^#rev=(\w+):(\d+)/.exec(location.hash);
+  if(rv){ S.ders = isDers(rv[1]) ? rv[1] : 'dk2'; go(rv[1], +rv[2]); viewPages().forEach(n => { const P = S.books[S.book].pages[n];
+    P.activities.forEach(A => groupsOf(A).forEach(G => S.revealed.add(G.id))); (S.books[S.book].foreign[n] || []).forEach(([A]) => groupsOf(A).forEach(G => S.revealed.add(G.id))); });
+    syncAll(); fit(document); return; }
   const c = store.get('cls', null);
-  if(c && CLASSES.includes(c)) pickClass(c); else { go(START.book, START.page); openPicker(); }
+  if(c && CLASSES.includes(c) && S.books[seriesOf(c)]) pickClass(c); else { S.ders = 'dk'; go('dk', SERIES.dk.start); openPicker(); }
 }).catch(() => { $('#loading').textContent = 'Kitap yüklenemedi. Sayfayı yenileyin.'; });
 })();
 </script>

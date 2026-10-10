@@ -400,6 +400,7 @@ ul.sort(key=lambda a: (a['from'][0] > 50, a['from'][1]))
 A27 = DK['27']['activities'][2]
 A27['items'] = [dict(UL(a['from'], a['to']), id=f'dk27-3-{k+1}') for k, a in enumerate(ul)]
 
-for name, store, aspect, title in (('dk', DK, 0.7855, 'Ders Kitabı'), ('dbt', DBT, 0.6669, 'Dil Bilgisi ve Telaffuz Kitabı')):
-    json.dump({'id': name, 'title': title, 'aspect': aspect, 'pages': store}, open(f'{ROOT}/data/{name}.json', 'w'), ensure_ascii=False, indent=1)
+U1 = lambda a, b: [{'no': 1, 'title': 'Merhaba', 'from': a, 'to': b}]
+for name, store, aspect, title, units in (('dk', DK, 0.7855, 'Ders Kitabı 1', U1(15, 38)), ('dbt', DBT, 0.6669, 'Dil Bilgisi ve Telaffuz Kitabı', U1(7, 21))):
+    json.dump({'id': name, 'title': title, 'aspect': aspect, 'units': units, 'pages': store}, open(f'{ROOT}/data/{name}.json', 'w'), ensure_ascii=False, indent=1)
 print('ok', len(DK), len(DBT), 'underlines', len(A27['items']))
