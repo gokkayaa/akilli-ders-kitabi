@@ -282,7 +282,19 @@ function spreadSteps(book = S.book, pages = viewPages()){
   return out;
 }
 function toast(msg){ const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1700); }
-function savePos(){ if(!S.cls) return; const p = pos[S.cls] || {}; p.book = S.book; p.page = S.page; p[S.book] = S.page; pos[S.cls] = p; store.set('pos', pos); }
+/* Where each class stopped: book, page, the step (activity) on that spread, whether that activity
+   was still open, and the way back to the ders kitabı. Activities are saved by their fixed id, so
+   adding units or fixing answers later does not break the record. */
+const stepId = o => o ? (o.kind === 'act' ? 'a:' + o.A.id : 'l:' + o.n + ':' + o.L.go.book + o.L.go.page) : null;
+function savePos(){
+  if(!S.cls || S.restoring) return;
+  const p = pos[S.cls] || {}, st = spreadSteps();
+  p.book = S.book; p.page = S.page; p[S.book] = S.page;
+  p.step = S.cursor >= 0 ? stepId(st[S.cursor]) : null;
+  p.open = !!S.zoom;
+  p.back = S.back.map(b => ({book:b.book, page:b.page, cursor:b.cursor, until:b.until, to:b.to}));
+  pos[S.cls] = p; store.set('pos', pos);
+}
 function showWhere(){
   if(!S.cls) return;
   const p = pos[S.cls] || {};
@@ -502,6 +514,7 @@ function updNav(){
   const atStart = !S.zoom && S.cursor < 0 && !list.some(p => p < vp[0]) && !S.back.length;
   const atEnd = !S.zoom && S.cursor >= st.length - 1 && !list.some(p => p > vp[vp.length-1]) && !returnDue();
   $('#prev').disabled = atStart; $('#next').disabled = atEnd;
+  savePos();
   const last = S.back[S.back.length-1], bk = $('#back');
   bk.hidden = !last; if(last) bk.innerHTML = ICON.back + `${bookName(last.book)} s.${last.page}`;
 }
@@ -749,7 +762,17 @@ function pickClass(c){
   S.cls = c; store.set('cls', c); $('#clsBtn').textContent = c; $('#picker').hidden = true;
   S.back = []; S.revealed.clear(); S.ink = {};
   const p = pos[c] || START;
-  (S.books[p.book] && S.books[p.book].pages[p.page]) ? go(p.book, p.page) : go(START.book, START.page);
+  if(!(S.books[p.book] && S.books[p.book].pages[p.page])){ go(START.book, START.page); showWhere(); return; }
+  S.restoring = true;
+  S.back = (p.back || []).filter(b => S.books[b.book] && S.books[b.book].pages[b.page]);
+  go(p.book, p.page, S.back.length > 0);
+  if(p.step){
+    const k = spreadSteps().findIndex(o => stepId(o) === p.step);
+    // an activity left open → → reopens it; a finished one → → goes on to the next
+    if(k >= 0) S.cursor = p.open ? k - 1 : k;
+  }
+  S.restoring = false;
+  updNav();
   showWhere();
 }
 
