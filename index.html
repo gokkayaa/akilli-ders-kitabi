@@ -164,6 +164,38 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 .pgrp.dk2 .grid button{background:#f4ecf8;border-color:#8e3fb0}
 .pgrp.dk2 .grid button b{color:#6d2a8c}
 .card.wide{max-width:640px}
+/* teachers can add their own classes (kept on this device); added ones can be removed */
+.grid button{position:relative}
+.grid button.add{border-style:dashed;background:transparent}
+.grid button.add b{font-size:30px}
+.pgrp.dk2 .grid button.add{background:transparent}
+.del{position:absolute;top:-9px;right:-9px;min-width:26px;height:26px;border-radius:13px;background:#fff;border:2px solid #c9d2d8;color:#7a858d;font-weight:800;font-size:15px;line-height:22px;padding:0 6px}
+.del.sure{background:#d0202a;border-color:#d0202a;color:#fff}
+.addf{grid-column:1/-1;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.grid .addf input{background:#fff;color:var(--text);font:inherit;font-size:22px;font-weight:800;width:7em;padding:6px 12px;border:2px solid var(--brand);border-radius:12px;text-transform:uppercase}
+#picker .addf button{border:0;font-weight:800;font-size:18px;padding:8px 18px;border-radius:12px;background:var(--brand);color:#fff}
+#picker .addf button.no{background:#eef2f4;color:var(--text)}
+.addf small{flex-basis:100%;color:var(--muted);font-weight:600}
+/* after choosing a class: go on where we left off, or start a unit */
+#units{position:fixed;inset:0;z-index:64;background:var(--dim);display:grid;place-items:center;padding:16px;animation:fadein .3s ease}
+.ucard{display:flex;align-items:flex-end;gap:2vw;background:var(--paper);color:var(--text);border-radius:28px;padding:3vh 3vw 3vh 1.5vw;box-shadow:0 30px 60px rgba(0,0,0,.5);max-width:min(1000px,100%);max-height:100%;overflow:auto}
+.ucard .wizo{height:min(40vh,320px)}
+.ubody{flex:1;min-width:0;display:flex;flex-direction:column;gap:1.6vh}
+.uhi{margin:0;font-size:min(5vw,46px);font-weight:800;line-height:1.05}
+.uhi b{color:var(--brand-deep)}
+.ucont{align-self:flex-start;display:flex;align-items:center;gap:14px;background:var(--brand);color:#fff;border-radius:18px;padding:12px 22px 12px 16px;text-align:left;font-weight:800;font-size:min(3vw,28px);box-shadow:0 6px 0 var(--brand-deep)}
+.ucont svg{width:1.3em;height:1.3em;flex:none}
+.ucont small{display:block;font-size:.62em;font-weight:700;opacity:.95}
+.ulbl{margin:.6vh 0 0;font-weight:700;color:var(--muted);font-size:min(2.2vw,18px)}
+.ulist{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.ubtn{display:flex;gap:10px;align-items:center;background:#f2f5f7;border:3px solid transparent;border-radius:16px;padding:8px;text-align:left;color:var(--text)}
+.ubtn img{width:56px;height:72px;object-fit:cover;border-radius:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.2);flex:none}
+.ubtn b{display:block;font-size:14px;color:var(--brand-deep)}
+.ubtn span{display:block;font-size:17px;font-weight:800;line-height:1.15}
+.ubtn small{display:block;font-size:12px;color:var(--muted);font-weight:600;margin-top:2px}
+.ubtn.cur{border-color:var(--brand);background:#e6f7f8}
+.uchg{align-self:flex-start;color:var(--muted);font-weight:700;text-decoration:underline;font-size:15px;padding:4px 0}
+@media (max-width:640px){.ucard .wizo{display:none}}
 /* contents: tabs per book, units, page thumbnails */
 #toc{position:fixed;inset:0;z-index:62;background:var(--dim);display:flex;justify-content:center;padding:16px;animation:fadein .25s ease}
 .tcard{background:var(--paper);color:var(--text);border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(1100px,100%);display:flex;flex-direction:column;overflow:hidden}
@@ -249,6 +281,18 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
     <div id="pickGrid"></div>
   </div>
 </div>
+<div id="units" hidden>
+  <div class="ucard" role="dialog" aria-label="Ünite seç">
+    <img class="wizo" src="assets/izo.png" alt="">
+    <div class="ubody">
+      <p class="uhi">Merhaba <b id="uCls">7A</b>!</p>
+      <button class="ucont" id="uCont"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>Kaldığın yerden devam<small id="uWhere"></small></span></button>
+      <p class="ulbl" id="uLbl">Ya da bir ünite seç:</p>
+      <div class="ulist" id="uList"></div>
+      <button class="uchg" id="uChg">Sınıfı değiştir</button>
+    </div>
+  </div>
+</div>
 <div id="toast" hidden></div>
 <div id="where" hidden>
   <div class="wcard">
@@ -290,7 +334,7 @@ const SERIES = {
 const DATA = {dk:['dk', 'dk-u2'], dk2:['dk2', 'dk2-u7'], dbt:['dbt', 'dbt-u2', 'dbt-u6', 'dbt-u7']};
 const BOOK_TITLE = {dk:'Ders Kitabı 1', dk2:'Ders Kitabı 2', dbt:'Dil Bilgisi ve Telaffuz'};
 const BOOK_COLOR = {dk:'#f07d1a', dk2:'#8e3fb0', dbt:'#3a9a8f'};
-const CLASSES = Object.values(SERIES).flatMap(x => x.classes);
+const allClasses = () => Object.values(SERIES).flatMap(x => x.classes);
 const seriesOf = c => Object.keys(SERIES).find(k => SERIES[k].classes.includes(c));
 const isDers = b => b in SERIES;
 const startOf = d => ({book:d, page:SERIES[d].start});
@@ -347,6 +391,9 @@ function spreadSteps(book = S.book, pages = viewPages()){
   });
   return out;
 }
+/* classes a teacher added on this device: {"8D":"dk2"} */
+const EXTRA = store.get('extra', {});
+for(const c in EXTRA){ const d = EXTRA[c]; if(SERIES[d] && !allClasses().includes(c)) SERIES[d].classes.push(c); }
 function toast(msg){ const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1700); }
 /* Where each class stopped: book, page, the step (activity) on that spread, whether that activity
    was still open, and the way back to the ders kitabı. Activities are saved by their fixed id, so
@@ -834,18 +881,48 @@ function openPicker(){
     sec.innerHTML = `<h3><i style="background:${SERIES[d].color}"></i>${SERIES[d].name}</h3><div class="grid"></div>`;
     SERIES[d].classes.forEach(c => { const p = pos[c], b = document.createElement('button');
       b.innerHTML = `<b>${c}</b><small>${p ? `${bookName(p.book)} s.${p.page}` : 'Yeni başlıyor'}</small>`;
-      b.addEventListener('click', () => pickClass(c)); sec.lastChild.appendChild(b); });
+      b.addEventListener('click', () => pickClass(c));
+      if(EXTRA[c]){ const x = document.createElement('span'); x.className = 'del'; x.textContent = '×'; x.setAttribute('aria-label', c + ' sınıfını sil');
+        x.addEventListener('click', ev => { ev.stopPropagation();
+          if(!x.classList.contains('sure')){ x.classList.add('sure'); x.textContent = 'Sil?'; setTimeout(() => { x.classList.remove('sure'); x.textContent = '×'; }, 3000); return; }
+          removeClass(c); });
+        b.appendChild(x); }
+      sec.lastChild.appendChild(b); });
+    const add = document.createElement('button'); add.className = 'add'; add.innerHTML = '<b>+</b><small>Sınıf ekle</small>';
+    add.addEventListener('click', () => addForm(sec.lastChild, d, add)); sec.lastChild.appendChild(add);
     box.appendChild(sec);
   }
   $('#picker').hidden = false;
 }
+function addForm(grid, d, addBtn){
+  addBtn.hidden = true;
+  const f = document.createElement('form'); f.className = 'addf';
+  f.innerHTML = `<input maxlength="6" placeholder="8D" aria-label="Sınıf adı" autocomplete="off"><button>Ekle</button><button type="button" class="no">Vazgeç</button><small>Sınıf bu cihaza kaydedilir ve ${SERIES[d].name} ile açılır.</small>`;
+  grid.appendChild(f); const inp = f.querySelector('input'); inp.focus();
+  f.querySelector('.no').addEventListener('click', () => { f.remove(); addBtn.hidden = false; });
+  f.addEventListener('submit', e => { e.preventDefault();
+    const c = inp.value.toLocaleUpperCase('tr').replace(/[\s\-\/]+/g, '');
+    if(!/^[0-9A-ZÇĞİÖŞÜ]{1,6}$/.test(c)){ toast('Sınıf adını yaz (örnek: 8D)'); inp.focus(); return; }
+    if(allClasses().includes(c)){ toast(c + ' zaten var'); inp.focus(); return; }
+    EXTRA[c] = d; store.set('extra', EXTRA); SERIES[d].classes.push(c);
+    pickClass(c); });
+}
+function removeClass(c){
+  const d = EXTRA[c]; if(!d) return;
+  delete EXTRA[c]; store.set('extra', EXTRA);
+  SERIES[d].classes = SERIES[d].classes.filter(x => x !== c);
+  delete pos[c]; store.set('pos', pos);
+  if(S.cls === c){ S.cls = null; store.set('cls', null); $('#clsBtn').textContent = '?'; }
+  toast(c + ' silindi'); openPicker();
+}
 function pickClass(c){
+  const had = !!(pos[c] && pos[c].book);
   S.cls = c; store.set('cls', c); $('#clsBtn').textContent = c; $('#picker').hidden = true;
   S.back = []; S.revealed.clear(); S.ink = {};
   S.ders = seriesOf(c);
   const st0 = startOf(S.ders), own = (b, n) => (b === S.ders || b === 'dbt') && S.books[b] && pagesOf(b).includes(n);
   const p = pos[c] && own(pos[c].book, pos[c].page) ? pos[c] : st0;
-  if(p === st0){ go(st0.book, st0.page); showWhere(); return; }
+  if(p === st0){ go(st0.book, st0.page); openUnits(false); return; }
   S.restoring = true;
   S.back = (p.back || []).filter(b => own(b.book, b.page));
   go(p.book, p.page, S.back.length > 0);
@@ -856,7 +933,26 @@ function pickClass(c){
   }
   S.restoring = false;
   updNav();
-  showWhere();
+  openUnits(had);
+}
+/* the class's units: "Kaldığın yerden devam" (when there is a saved place) or start any unit */
+function openUnits(had){
+  const d = S.ders, B = S.books[d], p = pos[S.cls] || {};
+  const at = isDers(S.book) ? S.page : (p[d] || SERIES[d].start), cu = unitOf(d, at);
+  $('#uCls').textContent = S.cls;
+  $('#uCont').hidden = !had;
+  if(had) $('#uWhere').textContent = (cu ? cu.no + '. Ünite · ' : '') + bookName(S.book) + ' s.' + S.page;
+  $('#uLbl').textContent = had ? 'Ya da bir ünite seç:' : 'Hangi üniteden başlayalım?';
+  const L = $('#uList'); L.innerHTML = '';
+  (B.units || []).forEach(u => { const b = document.createElement('button');
+    b.className = 'ubtn' + (had && u === cu ? ' cur' : '');
+    b.innerHTML = `<img src="img/${d}/t/${String(u.from).padStart(3, '0')}.jpg" alt=""><div><b>${u.no}. Ünite</b><span>${u.title}</span><small>s.${u.from}–${u.to}</small></div>`;
+    b.addEventListener('click', () => startUnit(u)); L.appendChild(b); });
+  $('#units').hidden = false;
+}
+function startUnit(u){
+  $('#units').hidden = true;
+  S.back = []; S.revealed.clear(); go(S.ders, u.from); updNav(); savePos(); showWhere();
 }
 
 /* ---------- contents: jump straight to any page ---------- */
@@ -928,6 +1024,8 @@ $('#fsBtn').addEventListener('click', () => {
   catch(e){ toast('Tam ekran bu cihazda açılamadı'); }
 });
 $('#clsBtn').addEventListener('click', openPicker);
+$('#uCont').addEventListener('click', () => { $('#units').hidden = true; showWhere(); });
+$('#uChg').addEventListener('click', () => { $('#units').hidden = true; openPicker(); });
 $('#whereBtn').addEventListener('click', showWhere);
 $('#tocBtn').addEventListener('click', openToc);
 $('#tocClose').addEventListener('click', () => $('#toc').hidden = true);
@@ -939,6 +1037,7 @@ $('#end').addEventListener('click', e => { if(e.target.id === 'end') $('#end').h
 $('#where').addEventListener('click', () => $('#where').hidden = true);
 addEventListener('keydown', e => {
   if(!$('#picker').hidden) return;
+  if(!$('#units').hidden){ if(['ArrowRight','PageDown','Enter',' ','Escape'].includes(e.key)){ e.preventDefault(); ($('#uCont').hidden ? $('#uList button') : $('#uCont')).click(); } return; }
   if(!$('#end').hidden && endNext && (e.key === 'ArrowRight' || e.key === 'PageDown')){ e.preventDefault(); $('#eNext').click(); return; }
   if(!$('#toc').hidden || !$('#end').hidden){ if(e.key === 'Escape'){ $('#toc').hidden = true; $('#end').hidden = true; } return; }
   if(!$('#where').hidden){ if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){ e.preventDefault(); $('#where').hidden = true; } return; }
@@ -965,7 +1064,7 @@ Promise.all(Object.entries(DATA).map(([id, files]) => Promise.all(files.map(getJ
     P.activities.forEach(A => groupsOf(A).forEach(G => S.revealed.add(G.id))); (S.books[S.book].foreign[n] || []).forEach(([A]) => groupsOf(A).forEach(G => S.revealed.add(G.id))); });
     syncAll(); fit(document); return; }
   const c = store.get('cls', null);
-  if(c && CLASSES.includes(c) && S.books[seriesOf(c)]) pickClass(c); else { S.ders = 'dk'; go('dk', SERIES.dk.start); openPicker(); }
+  if(c && allClasses().includes(c) && S.books[seriesOf(c)]) pickClass(c); else { S.ders = 'dk'; go('dk', SERIES.dk.start); openPicker(); }
 }).catch(() => { $('#loading').textContent = 'Kitap yüklenemedi. Sayfayı yenileyin.'; });
 })();
 </script>
