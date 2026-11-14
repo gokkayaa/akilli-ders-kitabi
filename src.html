@@ -266,7 +266,7 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
     <div class="wtx">
       <p class="whi">Aferin <b id="eCls">7A</b>!</p>
       <p class="wgo" id="eTx">1. Ünite bitti.</p>
-      <div class="ebtns"><button class="go" id="eToc">İçindekiler</button><button id="eStay">Kitaba dön</button></div>
+      <div class="ebtns"><button class="go" id="eNext" hidden>Sonraki ünite</button><button id="eToc">İçindekiler</button><button id="eStay">Kitaba dön</button></div>
     </div>
   </div>
 </div>
@@ -278,7 +278,7 @@ const SERIES = {
   dk:  {name:'Ders Kitabı 1', color:'#f07d1a', classes:['7A','7B','7C','7D'], start:16},
   dk2: {name:'Ders Kitabı 2', color:'#8e3fb0', classes:['7E','7F','8A','8B','8C'], start:7}
 };
-const DATA = {dk:['dk'], dk2:['dk2'], dbt:['dbt', 'dbt-u6']};
+const DATA = {dk:['dk', 'dk-u2'], dk2:['dk2', 'dk2-u7'], dbt:['dbt', 'dbt-u2', 'dbt-u6', 'dbt-u7']};
 const BOOK_TITLE = {dk:'Ders Kitabı 1', dk2:'Ders Kitabı 2', dbt:'Dil Bilgisi ve Telaffuz'};
 const BOOK_COLOR = {dk:'#f07d1a', dk2:'#8e3fb0', dbt:'#3a9a8f'};
 const CLASSES = Object.values(SERIES).flatMap(x => x.classes);
@@ -313,12 +313,7 @@ const pagesOf = b => {
   return all.filter(n => { const u = unitOf(b, n); return u && nos.includes(u.no); });
 };
 const bookName = b => isDers(b) ? 'Ders kitabı' : 'Telaffuz';
-function viewPages(){
-  const list = pagesOf(S.book), p = S.page;
-  if(!S.two) return [p];
-  const left = p % 2 === 0 ? p : p - 1;
-  return [left, left + 1].filter(n => list.includes(n));
-}
+function viewPages(){ return spreadOf(S.book, S.page); }
 /* answer groups of an activity, in order: items sharing "g" open together */
 function groupsOf(A, items = A.items){
   const gs = [], idx = {};
@@ -329,8 +324,8 @@ function groupsOf(A, items = A.items){
 function spreadOf(book, page){
   const list = pagesOf(book);
   if(!S.two) return [page];
-  const left = page % 2 === 0 ? page : page - 1;
-  return [left, left + 1].filter(n => list.includes(n));
+  const left = page % 2 === 0 ? page : page - 1, u = unitOf(book, page);
+  return [left, left + 1].filter(n => list.includes(n) && unitOf(book, n) === u);
 }
 function spreadSteps(book = S.book, pages = viewPages()){
   const out = [];
@@ -542,7 +537,8 @@ function next(){
     return;
   }
   const list = pagesOf(S.book), vp = viewPages(), t = list.find(p => p > vp[vp.length-1]);
-  if(t != null) go(S.book, t); else if(isDers(S.book)) showEnd();
+  if(t != null && isDers(S.book) && unitOf(S.book, t) !== unitOf(S.book, vp[vp.length-1])) showEnd(t);
+  else if(t != null) go(S.book, t); else if(isDers(S.book)) showEnd();
 }
 function prev(){
   if(S.zoom){
@@ -885,9 +881,13 @@ function drawToc(){
   }
 }
 /* ---------- end of the unit ---------- */
-function showEnd(){
-  const u = unitOf(S.book, S.page);
+let endNext = null;
+function showEnd(nextPage){
+  const u = unitOf(S.book, S.page), nu = nextPage != null ? unitOf(S.book, nextPage) : null;
+  endNext = nu ? {book:S.book, page:nextPage} : null;
   $('#eCls').textContent = S.cls || ''; $('#eTx').textContent = u ? `${u.no}. Ünite bitti.` : 'Ünite bitti.';
+  $('#eNext').hidden = !nu; if(nu) $('#eNext').textContent = `${nu.no}. Ünite'ye geç`;
+  $('#eToc').classList.toggle('go', !nu);
   $('#end').hidden = false;
 }
 
@@ -924,11 +924,13 @@ $('#tocBtn').addEventListener('click', openToc);
 $('#tocClose').addEventListener('click', () => $('#toc').hidden = true);
 $('#toc').addEventListener('click', e => { if(e.target.id === 'toc') $('#toc').hidden = true; });
 $('#eToc').addEventListener('click', () => { $('#end').hidden = true; openToc(); });
+$('#eNext').addEventListener('click', () => { $('#end').hidden = true; if(endNext){ S.back = []; go(endNext.book, endNext.page); } });
 $('#eStay').addEventListener('click', () => $('#end').hidden = true);
 $('#end').addEventListener('click', e => { if(e.target.id === 'end') $('#end').hidden = true; });
 $('#where').addEventListener('click', () => $('#where').hidden = true);
 addEventListener('keydown', e => {
   if(!$('#picker').hidden) return;
+  if(!$('#end').hidden && endNext && (e.key === 'ArrowRight' || e.key === 'PageDown')){ e.preventDefault(); $('#eNext').click(); return; }
   if(!$('#toc').hidden || !$('#end').hidden){ if(e.key === 'Escape'){ $('#toc').hidden = true; $('#end').hidden = true; } return; }
   if(!$('#where').hidden){ if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){ e.preventDefault(); $('#where').hidden = true; } return; }
   if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){ e.preventDefault(); next(); }
@@ -949,8 +951,8 @@ Promise.all(Object.entries(DATA).map(([id, files]) => Promise.all(files.map(getJ
 }))).then(() => {
   if(!S.books.dk || !S.books.dbt) throw 0;
   /* review hook for checking answers: #rev=book:page opens that spread with every answer shown */
-  const rv = /^#rev=(\w+):(\d+)/.exec(location.hash);
-  if(rv){ S.ders = isDers(rv[1]) ? rv[1] : 'dk2'; go(rv[1], +rv[2]); viewPages().forEach(n => { const P = S.books[S.book].pages[n];
+  const rv = /^#rev=(\w+):(\d+)(?::(\w+))?/.exec(location.hash);
+  if(rv){ S.ders = isDers(rv[1]) ? rv[1] : (rv[3] || 'dk2'); go(rv[1], +rv[2]); viewPages().forEach(n => { const P = S.books[S.book].pages[n];
     P.activities.forEach(A => groupsOf(A).forEach(G => S.revealed.add(G.id))); (S.books[S.book].foreign[n] || []).forEach(([A]) => groupsOf(A).forEach(G => S.revealed.add(G.id))); });
     syncAll(); fit(document); return; }
   const c = store.get('cls', null);

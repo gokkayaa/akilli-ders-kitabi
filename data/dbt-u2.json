@@ -1,0 +1,1471 @@
+{
+ "id": "dbt-u2",
+ "title": "Dil Bilgisi ve Telaffuz Kitabı",
+ "aspect": 0.6669,
+ "units": [
+  {
+   "no": 2,
+   "title": "Haydi Okula",
+   "from": 22,
+   "to": 38
+  }
+ ],
+ "pages": {
+  "22": {
+   "img": "img/dbt/022.jpg",
+   "activities": []
+  },
+  "23": {
+   "img": "img/dbt/023.jpg",
+   "activities": [
+    {
+     "id": "dbt23-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      24.0,
+      84,
+      52.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.017",
+       "rect": [
+        50.91,
+        24.38,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S017.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt23-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      77.0,
+      84,
+      16.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "24": {
+   "img": "img/dbt/024.jpg",
+   "activities": [
+    {
+     "id": "dbt24-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      7.0,
+      82,
+      26.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        55.68,
+        69.47,
+        15.66
+       ],
+       "text": "Bu Esma",
+       "id": "dbt24-3-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.77,
+        89.6,
+        15.66
+       ],
+       "text": "Bu defter",
+       "id": "dbt24-3-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.68,
+        69.47,
+        20.59
+       ],
+       "text": "Bu Emre",
+       "id": "dbt24-3-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.77,
+        89.6,
+        20.59
+       ],
+       "text": "Bu kalem",
+       "id": "dbt24-3-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.68,
+        69.47,
+        25.53
+       ],
+       "text": "Bu Zeynep",
+       "id": "dbt24-3-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.77,
+        89.6,
+        25.53
+       ],
+       "text": "Bu makas",
+       "id": "dbt24-3-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.68,
+        69.47,
+        30.46
+       ],
+       "text": "Bu Ali",
+       "id": "dbt24-3-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.77,
+        89.6,
+        30.46
+       ],
+       "text": "Bu çanta",
+       "id": "dbt24-3-8"
+      }
+     ]
+    },
+    {
+     "id": "dbt24-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      38.5,
+      82,
+      19.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.018",
+       "rect": [
+        34.96,
+        39.15,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S018.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt24-5",
+     "label": "5. etkinlik",
+     "rect": [
+      10,
+      58.5,
+      82,
+      30.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        35.37,
+        41.54,
+        74.24
+       ],
+       "text": "Şu",
+       "id": "dbt24-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.59,
+        71.72,
+        74.24
+       ],
+       "text": "O",
+       "id": "dbt24-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.29,
+        21.45,
+        87.81
+       ],
+       "text": "Bu",
+       "id": "dbt24-5-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.32,
+        39.3,
+        87.81
+       ],
+       "text": "Şu",
+       "id": "dbt24-5-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        64.93,
+        71.06,
+        87.81
+       ],
+       "text": "O",
+       "id": "dbt24-5-5"
+      }
+     ]
+    }
+   ]
+  },
+  "25": {
+   "img": "img/dbt/025.jpg",
+   "activities": [
+    {
+     "id": "dbt25-6",
+     "label": "6. etkinlik",
+     "rect": [
+      8,
+      7.0,
+      84,
+      26.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.019",
+       "rect": [
+        54.15,
+        7.36,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S019.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt25-7",
+     "label": "7. etkinlik",
+     "rect": [
+      8,
+      34.0,
+      84,
+      58.0
+     ],
+     "items": [
+      {
+       "type": "ellipse",
+       "rect": [
+        69.0,
+        46.9,
+        17.2,
+        2.6
+       ],
+       "id": "dbt25-7-1"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        69.0,
+        52.1,
+        17.2,
+        2.6
+       ],
+       "id": "dbt25-7-2"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        50.1,
+        57.2,
+        17.2,
+        2.6
+       ],
+       "id": "dbt25-7-3"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        69.0,
+        62.5,
+        17.2,
+        2.6
+       ],
+       "id": "dbt25-7-4"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        50.1,
+        67.6,
+        17.2,
+        2.6
+       ],
+       "id": "dbt25-7-5"
+      }
+     ]
+    }
+   ]
+  },
+  "26": {
+   "img": "img/dbt/026.jpg",
+   "activities": [
+    {
+     "id": "dbt26-1",
+     "label": "1. etkinlik",
+     "rect": [
+      10,
+      19.5,
+      82,
+      53.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.020",
+       "rect": [
+        53.46,
+        19.31,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S020.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt26-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      73.5,
+      82,
+      20.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "27": {
+   "img": "img/dbt/027.jpg",
+   "activities": [
+    {
+     "id": "dbt27-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      16.0,
+      84,
+      40.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.021",
+       "rect": [
+        32.66,
+        16.78,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S021.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt27-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      58.0,
+      84,
+      31.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        70.97,
+        82.11,
+        64.95
+       ],
+       "text": "üç cetvel",
+       "id": "dbt27-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        70.7,
+        82.38,
+        70.77
+       ],
+       "text": "cetveller",
+       "id": "dbt27-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        30.53,
+        41.67,
+        80.46
+       ],
+       "text": "iki sıra",
+       "id": "dbt27-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        30.26,
+        41.94,
+        86.28
+       ],
+       "text": "sıralar",
+       "id": "dbt27-4-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        70.97,
+        82.11,
+        80.46
+       ],
+       "text": "iki kalemtıraş",
+       "id": "dbt27-4-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        70.7,
+        82.38,
+        86.28
+       ],
+       "text": "kalemtıraşlar",
+       "id": "dbt27-4-6"
+      }
+     ]
+    }
+   ]
+  },
+  "28": {
+   "img": "img/dbt/028.jpg",
+   "activities": [
+    {
+     "id": "dbt28-5",
+     "label": "5. etkinlik",
+     "rect": [
+      10,
+      16.0,
+      82,
+      16.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.022",
+       "rect": [
+        35.45,
+        16.53,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S022.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt28-6",
+     "label": "6. etkinlik",
+     "rect": [
+      10,
+      33.0,
+      82,
+      60.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        14.41,
+        33.52,
+        63.17
+       ],
+       "text": "Sıra burada.",
+       "id": "dbt28-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.67,
+        60.79,
+        63.17
+       ],
+       "text": "Sıra şurada.",
+       "id": "dbt28-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.55,
+        87.67,
+        63.17
+       ],
+       "text": "Sıra orada.",
+       "id": "dbt28-6-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.41,
+        33.52,
+        77.23
+       ],
+       "text": "Masa burada.",
+       "id": "dbt28-6-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.72,
+        60.84,
+        77.23
+       ],
+       "text": "Masa şurada.",
+       "id": "dbt28-6-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.55,
+        87.67,
+        77.23
+       ],
+       "text": "Masa orada.",
+       "id": "dbt28-6-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.41,
+        33.52,
+        91.69
+       ],
+       "text": "Askı burada.",
+       "id": "dbt28-6-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        41.72,
+        60.84,
+        91.69
+       ],
+       "text": "Askı şurada.",
+       "id": "dbt28-6-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.55,
+        87.67,
+        91.69
+       ],
+       "text": "Askı orada.",
+       "id": "dbt28-6-9"
+      }
+     ]
+    }
+   ]
+  },
+  "29": {
+   "img": "img/dbt/029.jpg",
+   "activities": [
+    {
+     "id": "dbt29-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      11.5,
+      84,
+      21.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.023",
+       "rect": [
+        32.69,
+        13.42,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S023.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt29-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      34.0,
+      84,
+      22.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.024",
+       "rect": [
+        37.64,
+        35.91,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S024.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt29-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      57.5,
+      84,
+      35.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.025",
+       "rect": [
+        53.98,
+        59.3,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S025.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "30": {
+   "img": "img/dbt/030.jpg",
+   "activities": [
+    {
+     "id": "dbt30-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      6.0,
+      82,
+      59.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.026",
+       "rect": [
+        54.09,
+        7.39,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S026.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt30-5",
+     "label": "5. etkinlik",
+     "rect": [
+      10,
+      66.5,
+      82,
+      22.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        40.13,
+        62.95,
+        83.93
+       ],
+       "text": "Kitap",
+       "id": "dbt30-5-1"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.027",
+       "rect": [
+        63.65,
+        67.72,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S027.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "31": {
+   "img": "img/dbt/031.jpg",
+   "activities": [
+    {
+     "id": "dbt31-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      23.5,
+      84,
+      45.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.028",
+       "rect": [
+        51.08,
+        24.19,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S028.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt31-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      69.5,
+      84,
+      22.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "32": {
+   "img": "img/dbt/032.jpg",
+   "activities": [
+    {
+     "id": "dbt32-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      16.0,
+      82,
+      16.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.029",
+       "rect": [
+        34.77,
+        17.22,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S029.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt32-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      32.0,
+      82,
+      14.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        14.23,
+        28.37,
+        45.33
+       ],
+       "text": "Burası sınıf.",
+       "id": "dbt32-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        36.3,
+        54.23,
+        45.33
+       ],
+       "text": "Şurası sınıf.",
+       "id": "dbt32-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        63.08,
+        87.62,
+        45.33
+       ],
+       "text": "Orası sınıf.",
+       "id": "dbt32-4-3"
+      }
+     ]
+    },
+    {
+     "id": "dbt32-5",
+     "label": "5. etkinlik",
+     "rect": [
+      8,
+      54.0,
+      85,
+      38.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.030",
+       "rect": [
+        34.77,
+        54.83,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S030.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "33": {
+   "img": "img/dbt/033.jpg",
+   "activities": [
+    {
+     "id": "dbt33-6",
+     "label": "6. etkinlik",
+     "rect": [
+      8,
+      7.0,
+      84,
+      34.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        55.11,
+        85.9,
+        32.81
+       ],
+       "text": "Kantin birinci katta.",
+       "id": "dbt33-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.85,
+        45.64,
+        36.57
+       ],
+       "text": "Kütüphane ikinci katta.",
+       "id": "dbt33-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.11,
+        85.9,
+        36.57
+       ],
+       "text": "Sınıflar üçüncü katta.",
+       "id": "dbt33-6-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.85,
+        45.64,
+        40.16
+       ],
+       "text": "Spor salonu birinci katta.",
+       "id": "dbt33-6-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.11,
+        85.9,
+        40.16
+       ],
+       "text": "Tuvalet üçüncü katta.",
+       "id": "dbt33-6-5"
+      }
+     ]
+    },
+    {
+     "id": "dbt33-7",
+     "label": "7. etkinlik",
+     "rect": [
+      8,
+      43.5,
+      84,
+      48.5
+     ],
+     "items": [
+      {
+       "type": "text",
+       "rect": [
+        47.9,
+        73.5,
+        3.0,
+        2.2
+       ],
+       "text": "2.",
+       "id": "dbt33-7-1"
+      },
+      {
+       "type": "text",
+       "rect": [
+        30.9,
+        71.4,
+        3.0,
+        2.2
+       ],
+       "text": "3.",
+       "id": "dbt33-7-2"
+      },
+      {
+       "type": "text",
+       "rect": [
+        23.4,
+        66.5,
+        3.0,
+        2.2
+       ],
+       "text": "4.",
+       "id": "dbt33-7-3"
+      },
+      {
+       "type": "text",
+       "rect": [
+        35.5,
+        61.5,
+        3.0,
+        2.2
+       ],
+       "text": "5.",
+       "id": "dbt33-7-4"
+      },
+      {
+       "type": "text",
+       "rect": [
+        44.9,
+        60.3,
+        3.0,
+        2.2
+       ],
+       "text": "6.",
+       "id": "dbt33-7-5"
+      }
+     ]
+    }
+   ]
+  },
+  "34": {
+   "img": "img/dbt/034.jpg",
+   "activities": [
+    {
+     "id": "dbt34-1",
+     "label": "1. etkinlik",
+     "rect": [
+      10,
+      18.5,
+      82,
+      32.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.031",
+       "rect": [
+        53.92,
+        18.71,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S031.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt34-2",
+     "label": "2. etkinlik",
+     "rect": [
+      10,
+      51.0,
+      82,
+      42.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "35": {
+   "img": "img/dbt/035.jpg",
+   "activities": [
+    {
+     "id": "dbt35-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      15.0,
+      84,
+      18.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt35-4",
+     "label": "4. etkinlik",
+     "rect": [
+      8,
+      33.0,
+      84,
+      32.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        48.81,
+        84.93,
+        57.9
+       ],
+       "text": "Evet, kantin birinci katta.",
+       "id": "dbt35-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        48.81,
+        84.93,
+        61.08
+       ],
+       "text": "Hayır, ikinci katta sınıf yok.",
+       "id": "dbt35-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        48.81,
+        84.93,
+        64.25
+       ],
+       "text": "Üçüncü katta sınıflar ve tuvalet var.",
+       "id": "dbt35-4-3"
+      }
+     ]
+    },
+    {
+     "id": "dbt35-5",
+     "label": "5. etkinlik",
+     "rect": [
+      8,
+      65.5,
+      84,
+      28.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        51.85,
+        85.33,
+        85.58
+       ],
+       "text": "Okulda sınıflar var mı?",
+       "g": "a",
+       "id": "dbt35-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.89,
+        85.37,
+        87.69
+       ],
+       "text": "Evet, sınıflar ikinci katta.",
+       "g": "a",
+       "id": "dbt35-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.76,
+        45.24,
+        90.33
+       ],
+       "text": "Kantin kaçıncı katta?",
+       "g": "b",
+       "id": "dbt35-5-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.81,
+        45.29,
+        92.45
+       ],
+       "text": "Kantin birinci katta.",
+       "g": "b",
+       "id": "dbt35-5-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.03,
+        85.51,
+        90.33
+       ],
+       "text": "Tuvalet kaçıncı katta?",
+       "g": "c",
+       "id": "dbt35-5-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.07,
+        85.55,
+        92.45
+       ],
+       "text": "Tuvalet birinci katta.",
+       "g": "c",
+       "id": "dbt35-5-6"
+      }
+     ]
+    }
+   ]
+  },
+  "36": {
+   "img": "img/dbt/036.jpg",
+   "activities": [
+    {
+     "id": "dbt36-6",
+     "label": "6. etkinlik",
+     "rect": [
+      10,
+      15.0,
+      82,
+      18.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.032",
+       "rect": [
+        54.2,
+        15.08,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S032.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt36-7",
+     "label": "7. etkinlik",
+     "rect": [
+      10,
+      34.5,
+      82,
+      14.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.033",
+       "rect": [
+        35.52,
+        34.84,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S033.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt36-8",
+     "label": "8. etkinlik",
+     "rect": [
+      10,
+      49.5,
+      82,
+      43.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        42.78,
+        56.92,
+        70.53
+       ],
+       "text": "Pencereyi",
+       "id": "dbt36-8-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.75,
+        84.54,
+        70.53
+       ],
+       "text": "Tahtayı",
+       "id": "dbt36-8-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        28.85,
+        42.73,
+        90.51
+       ],
+       "text": "Çantayı",
+       "id": "dbt36-8-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.98,
+        72.29,
+        90.51
+       ],
+       "text": "Topu",
+       "id": "dbt36-8-4"
+      }
+     ]
+    }
+   ]
+  },
+  "37": {
+   "img": "img/dbt/037.jpg",
+   "activities": [
+    {
+     "id": "dbt37-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      11.5,
+      84,
+      21.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.034",
+       "rect": [
+        32.33,
+        13.32,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S034.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt37-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      34.0,
+      84,
+      22.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.035",
+       "rect": [
+        37.49,
+        35.83,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S035.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt37-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      57.5,
+      84,
+      35.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.036",
+       "rect": [
+        53.36,
+        59.22,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S036.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "38": {
+   "img": "img/dbt/038.jpg",
+   "activities": [
+    {
+     "id": "dbt38-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      6.0,
+      82,
+      61.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.037",
+       "rect": [
+        53.59,
+        7.4,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S037.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt38-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      10,
+      67.5,
+      41,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        19.69,
+        42.42,
+        87.16
+       ],
+       "text": "Birinci olur.",
+       "id": "dbt38-5a-1"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.038",
+       "rect": [
+        37.21,
+        70.93,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S038.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt38-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      51,
+      67.5,
+      41,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        54.9,
+        87.8,
+        80.1
+       ],
+       "text": "Siler, temizler, izleri yok eder,",
+       "g": "b",
+       "id": "dbt38-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.9,
+        87.8,
+        81.9
+       ],
+       "text": "Kalemin yanında hep bekler!",
+       "g": "b",
+       "id": "dbt38-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.9,
+        87.8,
+        83.8
+       ],
+       "text": "Bil bakalım ne?",
+       "g": "b",
+       "id": "dbt38-5b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.89,
+        87.75,
+        85.63
+       ],
+       "text": "– Silgi.",
+       "g": "b",
+       "id": "dbt38-5b-4"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

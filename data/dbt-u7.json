@@ -1,0 +1,1205 @@
+{
+ "id": "dbt-u7",
+ "title": "Dil Bilgisi ve Telaffuz Kitabı",
+ "aspect": 0.6669,
+ "units": [
+  {
+   "no": 7,
+   "title": "Hava Nasıl?",
+   "from": 108,
+   "to": 120
+  }
+ ],
+ "pages": {
+  "108": {
+   "img": "img/dbt/108.jpg",
+   "activities": []
+  },
+  "109": {
+   "img": "img/dbt/109.jpg",
+   "activities": [
+    {
+     "id": "dbt109-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      22.0,
+      84,
+      45.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.097",
+       "rect": [
+        50.49,
+        22.13,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S097.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt109-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      68.0,
+      84,
+      21.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        53.44,
+        84.76,
+        86.46
+       ],
+       "text": "Ben dün bisiklet sürdüm.",
+       "id": "dbt109-2-1"
+      }
+     ]
+    }
+   ]
+  },
+  "110": {
+   "img": "img/dbt/110.jpg",
+   "activities": [
+    {
+     "id": "dbt110-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      12.0,
+      80,
+      20.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt110-4a",
+     "label": "4. etkinlik (a)",
+     "rect": [
+      10,
+      34.0,
+      80,
+      27.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        17.8,
+        33.7,
+        51.38
+       ],
+       "text": "yaşadım",
+       "id": "dbt110-4a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.04,
+        68.94,
+        51.38
+       ],
+       "text": "uçurdum",
+       "id": "dbt110-4a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.29,
+        31.19,
+        53.73
+       ],
+       "text": "yüzdüm",
+       "id": "dbt110-4a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        49.96,
+        65.86,
+        53.73
+       ],
+       "text": "fotoğraf çektim",
+       "id": "dbt110-4a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.29,
+        31.19,
+        56.08
+       ],
+       "text": "yaptım",
+       "id": "dbt110-4a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        56.39,
+        72.29,
+        56.08
+       ],
+       "text": "sevdim",
+       "id": "dbt110-4a-6"
+      }
+     ]
+    },
+    {
+     "id": "dbt110-4b",
+     "label": "4. etkinlik (b)",
+     "rect": [
+      10,
+      62.0,
+      80,
+      28.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        55.77,
+        87.09,
+        70.59
+       ],
+       "text": "Mahmut, ilkbaharda uçurtma uçurdu.",
+       "id": "dbt110-4b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.33,
+        46.65,
+        78.76
+       ],
+       "text": "Mahmut, yazın denizde yüzdü.",
+       "id": "dbt110-4b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.77,
+        87.09,
+        78.76
+       ],
+       "text": "Sonbaharda bol bol fotoğraf çekti.",
+       "id": "dbt110-4b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.24,
+        46.56,
+        87.22
+       ],
+       "text": "Mahmut, kışın kayak yaptı.",
+       "id": "dbt110-4b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.77,
+        87.09,
+        87.22
+       ],
+       "text": "En çok Türk yemeklerini sevdi.",
+       "id": "dbt110-4b-5"
+      }
+     ]
+    }
+   ]
+  },
+  "111": {
+   "img": "img/dbt/111.jpg",
+   "activities": [
+    {
+     "id": "dbt111-5",
+     "label": "5. etkinlik",
+     "rect": [
+      8,
+      7.0,
+      84,
+      23.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        13.13
+       ],
+       "text": "İlkbaharda piknik yaptım.",
+       "id": "dbt111-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        18.01
+       ],
+       "text": "Yazın denizde yüzdüm.",
+       "id": "dbt111-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        22.94
+       ],
+       "text": "Sonbaharda reçel yaptım.",
+       "id": "dbt111-5-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        51.32,
+        84.63,
+        27.88
+       ],
+       "text": "Kışın kayak yaptım.",
+       "id": "dbt111-5-4"
+      }
+     ]
+    },
+    {
+     "id": "dbt111-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      39.0,
+      84,
+      36.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.098",
+       "rect": [
+        50.85,
+        39.49,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S098.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt111-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      76.0,
+      84,
+      17.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "112": {
+   "img": "img/dbt/112.jpg",
+   "activities": [
+    {
+     "id": "dbt112-3a",
+     "label": "3. etkinlik (a)",
+     "rect": [
+      10,
+      12.0,
+      80,
+      20.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt112-3b",
+     "label": "3. etkinlik (b)",
+     "rect": [
+      10,
+      36.0,
+      80,
+      32.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        33.39,
+        49.3,
+        61.13
+       ],
+       "text": "yağmurluydu.",
+       "id": "dbt112-3b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.57,
+        88.68,
+        61.13
+       ],
+       "text": "karlı ve soğuktu.",
+       "id": "dbt112-3b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        31.67,
+        48.15,
+        66.01
+       ],
+       "text": "güneşliydi.",
+       "id": "dbt112-3b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.17,
+        87.8,
+        66.01
+       ],
+       "text": "bulutluydu.",
+       "id": "dbt112-3b-4"
+      }
+     ]
+    },
+    {
+     "id": "dbt112-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      69.0,
+      80,
+      22.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        14.1,
+        48.46,
+        79.58
+       ],
+       "text": "Benim şehrimde dün hava yağmurluydu.",
+       "id": "dbt112-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.19,
+        88.55,
+        79.58
+       ],
+       "text": "Benim şehrimde bugün hava güneşli.",
+       "id": "dbt112-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.1,
+        48.46,
+        89.51
+       ],
+       "text": "Ben dün evde televizyon izledim.",
+       "id": "dbt112-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.19,
+        88.55,
+        89.51
+       ],
+       "text": "Ben şimdi voleybol oynuyorum.",
+       "id": "dbt112-4-4"
+      }
+     ]
+    }
+   ]
+  },
+  "113": {
+   "img": "img/dbt/113.jpg",
+   "activities": [
+    {
+     "id": "dbt113-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      13.0,
+      84,
+      17.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.099",
+       "rect": [
+        32.31,
+        13.68,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S099.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt113-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      31.0,
+      84,
+      36.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.100",
+       "rect": [
+        37.26,
+        30.88,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S100.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt113-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      69.5,
+      84,
+      15.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.101",
+       "rect": [
+        53.27,
+        70.18,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S101.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "114": {
+   "img": "img/dbt/114.jpg",
+   "activities": [
+    {
+     "id": "dbt114-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      7.0,
+      80,
+      46.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.102",
+       "rect": [
+        52.94,
+        7.31,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S102.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt114-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      10,
+      55.0,
+      40,
+      22.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        19.82,
+        42.56,
+        74.65
+       ],
+       "text": "Mevsim.",
+       "id": "dbt114-5a-1"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.103",
+       "rect": [
+        23.74,
+        57.48,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S103.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt114-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      52,
+      55.0,
+      38,
+      22.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        66.4
+       ],
+       "text": "Ne kar yağdırır, ne çiçek açtırır,",
+       "g": "b",
+       "id": "dbt114-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        68.4
+       ],
+       "text": "O sadece yaprakları sarartır.",
+       "g": "b",
+       "id": "dbt114-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.71,
+        88.19,
+        70.48
+       ],
+       "text": "Bil bakalım ben neyim?",
+       "g": "b",
+       "id": "dbt114-5b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        72.7
+       ],
+       "text": "Sonbahar.",
+       "g": "c",
+       "id": "dbt114-5b-4"
+      }
+     ]
+    }
+   ]
+  },
+  "115": {
+   "img": "img/dbt/115.jpg",
+   "activities": [
+    {
+     "id": "dbt115-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      21.0,
+      84,
+      53.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.104",
+       "rect": [
+        50.46,
+        20.75,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S104.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt115-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      76.0,
+      84,
+      17.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        52.11,
+        86.12,
+        90.75
+       ],
+       "text": "Ben kırmızı bir mont almak isterim.",
+       "id": "dbt115-2-1"
+      }
+     ]
+    }
+   ]
+  },
+  "116": {
+   "img": "img/dbt/116.jpg",
+   "activities": [
+    {
+     "id": "dbt116-3",
+     "label": "3. etkinlik",
+     "rect": [
+      10,
+      12.0,
+      80,
+      47.5
+     ],
+     "items": []
+    },
+    {
+     "id": "dbt116-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      61.0,
+      80,
+      24.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        62.2,
+        82.29,
+        67.83
+       ],
+       "text": "kırmızı tişört",
+       "id": "dbt116-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        62.73,
+        81.85,
+        73.18
+       ],
+       "text": "beyaz pantolon",
+       "id": "dbt116-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        14.01,
+        33.66,
+        74.24
+       ],
+       "text": "mavi ayakkabı",
+       "id": "dbt116-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.33,
+        29.16,
+        84.11
+       ],
+       "text": "turuncu kitap",
+       "id": "dbt116-4-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        44.45,
+        58.24,
+        84.11
+       ],
+       "text": "renkli bina",
+       "id": "dbt116-4-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.57,
+        87.36,
+        84.11
+       ],
+       "text": "mavi masa",
+       "id": "dbt116-4-6"
+      }
+     ]
+    },
+    {
+     "id": "dbt116-5",
+     "label": "5. etkinlik",
+     "rect": [
+      10,
+      85.5,
+      80,
+      7.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "117": {
+   "img": "img/dbt/117.jpg",
+   "activities": [
+    {
+     "id": "dbt117-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      17.0,
+      84,
+      43.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.105",
+       "rect": [
+        50.62,
+        17.64,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S105.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt117-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      61.0,
+      84,
+      9.0
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        73.2,
+        65.2
+       ],
+       "s": 2.4,
+       "id": "dbt117-2-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        81.3,
+        68.0
+       ],
+       "s": 2.4,
+       "id": "dbt117-2-2"
+      }
+     ]
+    },
+    {
+     "id": "dbt117-3a",
+     "label": "3. etkinlik (a)",
+     "rect": [
+      8,
+      74.0,
+      84,
+      20.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "118": {
+   "img": "img/dbt/118.jpg",
+   "activities": [
+    {
+     "id": "dbt118-3a",
+     "label": "3. etkinlik (a)",
+     "rect": [
+      10,
+      7.0,
+      80,
+      19.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        36.87,
+        80.97,
+        22.06
+       ],
+       "text": "Dursun, İzo’dan daha yaşlı.",
+       "id": "dbt118-3a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        36.87,
+        80.97,
+        23.65
+       ],
+       "text": "Karagöz, İzo ve Dursun’dan daha yaşlı.",
+       "id": "dbt118-3a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        36.87,
+        80.97,
+        25.24
+       ],
+       "text": "En genç İzo.",
+       "id": "dbt118-3a-3"
+      }
+     ]
+    },
+    {
+     "id": "dbt118-3b",
+     "label": "3. etkinlik (b)",
+     "rect": [
+      10,
+      27.5,
+      80,
+      19.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        31.23,
+        69.47,
+        44.21
+       ],
+       "text": "Bence Karagöz hepsinden daha komik.",
+       "id": "dbt118-3b-1"
+      }
+     ]
+    },
+    {
+     "id": "dbt118-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      48.0,
+      80,
+      45.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        65.42
+       ],
+       "text": "Kış mevsiminden.",
+       "id": "dbt118-4-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        70.36
+       ],
+       "text": "Yaz mevsimi.",
+       "id": "dbt118-4-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        75.24
+       ],
+       "text": "Kış mevsiminden.",
+       "id": "dbt118-4-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        80.17
+       ],
+       "text": "Kış mevsimi.",
+       "id": "dbt118-4-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        85.05
+       ],
+       "text": "İlkbahar.",
+       "id": "dbt118-4-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.16,
+        88.06,
+        89.98
+       ],
+       "text": "İlkbaharı.",
+       "id": "dbt118-4-6"
+      }
+     ]
+    }
+   ]
+  },
+  "119": {
+   "img": "img/dbt/119.jpg",
+   "activities": [
+    {
+     "id": "dbt119-1",
+     "label": "1. etkinlik",
+     "rect": [
+      8,
+      13.0,
+      84,
+      20.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.106",
+       "rect": [
+        32.13,
+        13.56,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S106.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt119-2",
+     "label": "2. etkinlik",
+     "rect": [
+      8,
+      34.0,
+      84,
+      24.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.107",
+       "rect": [
+        37.44,
+        34.77,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S107.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt119-3",
+     "label": "3. etkinlik",
+     "rect": [
+      8,
+      60.0,
+      84,
+      20.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        62.03,
+        84.58,
+        74.35
+       ],
+       "text": "mavi.",
+       "id": "dbt119-3-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        48.79,
+        65.2,
+        77.94
+       ],
+       "text": "ilkbahar",
+       "id": "dbt119-3-2"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.108",
+       "rect": [
+        53.4,
+        60.77,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S108.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "120": {
+   "img": "img/dbt/120.jpg",
+   "activities": [
+    {
+     "id": "dbt120-4",
+     "label": "4. etkinlik",
+     "rect": [
+      10,
+      7.0,
+      80,
+      56.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.109",
+       "rect": [
+        53.04,
+        7.31,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S109.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt120-5a",
+     "label": "5. etkinlik (a)",
+     "rect": [
+      10,
+      68.0,
+      40,
+      22.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        19.82,
+        42.56,
+        86.22
+       ],
+       "text": "Eldiven.",
+       "id": "dbt120-5a-1"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.110",
+       "rect": [
+        36.95,
+        70.7,
+        10.16,
+        2.35
+       ],
+       "src": "audio/dbt/S110.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dbt120-5b",
+     "label": "5. etkinlik (b)",
+     "rect": [
+      52,
+      68.0,
+      38,
+      22.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        79.6
+       ],
+       "text": "Pantolonun kardeşi kısa,",
+       "g": "b",
+       "id": "dbt120-5b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        81.6
+       ],
+       "text": "Yazın giyilir, oh ne tasa!",
+       "g": "b",
+       "id": "dbt120-5b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.71,
+        88.19,
+        83.64
+       ],
+       "text": "Dizden yukarı, serin serin,",
+       "g": "b",
+       "id": "dbt120-5b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        85.6
+       ],
+       "text": "Bul bakalım, nedir benim?",
+       "g": "b",
+       "id": "dbt120-5b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.7,
+        88.2,
+        87.6
+       ],
+       "text": "Şort.",
+       "g": "c",
+       "id": "dbt120-5b-5"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

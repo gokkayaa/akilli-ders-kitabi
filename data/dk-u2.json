@@ -1,0 +1,3900 @@
+{
+ "id": "dk-u2",
+ "title": "Ders Kitabı 1",
+ "aspect": 0.7855,
+ "units": [
+  {
+   "no": 2,
+   "title": "Haydi Okula",
+   "from": 39,
+   "to": 64
+  }
+ ],
+ "pages": {
+  "39": {
+   "img": "img/dk/039.jpg",
+   "activities": [
+    {
+     "id": "dk39-h",
+     "label": "Üniteye Hazırlık",
+     "rect": [
+      8,
+      86.0,
+      84,
+      10.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "40": {
+   "img": "img/dk/040.jpg",
+   "activities": [
+    {
+     "id": "dk40-1",
+     "label": "1. etkinlik",
+     "rect": [
+      5,
+      16.5,
+      44,
+      16.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.024",
+       "rect": [
+        28.81,
+        17.14,
+        7.4,
+        2.01
+       ],
+       "src": "audio/dk/S024.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk40-2",
+     "label": "2. etkinlik",
+     "rect": [
+      49,
+      16.5,
+      47,
+      16.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.025",
+       "rect": [
+        77.17,
+        17.14,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S025.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk40-3",
+     "label": "3. etkinlik",
+     "rect": [
+      4,
+      32.5,
+      93,
+      18.0
+     ],
+     "items": [
+      {
+       "type": "ellipse",
+       "rect": [
+        52.7,
+        37.1,
+        12.8,
+        3.6
+       ],
+       "g": "y",
+       "id": "dk40-3-1"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        51.85,
+        41.5,
+        14.5,
+        3.6
+       ],
+       "g": "y",
+       "id": "dk40-3-2"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        83.9,
+        37.1,
+        12.8,
+        3.6
+       ],
+       "g": "p",
+       "id": "dk40-3-3"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        83.9,
+        41.5,
+        12.8,
+        3.6
+       ],
+       "g": "p",
+       "id": "dk40-3-4"
+      },
+      {
+       "type": "ellipse",
+       "rect": [
+        83.9,
+        45.8,
+        12.8,
+        3.6
+       ],
+       "g": "p",
+       "id": "dk40-3-5"
+      }
+     ]
+    },
+    {
+     "id": "dk40-4",
+     "label": "4. etkinlik",
+     "rect": [
+      4,
+      51.0,
+      93,
+      44.5
+     ],
+     "items": [
+      {
+       "type": "uline",
+       "from": [
+        68.1,
+        90.2
+       ],
+       "to": [
+        75.9,
+        90.2
+       ],
+       "id": "dk40-4-1"
+      },
+      {
+       "type": "uline",
+       "from": [
+        66.9,
+        93.4
+       ],
+       "to": [
+        70.9,
+        93.4
+       ],
+       "id": "dk40-4-2"
+      },
+      {
+       "type": "uline",
+       "from": [
+        72.0,
+        93.4
+       ],
+       "to": [
+        76.0,
+        93.4
+       ],
+       "id": "dk40-4-3"
+      },
+      {
+       "type": "uline",
+       "from": [
+        77.1,
+        93.3
+       ],
+       "to": [
+        81.1,
+        93.3
+       ],
+       "id": "dk40-4-4"
+      },
+      {
+       "type": "uline",
+       "from": [
+        22.2,
+        8.55
+       ],
+       "to": [
+        27.4,
+        8.55
+       ],
+       "page": 41,
+       "id": "dk40-4-5"
+      },
+      {
+       "type": "uline",
+       "from": [
+        20.8,
+        13.05
+       ],
+       "to": [
+        26.0,
+        13.05
+       ],
+       "page": 41,
+       "id": "dk40-4-6"
+      },
+      {
+       "type": "uline",
+       "from": [
+        26.7,
+        13.2
+       ],
+       "to": [
+        31.9,
+        13.2
+       ],
+       "page": 41,
+       "id": "dk40-4-7"
+      },
+      {
+       "type": "uline",
+       "from": [
+        33.8,
+        13.15
+       ],
+       "to": [
+        39.0,
+        13.15
+       ],
+       "page": 41,
+       "id": "dk40-4-8"
+      },
+      {
+       "type": "uline",
+       "from": [
+        71.7,
+        7.15
+       ],
+       "to": [
+        76.9,
+        7.15
+       ],
+       "page": 41,
+       "id": "dk40-4-9"
+      },
+      {
+       "type": "uline",
+       "from": [
+        19.1,
+        41.05
+       ],
+       "to": [
+        30.3,
+        41.05
+       ],
+       "page": 41,
+       "id": "dk40-4-10"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.026",
+       "rect": [
+        65.46,
+        51.32,
+        7.4,
+        2.01
+       ],
+       "src": "audio/dk/S026.mp3"
+      }
+     ],
+     "tiles": [
+      [
+       4,
+       51.0,
+       93,
+       44.5
+      ],
+      {
+       "r": [
+        6,
+        2.5,
+        88,
+        58.0
+       ],
+       "page": 41
+      }
+     ],
+     "cols": 2,
+     "nums": false
+    }
+   ]
+  },
+  "41": {
+   "img": "img/dk/041.jpg",
+   "activities": [
+    {
+     "id": "dk41-4",
+     "label": "4. etkinlik",
+     "rect": [
+      6,
+      2.5,
+      88,
+      58.0
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 40,
+      "act": "dk40-4"
+     }
+    },
+    {
+     "id": "dk41-5",
+     "label": "5. etkinlik",
+     "rect": [
+      5,
+      60.0,
+      90,
+      34.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.027",
+       "rect": [
+        49.88,
+        61.3,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S027.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "42": {
+   "img": "img/dk/042.jpg",
+   "activities": [
+    {
+     "id": "dk42-6",
+     "label": "6. etkinlik",
+     "rect": [
+      5,
+      2.5,
+      90,
+      52.0
+     ],
+     "items": [
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "K",
+       "g": "kalemtıraş",
+       "id": "dk42-6-1"
+      },
+      {
+       "type": "text",
+       "rect": [
+        34.0,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "A",
+       "g": "kalemtıraş",
+       "id": "dk42-6-2"
+      },
+      {
+       "type": "text",
+       "rect": [
+        38.2,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "L",
+       "g": "kalemtıraş",
+       "id": "dk42-6-3"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "kalemtıraş",
+       "id": "dk42-6-4"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "M",
+       "g": "kalemtıraş",
+       "id": "dk42-6-5"
+      },
+      {
+       "type": "text",
+       "rect": [
+        50.7,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "kalemtıraş",
+       "id": "dk42-6-6"
+      },
+      {
+       "type": "text",
+       "rect": [
+        54.9,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "I",
+       "g": "kalemtıraş",
+       "id": "dk42-6-7"
+      },
+      {
+       "type": "text",
+       "rect": [
+        59.1,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "R",
+       "g": "kalemtıraş",
+       "id": "dk42-6-8"
+      },
+      {
+       "type": "text",
+       "rect": [
+        67.9,
+        13.4,
+        3.0,
+        3.0
+       ],
+       "text": "Ş",
+       "g": "kalemtıraş",
+       "id": "dk42-6-9"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        10.05,
+        3.0,
+        3.0
+       ],
+       "text": "D",
+       "g": "defter",
+       "id": "dk42-6-10"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        16.71,
+        3.0,
+        3.0
+       ],
+       "text": "F",
+       "g": "defter",
+       "id": "dk42-6-11"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        20.04,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "defter",
+       "id": "dk42-6-12"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        23.37,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "defter",
+       "id": "dk42-6-13"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        26.7,
+        3.0,
+        3.0
+       ],
+       "text": "R",
+       "g": "defter",
+       "id": "dk42-6-14"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        16.73,
+        3.0,
+        3.0
+       ],
+       "text": "A",
+       "g": "kalemlik",
+       "id": "dk42-6-15"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        20.06,
+        3.0,
+        3.0
+       ],
+       "text": "L",
+       "g": "kalemlik",
+       "id": "dk42-6-16"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        23.39,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "kalemlik",
+       "id": "dk42-6-17"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        26.72,
+        3.0,
+        3.0
+       ],
+       "text": "M",
+       "g": "kalemlik",
+       "id": "dk42-6-18"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        30.05,
+        3.0,
+        3.0
+       ],
+       "text": "L",
+       "g": "kalemlik",
+       "id": "dk42-6-19"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        33.38,
+        3.0,
+        3.0
+       ],
+       "text": "İ",
+       "g": "kalemlik",
+       "id": "dk42-6-20"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        36.71,
+        3.0,
+        3.0
+       ],
+       "text": "K",
+       "g": "kalemlik",
+       "id": "dk42-6-21"
+      },
+      {
+       "type": "text",
+       "rect": [
+        21.2,
+        30.0,
+        3.0,
+        3.0
+       ],
+       "text": "S",
+       "g": "silgi",
+       "id": "dk42-6-22"
+      },
+      {
+       "type": "text",
+       "rect": [
+        25.4,
+        30.0,
+        3.0,
+        3.0
+       ],
+       "text": "İ",
+       "g": "silgi",
+       "id": "dk42-6-23"
+      },
+      {
+       "type": "text",
+       "rect": [
+        34.0,
+        30.0,
+        3.0,
+        3.0
+       ],
+       "text": "G",
+       "g": "silgi",
+       "id": "dk42-6-24"
+      },
+      {
+       "type": "text",
+       "rect": [
+        38.2,
+        30.0,
+        3.0,
+        3.0
+       ],
+       "text": "İ",
+       "g": "silgi",
+       "id": "dk42-6-25"
+      },
+      {
+       "type": "text",
+       "rect": [
+        34.0,
+        36.7,
+        3.0,
+        3.0
+       ],
+       "text": "İ",
+       "g": "kitap",
+       "id": "dk42-6-26"
+      },
+      {
+       "type": "text",
+       "rect": [
+        38.2,
+        36.7,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "kitap",
+       "id": "dk42-6-27"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        36.7,
+        3.0,
+        3.0
+       ],
+       "text": "A",
+       "g": "kitap",
+       "id": "dk42-6-28"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        36.7,
+        3.0,
+        3.0
+       ],
+       "text": "P",
+       "g": "kitap",
+       "id": "dk42-6-29"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        40.03,
+        3.0,
+        3.0
+       ],
+       "text": "A",
+       "g": "paket",
+       "id": "dk42-6-30"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        43.36,
+        3.0,
+        3.0
+       ],
+       "text": "K",
+       "g": "paket",
+       "id": "dk42-6-31"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        46.69,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "paket",
+       "id": "dk42-6-32"
+      },
+      {
+       "type": "text",
+       "rect": [
+        46.5,
+        50.02,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "paket",
+       "id": "dk42-6-33"
+      },
+      {
+       "type": "text",
+       "rect": [
+        29.9,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "N",
+       "g": "not defteri",
+       "id": "dk42-6-34"
+      },
+      {
+       "type": "text",
+       "rect": [
+        34.0,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "O",
+       "g": "not defteri",
+       "id": "dk42-6-35"
+      },
+      {
+       "type": "text",
+       "rect": [
+        38.2,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "not defteri",
+       "id": "dk42-6-36"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "D",
+       "g": "not defteri",
+       "id": "dk42-6-37"
+      },
+      {
+       "type": "text",
+       "rect": [
+        50.7,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "F",
+       "g": "not defteri",
+       "id": "dk42-6-38"
+      },
+      {
+       "type": "text",
+       "rect": [
+        54.9,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "T",
+       "g": "not defteri",
+       "id": "dk42-6-39"
+      },
+      {
+       "type": "text",
+       "rect": [
+        59.1,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "not defteri",
+       "id": "dk42-6-40"
+      },
+      {
+       "type": "text",
+       "rect": [
+        63.5,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "R",
+       "g": "not defteri",
+       "id": "dk42-6-41"
+      },
+      {
+       "type": "text",
+       "rect": [
+        67.9,
+        46.7,
+        3.0,
+        3.0
+       ],
+       "text": "İ",
+       "g": "not defteri",
+       "id": "dk42-6-42"
+      },
+      {
+       "type": "text",
+       "rect": [
+        68.6,
+        37.0,
+        3.0,
+        3.0
+       ],
+       "text": "F",
+       "g": "şifre",
+       "id": "dk42-6-43"
+      },
+      {
+       "type": "text",
+       "rect": [
+        72.8,
+        37.0,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "şifre",
+       "id": "dk42-6-44"
+      },
+      {
+       "type": "text",
+       "rect": [
+        77.0,
+        37.0,
+        3.0,
+        3.0
+       ],
+       "text": "N",
+       "g": "şifre",
+       "id": "dk42-6-45"
+      },
+      {
+       "type": "text",
+       "rect": [
+        81.2,
+        37.0,
+        3.0,
+        3.0
+       ],
+       "text": "E",
+       "g": "şifre",
+       "id": "dk42-6-46"
+      },
+      {
+       "type": "text",
+       "rect": [
+        85.4,
+        37.0,
+        3.0,
+        3.0
+       ],
+       "text": "R",
+       "g": "şifre",
+       "id": "dk42-6-47"
+      }
+     ]
+    },
+    {
+     "id": "dk42-7",
+     "label": "7. etkinlik",
+     "rect": [
+      5,
+      55.0,
+      90,
+      41.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        41.03,
+        53.14,
+        72.89
+       ],
+       "text": "Ali",
+       "id": "dk42-7-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        15.49,
+        26.71,
+        92.47
+       ],
+       "text": "cetvel",
+       "id": "dk42-7-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        39.78,
+        51.89,
+        92.48
+       ],
+       "text": "Zeynep",
+       "id": "dk42-7-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        81.31,
+        89.65,
+        73.5
+       ],
+       "text": "silgi,",
+       "g": "k",
+       "id": "dk42-7-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.5,
+        84.7,
+        75.6
+       ],
+       "text": "kalemtıraş ve cetvel",
+       "g": "k",
+       "id": "dk42-7-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        79.81,
+        89.9,
+        93.03
+       ],
+       "text": "defter",
+       "g": "ç",
+       "id": "dk42-7-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.54,
+        88.75,
+        95.15
+       ],
+       "text": "ve kalemtıraş var",
+       "g": "ç",
+       "id": "dk42-7-7"
+      }
+     ]
+    }
+   ]
+  },
+  "43": {
+   "img": "img/dk/043.jpg",
+   "activities": [
+    {
+     "id": "dk43-8",
+     "label": "8. etkinlik",
+     "rect": [
+      5,
+      5.5,
+      90,
+      16.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        27.1,
+        47.98,
+        14.68
+       ],
+       "text": "kitap, defter,",
+       "g": "a",
+       "id": "dk43-8-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.95,
+        47.76,
+        17.2
+       ],
+       "text": "kalem, silgi, kalemtıraş",
+       "g": "a",
+       "id": "dk43-8-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.9,
+        44.1,
+        19.72
+       ],
+       "text": "ve cetvel",
+       "g": "a",
+       "id": "dk43-8-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        70.26,
+        88.58,
+        14.68
+       ],
+       "text": "kalemler, silgi,",
+       "g": "b",
+       "id": "dk43-8-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.53,
+        88.78,
+        17.2
+       ],
+       "text": "kalemtıraş ve cetvel",
+       "g": "b",
+       "id": "dk43-8-5"
+      }
+     ]
+    },
+    {
+     "id": "dk43-gy",
+     "label": "Gizemli Yolculuk",
+     "rect": [
+      5,
+      21.5,
+      90,
+      30.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        75.13,
+        86.89,
+        41.12
+       ],
+       "text": "Fener burada!",
+       "g": "ş",
+       "id": "dk43-gy-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        74.9,
+        86.65,
+        43.23
+       ],
+       "text": "Peki yol nerede?",
+       "g": "ş",
+       "id": "dk43-gy-2"
+      }
+     ]
+    },
+    {
+     "id": "dk43-sv1",
+     "label": "Söz Varlığı 1",
+     "rect": [
+      5,
+      57.0,
+      90,
+      16.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.028",
+       "rect": [
+        29.25,
+        57.56,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S028.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk43-sv2",
+     "label": "Söz Varlığı 2",
+     "rect": [
+      5,
+      73.0,
+      90,
+      17.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        25.9,
+        38.91,
+        85.98
+       ],
+       "text": "Bu sarı",
+       "id": "dk43-sv2-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        25.9,
+        38.91,
+        88.09
+       ],
+       "text": "kalem.",
+       "id": "dk43-sv2-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        43.49,
+        56.5,
+        85.98
+       ],
+       "text": "Bu siyah",
+       "id": "dk43-sv2-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        43.49,
+        56.5,
+        88.1
+       ],
+       "text": "makas.",
+       "id": "dk43-sv2-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        61.07,
+        74.08,
+        85.98
+       ],
+       "text": "Bu yeşil",
+       "id": "dk43-sv2-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        61.07,
+        74.08,
+        88.09
+       ],
+       "text": "çanta.",
+       "id": "dk43-sv2-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.68,
+        91.69,
+        85.98
+       ],
+       "text": "Bu kırmızı",
+       "id": "dk43-sv2-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.68,
+        91.69,
+        88.1
+       ],
+       "text": "paket.",
+       "id": "dk43-sv2-8"
+      }
+     ]
+    }
+   ],
+   "links": [
+    {
+     "rect": [
+      28.6,
+      93.0,
+      30.8,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 23,
+      "act": "dbt23-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.23",
+     "until": {
+      "act": "dbt25-7"
+     }
+    }
+   ]
+  },
+  "44": {
+   "img": "img/dk/044.jpg",
+   "activities": [
+    {
+     "id": "dk44-1",
+     "label": "1. etkinlik",
+     "rect": [
+      5,
+      8.0,
+      46,
+      32.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.029",
+       "rect": [
+        28.68,
+        8.77,
+        7.4,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk44-2",
+     "label": "2. etkinlik",
+     "rect": [
+      49,
+      8.0,
+      47,
+      32.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.030",
+       "rect": [
+        77.85,
+        8.77,
+        7.42,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk44-3",
+     "label": "3. etkinlik",
+     "rect": [
+      5,
+      40.5,
+      90,
+      20.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        11.33,
+        22.1,
+        59.69
+       ],
+       "text": "sıra",
+       "id": "dk44-3-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        33.62,
+        44.39,
+        59.7
+       ],
+       "text": "sandalye",
+       "id": "dk44-3-2"
+      }
+     ]
+    },
+    {
+     "id": "dk44-4",
+     "label": "4. etkinlik",
+     "rect": [
+      5,
+      61.0,
+      90,
+      34.5
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        61.4,
+        79.4
+       ],
+       "s": 2.4,
+       "id": "dk44-4-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        83.5,
+        79.4
+       ],
+       "s": 2.4,
+       "id": "dk44-4-2"
+      },
+      {
+       "type": "check",
+       "at": [
+        39.4,
+        93.7
+       ],
+       "s": 2.4,
+       "id": "dk44-4-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        61.4,
+        93.7
+       ],
+       "s": 2.4,
+       "id": "dk44-4-4"
+      },
+      {
+       "type": "check",
+       "at": [
+        83.5,
+        93.7
+       ],
+       "s": 2.4,
+       "id": "dk44-4-5"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.031",
+       "rect": [
+        79.01,
+        61.87,
+        7.38,
+        2.01
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "45": {
+   "img": "img/dk/045.jpg",
+   "activities": [
+    {
+     "id": "dk45-5",
+     "label": "5. etkinlik",
+     "rect": [
+      5,
+      57.0,
+      90,
+      39.0
+     ],
+     "items": [
+      {
+       "type": "line",
+       "from": [
+        36.1,
+        67.4
+       ],
+       "to": [
+        42.1,
+        63.3
+       ],
+       "g": "q2",
+       "id": "dk45-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        52.18,
+        83.56,
+        63.78
+       ],
+       "text": "kitap, defter ve kalemlik",
+       "g": "q2",
+       "id": "dk45-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.68,
+        83.37,
+        67.86
+       ],
+       "text": "on kalem",
+       "g": "q1",
+       "id": "dk45-5-3"
+      },
+      {
+       "type": "line",
+       "from": [
+        36.1,
+        75.7
+       ],
+       "to": [
+        42.0,
+        71.4
+       ],
+       "g": "q4",
+       "id": "dk45-5-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        54.01,
+        86.84,
+        71.88
+       ],
+       "text": "sıralar kahverengi",
+       "g": "q4",
+       "id": "dk45-5-5"
+      },
+      {
+       "type": "line",
+       "from": [
+        36.1,
+        71.7
+       ],
+       "to": [
+        42.1,
+        75.6
+       ],
+       "g": "q3",
+       "id": "dk45-5-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        50.15,
+        76.76,
+        75.91
+       ],
+       "text": "on iki",
+       "g": "q3",
+       "id": "dk45-5-7"
+      },
+      {
+       "type": "line",
+       "from": [
+        35.4,
+        88.1
+       ],
+       "to": [
+        42.1,
+        79.8
+       ],
+       "g": "q7",
+       "id": "dk45-5-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        50.15,
+        75.09,
+        79.99
+       ],
+       "text": "bir",
+       "g": "q7",
+       "id": "dk45-5-9"
+      },
+      {
+       "type": "line",
+       "from": [
+        36.1,
+        84.2
+       ],
+       "to": [
+        42.1,
+        83.9
+       ],
+       "g": "q6",
+       "id": "dk45-5-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        45.0,
+        79.8,
+        84.07
+       ],
+       "text": "Sınıfta on beş",
+       "g": "q6",
+       "id": "dk45-5-11"
+      },
+      {
+       "type": "line",
+       "from": [
+        36.1,
+        79.5
+       ],
+       "to": [
+        42.8,
+        87.9
+       ],
+       "g": "q5",
+       "id": "dk45-5-12"
+      },
+      {
+       "type": "blank",
+       "line": [
+        50.62,
+        83.36,
+        88.15
+       ],
+       "text": "sıra, tahta, masa, pano ve dolap",
+       "g": "q5",
+       "id": "dk45-5-13"
+      },
+      {
+       "type": "text",
+       "rect": [
+        42.4,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "I",
+       "g": "şifre",
+       "id": "dk45-5-14"
+      },
+      {
+       "type": "text",
+       "rect": [
+        47.6,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "R",
+       "g": "şifre",
+       "id": "dk45-5-15"
+      },
+      {
+       "type": "text",
+       "rect": [
+        52.9,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "A",
+       "g": "şifre",
+       "id": "dk45-5-16"
+      },
+      {
+       "type": "text",
+       "rect": [
+        58.1,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "L",
+       "g": "şifre",
+       "id": "dk45-5-17"
+      },
+      {
+       "type": "text",
+       "rect": [
+        63.3,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "A",
+       "g": "şifre",
+       "id": "dk45-5-18"
+      },
+      {
+       "type": "text",
+       "rect": [
+        68.6,
+        91.4,
+        3.2,
+        3.2
+       ],
+       "text": "R",
+       "g": "şifre",
+       "id": "dk45-5-19"
+      }
+     ]
+    }
+   ]
+  },
+  "46": {
+   "img": "img/dk/046.jpg",
+   "activities": [
+    {
+     "id": "dk46-6",
+     "label": "6. etkinlik",
+     "rect": [
+      5,
+      7.0,
+      90,
+      15.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        31.58,
+        82.28,
+        14.48
+       ],
+       "text": "tahta, sıra, masa,",
+       "id": "dk46-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        16.5,
+        83.1,
+        17.0
+       ],
+       "text": "sandalye, pano, çöp kovası, klima",
+       "id": "dk46-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        16.51,
+        79.16,
+        19.51
+       ],
+       "text": "ve kitaplık",
+       "id": "dk46-6-3"
+      }
+     ]
+    },
+    {
+     "id": "dk46-sv1",
+     "label": "Söz Varlığı 1",
+     "rect": [
+      5,
+      29.0,
+      90,
+      31.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.032",
+       "rect": [
+        28.76,
+        30.2,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S032.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk46-sv2",
+     "label": "Söz Varlığı 2",
+     "rect": [
+      4,
+      61.0,
+      92,
+      27.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        78.24,
+        90.1,
+        69.87
+       ],
+       "text": "bir çanta var",
+       "id": "dk46-sv2-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.73,
+        86.7,
+        74.05
+       ],
+       "text": "Sınıfta bir cetvel",
+       "id": "dk46-sv2-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.73,
+        79.13,
+        78.28
+       ],
+       "text": "Sınıfta bir",
+       "id": "dk46-sv2-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        87.61,
+        90.26,
+        78.27
+       ],
+       "text": "var",
+       "id": "dk46-sv2-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        77.82,
+        90.1,
+        82.46
+       ],
+       "text": "bir kalemtıraş var",
+       "id": "dk46-sv2-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        71.73,
+        86.7,
+        86.64
+       ],
+       "text": "Sınıfta altı defter",
+       "id": "dk46-sv2-6"
+      }
+     ]
+    },
+    {
+     "id": "dk46-sv3",
+     "label": "Söz Varlığı 3",
+     "rect": [
+      5,
+      88.5,
+      90,
+      7.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        21.71,
+        69.48,
+        93.69
+       ],
+       "text": "on kalemim var",
+       "id": "dk46-sv3-1"
+      }
+     ]
+    }
+   ]
+  },
+  "47": {
+   "img": "img/dk/047.jpg",
+   "activities": [
+    {
+     "id": "dk47-s",
+     "label": "Şarkı Zamanı",
+     "rect": [
+      5,
+      13.5,
+      90,
+      76.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "M.006",
+       "rect": [
+        34.39,
+        17.17,
+        7.76,
+        2.01
+       ],
+       "src": "audio/dk/M006.mp3"
+      },
+      {
+       "code": "M.007",
+       "rect": [
+        42.84,
+        17.17,
+        7.75,
+        2.01
+       ],
+       "src": "audio/dk/M007.mp3"
+      }
+     ]
+    }
+   ],
+   "links": [
+    {
+     "rect": [
+      29.3,
+      6.0,
+      30.8,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 26,
+      "act": "dbt26-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.26",
+     "until": {
+      "act": "dbt28-6"
+     }
+    },
+    {
+     "rect": [
+      29.3,
+      90.9,
+      30.8,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 29,
+      "act": "dbt29-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.29",
+     "until": {
+      "act": "dbt30-5"
+     }
+    }
+   ]
+  },
+  "48": {
+   "img": "img/dk/048.jpg",
+   "activities": [
+    {
+     "id": "dk48-1",
+     "label": "Konuşma 1",
+     "rect": [
+      5,
+      9.0,
+      90,
+      32.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dk48-2",
+     "label": "Konuşma 2",
+     "rect": [
+      5,
+      42.0,
+      90,
+      26.5
+     ],
+     "items": []
+    },
+    {
+     "id": "dk48-3",
+     "label": "Konuşma 3",
+     "rect": [
+      5,
+      69.0,
+      90,
+      26.5
+     ],
+     "items": []
+    }
+   ]
+  },
+  "49": {
+   "img": "img/dk/049.jpg",
+   "activities": [
+    {
+     "id": "dk49-1a",
+     "label": "Yazma 1 (a)",
+     "rect": [
+      5,
+      9.0,
+      90,
+      71.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        74.22,
+        87.92,
+        60.15
+       ],
+       "text": "bu kitaplık",
+       "id": "dk49-1a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        22.63,
+        38.14,
+        66.34
+       ],
+       "text": "nerede",
+       "g": "n",
+       "id": "dk49-1a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        22.62,
+        39.81,
+        69.11
+       ],
+       "text": "sınıfta",
+       "g": "n",
+       "id": "dk49-1a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        70.26,
+        83.1,
+        66.34
+       ],
+       "text": "öğrenci",
+       "g": "ö",
+       "id": "dk49-1a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.17,
+        71.57,
+        69.12
+       ],
+       "text": "Evet",
+       "g": "ö",
+       "id": "dk49-1a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        73.46,
+        88.46,
+        69.11
+       ],
+       "text": "o öğrenci",
+       "g": "ö",
+       "id": "dk49-1a-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        30.15,
+        34.04,
+        75.51
+       ],
+       "text": "defter",
+       "g": "d",
+       "id": "dk49-1a-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.9,
+        38.6,
+        78.33
+       ],
+       "text": "Sınıfta beş defter var",
+       "g": "d",
+       "id": "dk49-1a-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        74.26,
+        83.4,
+        75.51
+       ],
+       "text": "kaç sıra",
+       "id": "dk49-1a-9"
+      }
+     ]
+    },
+    {
+     "id": "dk49-1b",
+     "label": "Yazma 1 (b)",
+     "rect": [
+      5,
+      81.0,
+      90,
+      15.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        21.45,
+        41.9,
+        88.6
+       ],
+       "text": "Sınıfta kaç tahta var",
+       "g": "t",
+       "id": "dk49-1b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        7.65,
+        41.83,
+        91.42
+       ],
+       "text": "Sınıfta bir tahta var",
+       "g": "t",
+       "id": "dk49-1b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.17,
+        89.53,
+        88.6
+       ],
+       "text": "Sınıfta kaç öğretmen var",
+       "g": "ö",
+       "id": "dk49-1b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        55.29,
+        89.46,
+        91.42
+       ],
+       "text": "Sınıfta bir öğretmen var",
+       "g": "ö",
+       "id": "dk49-1b-4"
+      }
+     ]
+    }
+   ]
+  },
+  "50": {
+   "img": "img/dk/050.jpg",
+   "activities": [
+    {
+     "id": "dk50-1",
+     "label": "1. etkinlik",
+     "rect": [
+      5,
+      18.5,
+      46,
+      15.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.033",
+       "rect": [
+        28.76,
+        19.42,
+        7.42,
+        2.01
+       ],
+       "src": "audio/dk/S033.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk50-2",
+     "label": "2. etkinlik",
+     "rect": [
+      49,
+      18.5,
+      47,
+      15.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.034",
+       "rect": [
+        76.59,
+        19.42,
+        7.42,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk50-3",
+     "label": "3. etkinlik",
+     "rect": [
+      5,
+      34.0,
+      90,
+      26.0
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        62.8,
+        45.8
+       ],
+       "s": 2.4,
+       "id": "dk50-3-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        92.8,
+        45.8
+       ],
+       "s": 2.4,
+       "id": "dk50-3-2"
+      },
+      {
+       "type": "check",
+       "at": [
+        32.7,
+        51.3
+       ],
+       "s": 2.4,
+       "id": "dk50-3-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        62.8,
+        58.2
+       ],
+       "s": 2.4,
+       "id": "dk50-3-4"
+      },
+      {
+       "type": "check",
+       "at": [
+        92.8,
+        54.8
+       ],
+       "s": 2.4,
+       "id": "dk50-3-5"
+      }
+     ]
+    },
+    {
+     "id": "dk50-4",
+     "label": "4. etkinlik",
+     "rect": [
+      4,
+      60.5,
+      92,
+      35.0
+     ],
+     "items": [
+      {
+       "type": "uline",
+       "from": [
+        29.0,
+        85.3
+       ],
+       "to": [
+        32.7,
+        85.3
+       ],
+       "id": "dk50-4-1"
+      },
+      {
+       "type": "uline",
+       "from": [
+        68.6,
+        86.9
+       ],
+       "to": [
+        82.2,
+        86.9
+       ],
+       "id": "dk50-4-2"
+      },
+      {
+       "type": "uline",
+       "from": [
+        36.4,
+        21.7
+       ],
+       "to": [
+        44.3,
+        21.7
+       ],
+       "page": 51,
+       "id": "dk50-4-3"
+      },
+      {
+       "type": "uline",
+       "from": [
+        21.6,
+        23.3
+       ],
+       "to": [
+        30.5,
+        23.3
+       ],
+       "page": 51,
+       "id": "dk50-4-4"
+      },
+      {
+       "type": "uline",
+       "from": [
+        31.8,
+        23.2
+       ],
+       "to": [
+        39.7,
+        23.2
+       ],
+       "page": 51,
+       "id": "dk50-4-5"
+      },
+      {
+       "type": "uline",
+       "from": [
+        76.4,
+        42.7
+       ],
+       "to": [
+        84.3,
+        42.7
+       ],
+       "page": 51,
+       "id": "dk50-4-6"
+      },
+      {
+       "type": "uline",
+       "from": [
+        78.4,
+        44.4
+       ],
+       "to": [
+        86.3,
+        44.4
+       ],
+       "page": 51,
+       "id": "dk50-4-7"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.035",
+       "rect": [
+        69.33,
+        61.38,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S035.mp3"
+      }
+     ],
+     "tiles": [
+      [
+       4,
+       60.5,
+       92,
+       35.0
+      ],
+      {
+       "r": [
+        6,
+        2.0,
+        88,
+        47.0
+       ],
+       "page": 51
+      }
+     ],
+     "cols": 2,
+     "nums": false
+    }
+   ]
+  },
+  "51": {
+   "img": "img/dk/051.jpg",
+   "activities": [
+    {
+     "id": "dk51-4",
+     "label": "4. etkinlik",
+     "rect": [
+      6,
+      2.0,
+      88,
+      47.0
+     ],
+     "items": [],
+     "skip": true,
+     "alias": {
+      "page": 50,
+      "act": "dk50-4"
+     }
+    },
+    {
+     "id": "dk51-5",
+     "label": "5. etkinlik",
+     "rect": [
+      5,
+      49.5,
+      90,
+      15.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        12.5,
+        20.58,
+        63.82
+       ],
+       "text": "Öğretmenler odası",
+       "id": "dk51-5-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        34.79,
+        42.87,
+        63.82
+       ],
+       "text": "Sınıf",
+       "id": "dk51-5-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.08,
+        65.15,
+        63.83
+       ],
+       "text": "Laboratuvar",
+       "id": "dk51-5-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        79.36,
+        87.44,
+        63.82
+       ],
+       "text": "Kantin",
+       "id": "dk51-5-4"
+      }
+     ]
+    },
+    {
+     "id": "dk51-6",
+     "label": "6. etkinlik",
+     "rect": [
+      5,
+      65.0,
+      90,
+      30.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        74.01,
+        89.87,
+        71.33
+       ],
+       "text": "tuvalet",
+       "g": "t",
+       "id": "dk51-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.24,
+        89.13,
+        74.15
+       ],
+       "text": "Tuvalet birinci katta",
+       "g": "t",
+       "id": "dk51-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.9,
+        42.91,
+        80.54
+       ],
+       "text": "Burası sınıf",
+       "g": "s",
+       "id": "dk51-6-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.89,
+        37.72,
+        83.36
+       ],
+       "text": "Sınıf ikinci",
+       "g": "s",
+       "id": "dk51-6-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.24,
+        90.26,
+        80.54
+       ],
+       "text": "Burası laboratuvar",
+       "g": "l",
+       "id": "dk51-6-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.24,
+        90.03,
+        83.36
+       ],
+       "text": "Laboratuvar birinci katta",
+       "g": "l",
+       "id": "dk51-6-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.9,
+        42.91,
+        89.85
+       ],
+       "text": "Burası öğretmenler odası",
+       "g": "ö",
+       "id": "dk51-6-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.89,
+        43.59,
+        92.63
+       ],
+       "text": "Öğretmenler odası ikinci katta",
+       "g": "ö",
+       "id": "dk51-6-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.24,
+        90.26,
+        89.86
+       ],
+       "text": "Burası kantin",
+       "g": "k",
+       "id": "dk51-6-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        68.24,
+        90.03,
+        92.63
+       ],
+       "text": "Kantin birinci katta",
+       "g": "k",
+       "id": "dk51-6-10"
+      }
+     ]
+    }
+   ]
+  },
+  "52": {
+   "img": "img/dk/052.jpg",
+   "activities": [
+    {
+     "id": "dk52-8a",
+     "label": "8. etkinlik (a)",
+     "rect": [
+      5,
+      4.0,
+      90,
+      72.0
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        48.3,
+        64.9
+       ],
+       "s": 2.6,
+       "id": "dk52-8a-1"
+      }
+     ]
+    },
+    {
+     "id": "dk52-8b",
+     "label": "8. etkinlik (b)",
+     "rect": [
+      5,
+      76.5,
+      90,
+      19.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        64.17,
+        70.86,
+        82.21
+       ],
+       "text": "üç",
+       "g": "o",
+       "id": "dk52-8b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        76.37,
+        86.68,
+        82.21
+       ],
+       "text": "Bahçede",
+       "g": "o",
+       "id": "dk52-8b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.1,
+        87.25,
+        84.72
+       ],
+       "text": "futbol sahası ve kantin var. Birinci katta müdür odası,",
+       "g": "o",
+       "id": "dk52-8b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.1,
+        87.64,
+        87.29
+       ],
+       "text": "spor salonu, tuvalet ve sınıflar var. İkinci katta sınıflar,",
+       "g": "o",
+       "id": "dk52-8b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.5,
+        87.7,
+        89.81
+       ],
+       "text": "tuvalet, kütüphane, dil sınıfı ve öğretmenler odası var.",
+       "g": "o",
+       "id": "dk52-8b-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.1,
+        87.34,
+        92.32
+       ],
+       "text": "Üçüncü katta konferans salonu, müzik odası ve resim odası var.",
+       "g": "o",
+       "id": "dk52-8b-6"
+      }
+     ]
+    }
+   ]
+  },
+  "53": {
+   "img": "img/dk/053.jpg",
+   "activities": [
+    {
+     "id": "dk53-1",
+     "label": "Söz Varlığı 1",
+     "rect": [
+      5,
+      8.5,
+      90,
+      34.5
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.036",
+       "rect": [
+        29.18,
+        9.93,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S036.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk53-2",
+     "label": "Söz Varlığı 2",
+     "rect": [
+      5,
+      45.0,
+      90,
+      42.0
+     ],
+     "items": [
+      {
+       "type": "fill",
+       "rect": [
+        31.5,
+        52.7,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-1"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        47.2,
+        52.7,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-2"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        63.0,
+        52.7,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-3"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        70.8,
+        52.7,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-4"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        31.2,
+        74.2,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-5"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        46.8,
+        74.2,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-6"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        54.8,
+        74.2,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-7"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        62.5,
+        74.2,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-8"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        70.5,
+        74.2,
+        6.0,
+        4.8
+       ],
+       "id": "dk53-2-9"
+      }
+     ]
+    }
+   ],
+   "links": [
+    {
+     "rect": [
+      27.9,
+      90.6,
+      30.6,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 31,
+      "act": "dbt31-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.31",
+     "until": {
+      "act": "dbt33-7"
+     }
+    }
+   ]
+  },
+  "54": {
+   "img": "img/dk/054.jpg",
+   "activities": [
+    {
+     "id": "dk54-1",
+     "label": "1. etkinlik",
+     "rect": [
+      5,
+      12.0,
+      46,
+      28.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.037",
+       "rect": [
+        28.8,
+        13.59,
+        7.41,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk54-2",
+     "label": "2. etkinlik",
+     "rect": [
+      49,
+      12.0,
+      47,
+      28.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.038",
+       "rect": [
+        76.59,
+        13.59,
+        7.42,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk54-3",
+     "label": "3. etkinlik",
+     "rect": [
+      5,
+      41.0,
+      90,
+      51.0
+     ],
+     "items": [
+      {
+       "type": "fill",
+       "rect": [
+        28.35,
+        70.9,
+        43.35,
+        3.2
+       ],
+       "g": "spor",
+       "id": "dk54-3-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        79.9,
+        52.1
+       ],
+       "s": 2.4,
+       "g": "spor",
+       "id": "dk54-3-2"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        28.35,
+        74.3,
+        30.3,
+        3.2
+       ],
+       "g": "tuvalet",
+       "id": "dk54-3-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        57.9,
+        63.1
+       ],
+       "s": 2.4,
+       "g": "tuvalet",
+       "id": "dk54-3-4"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        15.3,
+        77.6,
+        69.45,
+        3.2
+       ],
+       "g": "öğretmen",
+       "id": "dk54-3-5"
+      },
+      {
+       "type": "check",
+       "at": [
+        79.7,
+        63.1
+       ],
+       "s": 2.4,
+       "g": "öğretmen",
+       "id": "dk54-3-6"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        32.7,
+        81.0,
+        30.3,
+        3.2
+       ],
+       "g": "koridor",
+       "id": "dk54-3-7"
+      },
+      {
+       "type": "check",
+       "at": [
+        58.1,
+        52.1
+       ],
+       "s": 2.4,
+       "g": "koridor",
+       "id": "dk54-3-8"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        28.35,
+        84.4,
+        47.7,
+        3.2
+       ],
+       "g": "bahçe",
+       "id": "dk54-3-9"
+      },
+      {
+       "type": "check",
+       "at": [
+        34.5,
+        52.1
+       ],
+       "s": 2.4,
+       "g": "bahçe",
+       "id": "dk54-3-10"
+      },
+      {
+       "type": "fill",
+       "rect": [
+        15.3,
+        87.8,
+        69.45,
+        3.2
+       ],
+       "g": "bilgisayar",
+       "id": "dk54-3-11"
+      },
+      {
+       "type": "check",
+       "at": [
+        34.5,
+        63.1
+       ],
+       "s": 2.4,
+       "g": "bilgisayar",
+       "id": "dk54-3-12"
+      }
+     ]
+    }
+   ]
+  },
+  "55": {
+   "img": "img/dk/055.jpg",
+   "activities": [
+    {
+     "id": "dk55-4",
+     "label": "4. etkinlik",
+     "rect": [
+      5,
+      2.0,
+      90,
+      88.5
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        29.8,
+        38.7
+       ],
+       "s": 2.0,
+       "id": "dk55-4-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        22.2,
+        44.7
+       ],
+       "s": 2.0,
+       "id": "dk55-4-2"
+      },
+      {
+       "type": "check",
+       "at": [
+        27.0,
+        73.2
+       ],
+       "s": 2.0,
+       "id": "dk55-4-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        24.1,
+        80.8
+       ],
+       "s": 2.0,
+       "id": "dk55-4-4"
+      },
+      {
+       "type": "check",
+       "at": [
+        73.9,
+        73.2
+       ],
+       "s": 2.0,
+       "id": "dk55-4-5"
+      }
+     ],
+     "audio": [
+      {
+       "code": "S.039",
+       "rect": [
+        62.09,
+        3.11,
+        7.41,
+        2.01
+       ],
+       "src": "audio/dk/S039.mp3"
+      }
+     ]
+    }
+   ]
+  },
+  "56": {
+   "img": "img/dk/056.jpg",
+   "activities": [
+    {
+     "id": "dk56-5",
+     "label": "5. etkinlik",
+     "rect": [
+      5,
+      3.5,
+      90,
+      66.0
+     ],
+     "items": [
+      {
+       "type": "text",
+       "rect": [
+        37.5,
+        21.8,
+        25.0,
+        2.6
+       ],
+       "text": "Zeynep’in okulu kaç katlı?",
+       "g": "a",
+       "id": "dk56-5-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        85.0,
+        30.5
+       ],
+       "s": 2.4,
+       "g": "a",
+       "id": "dk56-5-2"
+      },
+      {
+       "type": "text",
+       "rect": [
+        62.6,
+        33.6,
+        25.4,
+        2.8
+       ],
+       "text": "Okulda kaç sınıf var?",
+       "g": "b",
+       "id": "dk56-5-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        57.4,
+        45.6
+       ],
+       "s": 2.4,
+       "g": "b",
+       "id": "dk56-5-4"
+      },
+      {
+       "type": "text",
+       "rect": [
+        62.2,
+        49.1,
+        25.2,
+        2.8
+       ],
+       "text": "Okulda kaç öğretmen var?",
+       "g": "c",
+       "id": "dk56-5-5"
+      },
+      {
+       "type": "check",
+       "at": [
+        94.0,
+        61.9
+       ],
+       "s": 2.4,
+       "g": "c",
+       "id": "dk56-5-6"
+      }
+     ]
+    },
+    {
+     "id": "dk56-6",
+     "label": "6. etkinlik",
+     "rect": [
+      5,
+      73.0,
+      90,
+      23.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        24.74,
+        28.65,
+        85.12
+       ],
+       "text": "beş",
+       "id": "dk56-6-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        44.23,
+        49.45,
+        85.12
+       ],
+       "text": "elli",
+       "id": "dk56-6-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        67.95,
+        73.17,
+        85.12
+       ],
+       "text": "doksan",
+       "id": "dk56-6-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        27.04,
+        47.18,
+        87.64
+       ],
+       "text": "sınıflar ve tuvalet",
+       "id": "dk56-6-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        57.69,
+        85.19,
+        87.64
+       ],
+       "text": "katta kütüphane ve",
+       "id": "dk56-6-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        12.08,
+        27.08,
+        90.16
+       ],
+       "text": "laboratuvar var",
+       "id": "dk56-6-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        38.95,
+        60.38,
+        90.16
+       ],
+       "text": "yüzme havuzu",
+       "id": "dk56-6-7"
+      }
+     ]
+    }
+   ]
+  },
+  "57": {
+   "img": "img/dk/057.jpg",
+   "activities": [
+    {
+     "id": "dk57-1",
+     "label": "Söz Varlığı 1",
+     "rect": [
+      5,
+      8.5,
+      90,
+      52.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "S.040",
+       "rect": [
+        28.99,
+        9.93,
+        7.42,
+        2.01
+       ],
+       "src": "audio/dk/S040.mp3"
+      }
+     ]
+    },
+    {
+     "id": "dk57-2",
+     "label": "Söz Varlığı 2",
+     "rect": [
+      5,
+      61.0,
+      90,
+      35.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        31.37,
+        46.63,
+        78.63
+       ],
+       "text": "Lütfen, kitabı aç.",
+       "id": "dk57-2-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.27,
+        68.53,
+        78.63
+       ],
+       "text": "Lütfen, kitabı kapat.",
+       "id": "dk57-2-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        75.56,
+        90.82,
+        78.63
+       ],
+       "text": "Lütfen, çöpü at.",
+       "id": "dk57-2-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        30.99,
+        46.25,
+        95.4
+       ],
+       "text": "Lütfen, kalk.",
+       "id": "dk57-2-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.27,
+        68.53,
+        95.39
+       ],
+       "text": "Lütfen, otur.",
+       "id": "dk57-2-5"
+      }
+     ]
+    }
+   ]
+  },
+  "58": {
+   "img": "img/dk/058.jpg",
+   "activities": [
+    {
+     "id": "dk58-s",
+     "label": "Şarkı Zamanı",
+     "rect": [
+      5,
+      13.0,
+      90,
+      70.0
+     ],
+     "items": [],
+     "audio": [
+      {
+       "code": "M.008",
+       "rect": [
+        34.19,
+        15.79,
+        7.76,
+        2.01
+       ],
+       "src": "audio/dk/M008.mp3"
+      }
+     ]
+    }
+   ],
+   "links": [
+    {
+     "rect": [
+      28.4,
+      6.0,
+      30.6,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 34,
+      "act": "dbt34-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.34",
+     "until": {
+      "act": "dbt36-8"
+     }
+    },
+    {
+     "rect": [
+      28.4,
+      84.0,
+      30.6,
+      2.0
+     ],
+     "go": {
+      "book": "dbt",
+      "page": 37,
+      "act": "dbt37-1"
+     },
+     "label": "Dil Bilgisi ve Telaffuz Kitabı s.37",
+     "until": {
+      "act": "dbt38-5b"
+     }
+    }
+   ]
+  },
+  "59": {
+   "img": "img/dk/059.jpg",
+   "activities": [
+    {
+     "id": "dk59-1",
+     "label": "Konuşma 1",
+     "rect": [
+      5,
+      9.0,
+      90,
+      75.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "60": {
+   "img": "img/dk/060.jpg",
+   "activities": [
+    {
+     "id": "dk60-2",
+     "label": "Konuşma 2",
+     "rect": [
+      5,
+      4.0,
+      90,
+      40.0
+     ],
+     "items": []
+    },
+    {
+     "id": "dk60-1a",
+     "label": "Yazma 1 (a)",
+     "rect": [
+      5,
+      54.5,
+      90,
+      22.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        41.23,
+        43.95,
+        61.31
+       ],
+       "text": "20",
+       "id": "dk60-1a-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        25.45,
+        31.28,
+        64.27
+       ],
+       "text": "on",
+       "id": "dk60-1a-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        53.81,
+        59.65,
+        64.29
+       ],
+       "text": "otuz",
+       "id": "dk60-1a-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        69.6,
+        72.31,
+        61.31
+       ],
+       "text": "40",
+       "id": "dk60-1a-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        82.16,
+        87.99,
+        64.27
+       ],
+       "text": "elli",
+       "id": "dk60-1a-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        20.11,
+        22.81,
+        70.42
+       ],
+       "text": "60",
+       "id": "dk60-1a-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        32.61,
+        38.44,
+        73.39
+       ],
+       "text": "yetmiş",
+       "id": "dk60-1a-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        48.33,
+        51.03,
+        70.4
+       ],
+       "text": "80",
+       "id": "dk60-1a-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        60.83,
+        66.67,
+        73.39
+       ],
+       "text": "doksan",
+       "id": "dk60-1a-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        76.55,
+        79.25,
+        70.42
+       ],
+       "text": "100",
+       "id": "dk60-1a-10"
+      }
+     ]
+    },
+    {
+     "id": "dk60-1b",
+     "label": "Yazma 1 (b)",
+     "rect": [
+      5,
+      76.5,
+      90,
+      12.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        31.97,
+        34.67,
+        82.95
+       ],
+       "text": "20.",
+       "id": "dk60-1b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        45.86,
+        53.49,
+        85.93
+       ],
+       "text": "otuzuncu",
+       "id": "dk60-1b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        64.73,
+        67.44,
+        82.94
+       ],
+       "text": "40.",
+       "id": "dk60-1b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        78.61,
+        86.24,
+        85.93
+       ],
+       "text": "ellinci",
+       "id": "dk60-1b-4"
+      }
+     ]
+    }
+   ]
+  },
+  "61": {
+   "img": "img/dk/061.jpg",
+   "activities": [
+    {
+     "id": "dk61-2a",
+     "label": "Yazma 2 (a)",
+     "rect": [
+      5,
+      4.0,
+      90,
+      23.5
+     ],
+     "items": [
+      {
+       "type": "check",
+       "at": [
+        69.4,
+        13.6
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-1"
+      },
+      {
+       "type": "check",
+       "at": [
+        77.7,
+        16.5
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-2"
+      },
+      {
+       "type": "check",
+       "at": [
+        86.1,
+        16.5
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-3"
+      },
+      {
+       "type": "check",
+       "at": [
+        77.7,
+        19.4
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-4"
+      },
+      {
+       "type": "check",
+       "at": [
+        69.4,
+        22.2
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-5"
+      },
+      {
+       "type": "check",
+       "at": [
+        86.1,
+        25.1
+       ],
+       "s": 2.2,
+       "id": "dk61-2a-6"
+      }
+     ]
+    },
+    {
+     "id": "dk61-2b",
+     "label": "Yazma 2 (b)",
+     "rect": [
+      5,
+      29.5,
+      90,
+      61.5
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        10.1,
+        89.5,
+        73.3
+       ],
+       "text": "Merhaba! Ben Ece. Benim okulum dört katlı. Bahçede basket sahası var.",
+       "g": "e",
+       "id": "dk61-2b-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        10.1,
+        89.5,
+        75.41
+       ],
+       "text": "Birinci katta spor salonu, yüzme havuzu ve kantin var.",
+       "g": "e",
+       "id": "dk61-2b-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        10.1,
+        89.5,
+        77.53
+       ],
+       "text": "İkinci katta müdür odası, sınıflar, tuvalet ve kütüphane var.",
+       "g": "e",
+       "id": "dk61-2b-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        10.1,
+        89.5,
+        79.64
+       ],
+       "text": "Üçüncü katta öğretmenler odası, sınıflar, tuvalet ve müzik odası var.",
+       "g": "e",
+       "id": "dk61-2b-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        10.1,
+        89.5,
+        81.76
+       ],
+       "text": "Dördüncü katta kantin, tuvalet ve konferans salonu var.",
+       "g": "e",
+       "id": "dk61-2b-5"
+      }
+     ]
+    }
+   ]
+  },
+  "62": {
+   "img": "img/dk/062.jpg",
+   "activities": [
+    {
+     "id": "dk62-1",
+     "label": "C. Pırıl’ın Sınıfı 1",
+     "rect": [
+      5,
+      12.0,
+      90,
+      73.0
+     ],
+     "items": [
+      {
+       "type": "blank",
+       "line": [
+        16.47,
+        37.6,
+        35.53
+       ],
+       "text": "Pırıl’ın okulu",
+       "id": "dk62-1-1"
+      },
+      {
+       "type": "blank",
+       "line": [
+        65.1,
+        86.25,
+        35.53
+       ],
+       "text": "Pırıl’ın sınıfı",
+       "id": "dk62-1-2"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.19,
+        17.75,
+        59.55
+       ],
+       "text": "kalem",
+       "id": "dk62-1-3"
+      },
+      {
+       "type": "blank",
+       "line": [
+        25.43,
+        32.0,
+        59.54
+       ],
+       "text": "defter",
+       "id": "dk62-1-4"
+      },
+      {
+       "type": "blank",
+       "line": [
+        39.7,
+        46.25,
+        59.55
+       ],
+       "text": "çanta",
+       "id": "dk62-1-5"
+      },
+      {
+       "type": "blank",
+       "line": [
+        60.6,
+        67.94,
+        59.5
+       ],
+       "text": "öğretmen",
+       "id": "dk62-1-6"
+      },
+      {
+       "type": "blank",
+       "line": [
+        79.08,
+        86.93,
+        59.49
+       ],
+       "text": "tahta",
+       "id": "dk62-1-7"
+      },
+      {
+       "type": "blank",
+       "line": [
+        11.01,
+        17.57,
+        83.61
+       ],
+       "text": "defter",
+       "id": "dk62-1-8"
+      },
+      {
+       "type": "blank",
+       "line": [
+        25.15,
+        31.7,
+        83.62
+       ],
+       "text": "çanta",
+       "id": "dk62-1-9"
+      },
+      {
+       "type": "blank",
+       "line": [
+        38.87,
+        45.87,
+        83.62
+       ],
+       "text": "kalemlik",
+       "id": "dk62-1-10"
+      },
+      {
+       "type": "blank",
+       "line": [
+        59.33,
+        69.03,
+        83.62
+       ],
+       "text": "Deha",
+       "id": "dk62-1-11"
+      },
+      {
+       "type": "blank",
+       "line": [
+        76.46,
+        86.16,
+        83.61
+       ],
+       "text": "Cesur",
+       "id": "dk62-1-12"
+      }
+     ],
+     "audio": [
+      {
+       "code": "V.002",
+       "rect": [
+        45.34,
+        11.14,
+        7.39,
+        2.01
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dk62-2",
+     "label": "C. Pırıl’ın Sınıfı 2",
+     "rect": [
+      33,
+      87.0,
+      62,
+      9.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "63": {
+   "img": "img/dk/063.jpg",
+   "activities": [
+    {
+     "id": "dk63-g",
+     "label": "Maarif Türkçe Grubu",
+     "rect": [
+      19,
+      4.0,
+      63,
+      90.0
+     ],
+     "items": []
+    }
+   ]
+  },
+  "64": {
+   "img": "img/dk/064.jpg",
+   "activities": [
+    {
+     "id": "dk64-p",
+     "label": "Proje Zamanı",
+     "rect": [
+      3,
+      4.0,
+      94,
+      92.0
+     ],
+     "items": []
+    }
+   ]
+  }
+ }
+}

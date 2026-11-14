@@ -1,7 +1,8 @@
+# usage: map_slides.py SLIDES.pptx WORK 'dk:39:64:2,dbt:22:38:0'  (book:first:last:label offset)
 import sys, json, re, io, numpy as np, cv2
 from pptx import Presentation
 from pptx.util import Emu
-W=sys.argv[2]; p=Presentation(sys.argv[1]); SW,SH=p.slide_width,p.slide_height
+W=sys.argv[2]; SPEC=[(b,int(lo),int(hi),int(off)) for b,lo,hi,off in (x.split(':') for x in sys.argv[3].split(','))]; p=Presentation(sys.argv[1]); SW,SH=p.slide_width,p.slide_height
 CLS={'7A','7B','7C','7D','7E','7F','8A','8B','8C'}
 sift=cv2.SIFT_create()
 pagecache={}
@@ -18,6 +19,7 @@ def allshapes(shs):
         else: yield sh
 def rect(sh): return [sh.left/SW*100, sh.top/SH*100, sh.width/SW*100, sh.height/SH*100]
 res=[]
+prev_labels=[]
 for si,s in enumerate(p.slides,1):
     pass
     shs=list(allshapes(s.shapes))
@@ -26,8 +28,11 @@ for si,s in enumerate(p.slides,1):
         if sh.has_text_frame:
             t=sh.text_frame.text.strip()
             if re.fullmatch(r'\d+(-\d+)?',t) and (sh.left/SW>0.8) and sh.top/SH<0.15: labels+= [int(x) for x in t.split('-')]
+    if not labels: labels=prev_labels  # an unnumbered slide continues the previous page
     if not labels: continue
-    cands=[(b,n) for n in set(labels) for b in ('dk2','dbt') if (b=='dk2' and 7<=n<=42) or (b=='dbt' and 93<=n<=108)]
+    prev_labels=labels
+    # slide page labels may be shifted from the printed numbers (label = page + offset); try neighbours too
+    cands=sorted({(b,n-off+d) for n in set(labels) for b,lo,hi,off in SPEC for d in (-1,0,1) if lo<=n-off+d<=hi})
     # big pictures = screenshots
     shots=[]
     for sh in shs:
