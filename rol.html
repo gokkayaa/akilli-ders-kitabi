@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rol Yapalım</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap">
+<style>
+/* Rol yapma denemesi: the class listens to a dialogue from the book; one character is played by a
+   student, who speaks (and is recorded) when that character's turn comes. At the end the whole
+   dialogue is played back with the student's voice in it. */
+:root{--brand:#00adb9;--brand-deep:#00838c;--ink:#22262a;--muted:#6b737a;--paper:#fff;--bg:#eaf6f7;
+  --a:#e7a500;--a-soft:#fff4d6;--b:#2a8fd6;--b-soft:#e3f1fc;--f:"Baloo 2","Trebuchet MS",system-ui,sans-serif}
+:root:not([data-theme="light"]){color-scheme:light}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);-webkit-tap-highlight-color:transparent;overflow:hidden}
+button{font:inherit;border:0;cursor:pointer;color:inherit;background:none}
+.scr{position:fixed;inset:0;display:flex;flex-direction:column}
+[hidden]{display:none!important}
+/* intro */
+#intro{align-items:center;justify-content:center;gap:3vh;padding:16px;text-align:center}
+#intro h1{margin:0;font-size:min(8vw,64px);line-height:1;color:var(--brand-deep)}
+#intro .sub{margin:0;font-size:min(3.4vw,24px);font-weight:700;color:var(--muted)}
+#intro h2{margin:2vh 0 0;font-size:min(5vw,40px)}
+.picks{display:flex;gap:4vw;flex-wrap:wrap;justify-content:center}
+.pick{background:var(--paper);border-radius:28px;padding:18px 26px 14px;box-shadow:0 8px 0 rgba(0,0,0,.08),0 12px 30px rgba(0,0,0,.08);border:4px solid transparent;transition:transform .15s}
+.pick:active{transform:scale(.97)}
+.pick img{width:min(26vw,220px);height:min(26vw,220px);border-radius:50%;object-fit:cover;display:block;margin:0 auto 8px}
+.pick b{font-size:min(5vw,38px)}
+.pick.A{border-color:var(--a)}.pick.A b{color:#b07d00}
+.pick.B{border-color:var(--b)}.pick.B b{color:#1b6aa5}
+.mic{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--muted);font-size:18px}
+.mic input{width:24px;height:24px;accent-color:var(--brand)}
+/* play */
+#play{background:var(--bg)}
+.top{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--paper);box-shadow:0 2px 10px rgba(0,0,0,.06);z-index:2}
+.top .t{font-weight:800;font-size:20px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .me{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;background:#e6f7f8;border-radius:99px;padding:4px 14px 4px 4px}
+.top .me img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.tb{background:#eef2f4;border-radius:12px;padding:8px 14px;font-weight:800;font-size:16px}
+#list{flex:1;overflow:auto;padding:18px 16px 40vh;-webkit-overflow-scrolling:touch}
+.ln{display:flex;align-items:flex-end;gap:10px;margin:0 auto 14px;max-width:900px;opacity:.45;transition:opacity .25s}
+.ln.done,.ln.cur{opacity:1}
+.ln img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.ln.R{flex-direction:row-reverse}
+.bub{position:relative;background:var(--paper);border-radius:22px;padding:10px 18px;font-size:min(4.4vw,30px);font-weight:700;line-height:1.2;box-shadow:0 2px 6px rgba(0,0,0,.07);max-width:72%;border:3px solid transparent}
+.ln.A .bub{background:var(--a-soft)}.ln.B .bub{background:var(--b-soft)}
+.ln.cur .bub{border-color:var(--brand);box-shadow:0 0 0 6px rgba(0,173,185,.18)}
+.ln.mine .bub{border-style:dashed;border-color:#9aa6ad}
+.ln.mine.cur .bub{border-style:solid;border-color:#e0457b;box-shadow:0 0 0 8px rgba(224,69,123,.18);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 14px rgba(224,69,123,.08)}}
+.ln .who{display:block;font-size:.55em;font-weight:800;color:var(--muted);margin-bottom:2px}
+.ln .acts{display:flex;gap:6px;align-self:center}
+.ln .acts button{width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.15);display:grid;place-items:center;font-size:18px}
+.ln .acts button.rec{background:#e0457b;color:#fff}
+.title{max-width:900px;margin:0 auto 16px;text-align:center;font-weight:800;font-size:22px;color:var(--brand-deep)}
+/* turn panel */
+#turn{position:fixed;left:0;right:0;bottom:0;z-index:3;background:var(--paper);border-radius:28px 28px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.15);padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:20px;justify-content:center;flex-wrap:wrap;transform:translateY(110%);transition:transform .3s}
+#turn.on{transform:none}
+#turn .say{font-size:min(6vw,44px);font-weight:800;color:#e0457b;display:flex;align-items:center;gap:14px}
+.lvl{width:64px;height:64px;border-radius:50%;background:#e0457b;display:grid;place-items:center;color:#fff;box-shadow:0 0 0 0 rgba(224,69,123,.35);transition:box-shadow .08s}
+.lvl svg{width:30px;height:30px}
+.bar{width:min(40vw,320px);height:10px;border-radius:5px;background:#f1d3de;overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:#e0457b;transform-origin:left}
+.done-b{background:var(--brand);color:#fff;font-weight:800;font-size:28px;padding:10px 34px;border-radius:18px;box-shadow:0 6px 0 var(--brand-deep)}
+.hint{background:#eef2f4;font-weight:800;font-size:18px;padding:10px 16px;border-radius:14px}
+/* end */
+#end{position:fixed;inset:0;z-index:4;background:rgba(10,20,25,.55);display:grid;place-items:center;padding:16px}
+.ecard{background:var(--paper);border-radius:28px;padding:26px 30px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,.35);max-width:620px}
+.ecard img{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.ecard h2{margin:6px 0 2px;font-size:min(8vw,52px);color:var(--brand-deep)}
+.ecard p{margin:0 0 16px;font-weight:700;color:var(--muted);font-size:20px}
+.ecard .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.ecard .row button{font-weight:800;font-size:20px;padding:10px 20px;border-radius:16px;background:#eef2f4}
+.ecard .row button.go{background:var(--brand);color:#fff;box-shadow:0 5px 0 var(--brand-deep);font-size:24px}
+#toast{position:fixed;left:50%;top:16px;transform:translateX(-50%);z-index:9;background:var(--ink);color:#fff;font-weight:700;padding:8px 18px;border-radius:99px}
+@media (max-width:640px){.bub{max-width:80%}.ln img{width:40px;height:40px}}
+</style>
+</head>
+<body>
+<section class="scr" id="intro">
+  <h1>Rol Yapalım!</h1>
+  <p class="sub">Maviş ve Meraklı Boncuk Okulda · Ders Kitabı s.50</p>
+  <h2>Kim olmak istersin?</h2>
+  <div class="picks">
+    <button class="pick A" data-r="B"><img src="assets/rol/boncuk.jpg" alt=""><b>Boncuk</b></button>
+    <button class="pick B" data-r="M"><img src="assets/rol/mavis.jpg" alt=""><b>Maviş</b></button>
+  </div>
+  <label class="mic"><input type="checkbox" id="recOn" checked> Sesimi kaydet</label>
+</section>
+
+<section class="scr" id="play" hidden>
+  <div class="top">
+    <span class="t">Maviş ve Meraklı Boncuk Okulda</span>
+    <span class="me"><img id="meImg" src="" alt=""><span>Sen: <span id="meName"></span></span></span>
+    <button class="tb" id="pauseB">Durdur</button>
+    <button class="tb" id="backB">Baştan</button>
+  </div>
+  <div id="list"></div>
+  <div id="turn">
+    <div class="say"><span class="lvl" id="lvl"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>Sıra sende!</div>
+    <div class="bar"><i id="barI"></i></div>
+    <button class="hint" id="hintB">🔊 Dinle</button>
+    <button class="done-b" id="doneB">Bitti ✓</button>
+  </div>
+</section>
+
+<div id="end" hidden>
+  <div class="ecard">
+    <img id="endImg" src="" alt="">
+    <h2>Aferin!</h2>
+    <p id="endTx">Diyalog bitti.</p>
+    <div class="row">
+      <button class="go" id="mixB">▶ Kaydı dinle</button>
+      <button id="againB">Tekrar</button>
+      <button id="swapB">Rolleri değiştir</button>
+      <button id="closeB">Kapat</button>
+    </div>
+  </div>
+</div>
+<div id="toast" hidden></div>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s);
+const AUDIO = 'audio/dk/S035.mp3';
+const WHO = {M:{name:'Maviş', img:'assets/rol/mavis.jpg', cls:'B'}, B:{name:'Boncuk', img:'assets/rol/boncuk.jpg', cls:'A'}};
+/* times (s) in S.035; found from the pauses in the recording and the length of each line */
+const LINES = [
+ {sp:'-',t:'Maviş ve Meraklı Boncuk Okulda',a:0.34,b:4.46},
+ {sp:'M',t:'Boncuk bak, burası sınıf.',a:6.05,b:7.88},
+ {sp:'B',t:'Peki bunlar kim?',a:8.33,b:9.79},
+ {sp:'M',t:'Bunlar öğrenciler. Bu da öğretmen.',a:10.70,b:14.77},
+ {sp:'B',t:'Sınıf kaçıncı katta?',a:15.22,b:17.66},
+ {sp:'M',t:'Sınıf ikinci katta.',a:18.56,b:20.57},
+ {sp:'B',t:'Peki şurası neresi?',a:21.36,b:24.77},
+ {sp:'M',t:'Orası öğretmenler odası.',a:25.28,b:29.30},
+ {sp:'B',t:'Onlar öğretmen mi?',a:29.94,b:31.06},
+ {sp:'M',t:'Evet, onlar öğretmen.',a:31.48,b:34.19},
+ {sp:'B',t:'Hmm! Burada yedi öğretmen var.',a:35.03,b:38.72},
+ {sp:'M',t:'Evet, Boncuk.',a:39.25,b:40.25},
+ {sp:'B',t:'Maviş, burası kaçıncı kat?',a:40.70,b:43.24},
+ {sp:'M',t:'Burası birinci kat.',a:43.74,b:45.10},
+ {sp:'B',t:'Birinci katta neler var?',a:45.73,b:47.93},
+ {sp:'M',t:'Birinci katta kütüphane, laboratuvar ve tuvalet var.',a:48.74,b:54.32},
+ {sp:'B',t:'Aa, kitaplara bak! Ne kadar çok kitap var!',a:54.89,b:59.34},
+ {sp:'M',t:'Sessiz ol Boncuk! Burası kütüphane.',a:60.06,b:64.14},
+ {sp:'B',t:'Burası laboratuvar mı?',a:64.78,b:68.64},
+ {sp:'M',t:'Evet, burası laboratuvar.',a:69.31,b:73.33},
+ {sp:'B',t:'Şurası yemekhane mi?',a:74.09,b:76.83},
+ {sp:'M',t:'Hayır! Orası kantin.',a:77.51,b:80.04},
+ {sp:'B',t:'O, kim? Bu ses ne?',a:80.47,b:81.80},
+ {sp:'M',t:'Aa! Koş koş...',a:82.10,b:85.42}
+];
+let ctx, buf, me = null, cur = -1, src = null, stream = null, rec = null, chunks = [], timer = null, paused = false, running = false, mixing = false;
+const mine = {};   // line index → {url, buffer}
+function toast(m){ const t = $('#toast'); t.textContent = m; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 2200); }
+
+async function setup(){
+  if(!ctx){ ctx = new (window.AudioContext || window.webkitAudioContext)(); }
+  if(ctx.state === 'suspended') await ctx.resume();
+}
+async function loadBuf(){
+  const ab = await (await fetch(AUDIO)).arrayBuffer();
+  buf = await new Promise((ok, no) => ctx.decodeAudioData(ab, ok, no));
+}
+function stopSrc(){ if(src){ try{ src.onended = null; src.stop(); }catch(e){} src = null; } }
+function playSeg(a, b, then){
+  stopSrc(); const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination);
+  s.onended = () => { if(src === s){ src = null; then && then(); } };
+  src = s; s.start(0, a, Math.max(.1, b - a + .08));
+}
+function playBuf(b, then){
+  stopSrc(); const s = ctx.createBufferSource(); s.buffer = b;
+  const g = ctx.createGain(); g.gain.value = 1.6; s.connect(g).connect(ctx.destination);
+  s.onended = () => { if(src === s){ src = null; then && then(); } };
+  src = s; s.start();
+}
+
+function draw(){
+  const L = $('#list'); L.innerHTML = `<div class="title">${LINES[0].t}</div>`;
+  LINES.forEach((l, i) => { if(l.sp === '-') return;
+    const w = WHO[l.sp], d = document.createElement('div');
+    d.className = `ln ${w.cls}${l.sp === 'B' ? '' : ' R'}${l.sp === me ? ' mine' : ''}`; d.dataset.i = i;
+    d.innerHTML = `<img src="${w.img}" alt=""><div class="bub"><span class="who">${w.name}${l.sp === me ? ' · sen' : ''}</span>${l.t}</div><div class="acts"></div>`;
+    L.appendChild(d); });
+  acts();
+}
+function acts(){
+  document.querySelectorAll('.ln').forEach(d => { const i = +d.dataset.i, a = d.querySelector('.acts'); a.innerHTML = '';
+    if(running) return;
+    const o = document.createElement('button'); o.textContent = '🔊'; o.title = 'Kitaptaki ses';
+    o.onclick = () => { mixing = false; playSeg(LINES[i].a, LINES[i].b); }; a.appendChild(o);
+    if(mine[i]){ const r = document.createElement('button'); r.className = 'rec'; r.textContent = '▶'; r.title = 'Öğrencinin sesi';
+      r.onclick = () => { mixing = false; playBuf(mine[i].buffer); }; a.appendChild(r); } });
+}
+function mark(i){
+  document.querySelectorAll('.ln').forEach(d => { const k = +d.dataset.i; d.classList.toggle('cur', k === i); d.classList.toggle('done', k < i); });
+  const el = document.querySelector(`.ln[data-i="${i}"]`); if(el) el.scrollIntoView({block:'center', behavior:'smooth'});
+}
+
+async function start(role){
+  me = role; paused = false;
+  $('#meImg').src = WHO[me].img; $('#meName').textContent = WHO[me].name;
+  try{ await setup(); if(!buf) await loadBuf(); }catch(e){ toast('Ses yüklenemedi'); return; }
+  if($('#recOn').checked && !stream){
+    try{ stream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true, noiseSuppression:true}}); meter(); }
+    catch(e){ toast('Mikrofon açılamadı; kayıtsız devam ediyoruz'); $('#recOn').checked = false; }
+  }
+  for(const k in mine) delete mine[k];
+  $('#intro').hidden = true; $('#play').hidden = false; $('#end').hidden = true;
+  running = true; draw(); cur = 0; step();
+}
+function step(){
+  if(paused) return;
+  cur++;
+  if(cur >= LINES.length){ finish(); return; }
+  const l = LINES[cur]; mark(cur);
+  if(l.sp === me) myTurn(l); else playSeg(l.a, l.b, () => setTimeout(step, 250));
+}
+/* the student's turn: record until "Bitti" (or →), or until time runs out */
+function myTurn(l){
+  stopSrc(); $('#turn').classList.add('on');
+  const max = Math.max(5, (l.b - l.a) * 3 + 2), t0 = performance.now();
+  if(stream && window.MediaRecorder){
+    chunks = []; rec = new MediaRecorder(stream);
+    rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+    const idx = cur;
+    rec.onstop = async () => { const blob = new Blob(chunks, {type: rec.mimeType || 'audio/mp4'});
+      try{ const b = await new Promise((ok, no) => blob.arrayBuffer().then(ab => ctx.decodeAudioData(ab, ok, no))); mine[idx] = {buffer: b}; }catch(e){} };
+    rec.start();
+  }
+  const bar = $('#barI');
+  (function tick(){ if(!$('#turn').classList.contains('on')) return;
+    const p = Math.min(1, (performance.now() - t0) / 1000 / max); bar.style.transform = `scaleX(${1 - p})`;
+    if(p >= 1){ endTurn(); return; } timer = requestAnimationFrame(tick); })();
+}
+function endTurn(){
+  if(!$('#turn').classList.contains('on')) return;
+  $('#turn').classList.remove('on'); cancelAnimationFrame(timer);
+  if(rec && rec.state !== 'inactive') rec.stop();
+  setTimeout(step, 350);
+}
+function finish(){
+  running = false; mark(LINES.length); acts();
+  $('#endImg').src = WHO[me].img;
+  $('#endTx').textContent = Object.keys(mine).length ? `${WHO[me].name} çok güzel konuştu.` : 'Diyalog bitti.';
+  $('#mixB').hidden = !Object.keys(mine).length;
+  $('#end').hidden = false;
+}
+/* play the whole dialogue again: the book's voice for the other character, the student's own voice for theirs */
+function mix(i){
+  if(i === 1){ mixing = true; $('#end').hidden = true; }
+  if(!mixing) return;
+  if(i >= LINES.length){ mixing = false; mark(LINES.length); $('#end').hidden = false; return; }
+  const l = LINES[i]; if(l.sp === '-'){ mix(i + 1); return; }
+  mark(i);
+  const nx = () => setTimeout(() => mix(i + 1), 250);
+  if(l.sp === me && mine[i]) playBuf(mine[i].buffer, nx);
+  else if(l.sp === me) nx(); else playSeg(l.a, l.b, nx);
+}
+/* the mic button glows with the student's voice */
+function meter(){
+  try{ const an = ctx.createAnalyser(); an.fftSize = 512; ctx.createMediaStreamSource(stream).connect(an);
+    const d = new Uint8Array(an.fftSize);
+    (function loop(){ an.getByteTimeDomainData(d); let m = 0; for(const v of d) m = Math.max(m, Math.abs(v - 128));
+      $('#lvl').style.boxShadow = `0 0 0 ${Math.round(m / 128 * 26)}px rgba(224,69,123,.35)`; requestAnimationFrame(loop); })();
+  }catch(e){}
+}
+
+document.querySelectorAll('.pick').forEach(b => b.addEventListener('click', () => start(b.dataset.r)));
+$('#doneB').addEventListener('click', endTurn);
+$('#hintB').addEventListener('click', () => { const l = LINES[cur]; if(l) playSeg(l.a, l.b); });
+$('#pauseB').addEventListener('click', () => {
+  if(!running) { stopSrc(); mixing = false; return; }
+  paused = !paused; $('#pauseB').textContent = paused ? 'Devam' : 'Durdur';
+  if(paused){ stopSrc(); } else { cur--; step(); }
+});
+$('#backB').addEventListener('click', () => { stopSrc(); mixing = false; $('#turn').classList.remove('on'); if(rec && rec.state !== 'inactive') rec.stop(); start(me); });
+$('#mixB').addEventListener('click', () => mix(1));
+$('#againB').addEventListener('click', () => start(me));
+$('#swapB').addEventListener('click', () => start(me === 'M' ? 'B' : 'M'));
+$('#closeB').addEventListener('click', () => { $('#end').hidden = true; });
+addEventListener('keydown', e => {
+  if(['ArrowRight','PageDown','Enter',' '].includes(e.key) && $('#turn').classList.contains('on')){ e.preventDefault(); endTurn(); }
+});
+})();
+</script>
+</body>
+</html>
