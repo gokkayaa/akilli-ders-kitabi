@@ -524,7 +524,158 @@
        ],
        "src": "audio/dbt/S102.mp3"
       }
-     ]
+     ],
+     "role": {
+      "chars": [
+       "Hacivat",
+       "Karagöz"
+      ],
+      "lines": [
+       {
+        "sp": "Hacivat",
+        "t": "Karagöz’üm, sana bir bilmecem var.",
+        "page": 114,
+        "r": [
+         14.26,
+         15.09,
+         40.3,
+         2.36
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Haydi, sor sor.",
+        "page": 114,
+        "r": [
+         14.26,
+         16.71,
+         21.79,
+         2.36
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Bir yılda kaç mevsim var?",
+        "page": 114,
+        "r": [
+         14.26,
+         18.33,
+         31.17,
+         2.36
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Bunu bilmeyecek ne var! Tabii ki dört mevsim var.",
+        "page": 114,
+        "r": [
+         14.26,
+         19.94,
+         41.71,
+         3.98
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Aferin Karagöz’üm. Şimdi yeni bir bilmece. Cevabı tek hece. Hazır mısın?",
+        "page": 114,
+        "r": [
+         14.26,
+         23.18,
+         38.17,
+         3.98
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Ne Hızır’ı Hacı Cavcav.",
+        "page": 114,
+        "r": [
+         14.26,
+         26.41,
+         29.09,
+         2.36
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Hızır değil Karagöz’üm. Hazır mısın dedim.",
+        "page": 114,
+        "r": [
+         14.26,
+         28.03,
+         39.83,
+         3.98
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Evet hazırım, sor bakalım.",
+        "page": 114,
+        "r": [
+         14.26,
+         31.26,
+         31.92,
+         2.36
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Şekere benzer, tadı yok. Gökte uçar, kanadı yok.",
+        "page": 114,
+        "r": [
+         14.26,
+         36.48,
+         29.44,
+         3.98
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Bundan kolay ne var! Elbette Hürkuş.",
+        "page": 114,
+        "r": [
+         14.26,
+         39.71,
+         41.77,
+         2.36
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Öyle değil Karagöz’üm. Kışın ne yağar?",
+        "page": 114,
+        "r": [
+         14.26,
+         41.33,
+         43.08,
+         2.36
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Tabii ki kar yağar.",
+        "page": 114,
+        "r": [
+         14.26,
+         42.94,
+         24.69,
+         2.36
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Aferin Karagöz’üm.",
+        "page": 114,
+        "r": [
+         14.26,
+         44.56,
+         25.64,
+         2.36
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "dbt114-5a",

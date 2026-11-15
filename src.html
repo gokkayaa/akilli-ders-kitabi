@@ -87,6 +87,48 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 #zbar button{display:flex;align-items:center;gap:6px;background:var(--rail-hi);border-radius:99px;padding:4px 12px}
 #zbar button svg{width:20px;height:20px}
 #zbar #zEye[aria-pressed="true"]{background:var(--ink-red)}
+#zbar #zRole{background:#e0457b}
+#zbar #zVoice{background:var(--brand)}
+/* Rol yap: the line being played lights up on the book page */
+.rl{position:absolute;border-radius:8px;pointer-events:none;opacity:0;transition:opacity .2s;box-shadow:0 0 0 3px #e0457b,0 0 18px rgba(224,69,123,.55);background:rgba(255,225,236,.35);z-index:4}
+.rl.on{opacity:1}
+#rbar{display:flex;gap:10px;align-items:center;color:#fff;font-weight:700;font-size:18px;background:#e0457b;border-radius:99px;padding:5px 6px 5px 18px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+#rbar b{font-weight:800}
+#rbar button{background:rgba(255,255,255,.22);border-radius:99px;padding:5px 14px;font-weight:800}
+#rbar button.sv{background:#fff;color:#e0457b}
+#role{position:fixed;inset:0;z-index:61;background:var(--bg-role,#eaf6f7);display:flex;flex-direction:column;color:var(--text);animation:fadein .2s ease}
+.rtop{display:flex;align-items:center;gap:10px;padding:10px 16px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.rtop .t{flex:1;font-weight:800;font-size:19px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rtop button{background:#eef2f4;border-radius:12px;padding:8px 14px;font-weight:800}
+.rbody{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+.rcast{max-width:1000px;margin:0 auto;padding:4vh 16px 140px;text-align:center}
+.rcast h2{margin:0 0 4px;font-size:min(6vw,44px)}
+.rcast p{margin:0 0 3vh;color:var(--muted);font-weight:700;font-size:19px}
+.rchars{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+.rch{background:#fff;border-radius:24px;padding:18px 20px;width:min(280px,44vw);box-shadow:0 8px 0 rgba(0,0,0,.05),0 12px 28px rgba(0,0,0,.08)}
+.rav{width:110px;height:110px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;color:#fff;font-size:52px;font-weight:800}
+.rch b{display:block;font-size:30px;line-height:1.1}
+.rch .nm{min-height:1.4em;font-size:24px;font-weight:800;color:#e0457b;margin:8px 0}
+.rch button{background:var(--brand);color:#fff;font-weight:800;font-size:19px;padding:8px 18px;border-radius:14px;box-shadow:0 4px 0 var(--brand-deep)}
+.rlist{max-width:940px;margin:0 auto;padding:22px 16px 40vh}
+.rln{display:flex;align-items:flex-end;gap:12px;margin:0 0 14px}
+.rln.R{flex-direction:row-reverse}
+.rln .rav{width:52px;height:52px;font-size:24px;margin:0;flex:none}
+.rln .bub{background:#fff;border-radius:22px;padding:10px 18px;font-size:min(4.2vw,30px);font-weight:700;line-height:1.2;max-width:74%;border:3px solid transparent;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+.rln .bub small{display:block;font-size:.55em;font-weight:800;color:var(--muted)}
+.rln.cur .bub{font-size:min(6.2vw,50px);border-color:#e0457b;box-shadow:0 0 0 9px rgba(224,69,123,.15)}
+.rln.cur .rav{width:80px;height:80px;font-size:38px}
+.rln.next{display:none}
+.rln .pl{width:42px;height:42px;border-radius:50%;background:#e0457b;color:#fff;align-self:center;flex:none}
+.rfoot{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:#fff;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+.rfoot .big{background:var(--brand);color:#fff;font-weight:800;font-size:26px;padding:9px 30px;border-radius:18px;box-shadow:0 6px 0 var(--brand-deep)}
+.rfoot .big.rec{background:#e0457b;box-shadow:0 6px 0 #a82a58}
+.rfoot .sm{background:#eef2f4;font-weight:800;font-size:18px;padding:9px 16px;border-radius:14px}
+.rfoot .who{font-size:min(4.4vw,28px);font-weight:800}.rfoot .who b{color:#e0457b}
+.rfoot .cnt{font-weight:800;color:var(--muted)}
+.rmic{width:54px;height:54px;border-radius:50%;background:#e0457b;display:grid;place-items:center;color:#fff}
+.rmic svg{width:26px;height:26px}
+.rmic.off{background:#c7cdd1}
 
 /* ---------- rail ---------- */
 #rail{position:fixed;z-index:42;display:flex;gap:4px;padding:6px;border-radius:16px;background:var(--rail);box-shadow:0 6px 20px rgba(0,0,0,.4);align-items:center}
@@ -288,8 +330,9 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
   <button class="tool" id="timerBtn" title="Süre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3h12M6 21h12"/><path d="M7 3c0 5 10 5 10 9s-10 4-10 9"/><path d="M17 3c0 5-10 5-10 9s10 4 10 9"/></svg></button>
   <button class="tool" id="fsBtn" title="Tam ekran"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
 </nav>
-<div id="bbar"><div id="zbar" hidden><span id="zLabel"></span><span class="cnt" id="zCount"></span>
+<div id="bbar"><div id="rbar" hidden><span id="rCap"></span><button id="rAgain">↺ Yeniden</button><button class="sv" id="rSave">💾 Kaydet</button><button id="rStop">✕</button></div><div id="zbar" hidden><span id="zLabel"></span><span class="cnt" id="zCount"></span>
   <button id="zEye" aria-pressed="false"></button>
+  <button id="zRole" hidden>🎭 Rol yap</button><button id="zVoice" hidden></button>
   <button id="zClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Sayfaya dön</button></div><div id="audio" hidden>
     <span class="codes" id="pCodes"></span>
     <button class="tool pb" id="pPlay" aria-label="Çal / durdur"></button>
@@ -359,6 +402,11 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
       <div class="wbot"><button class="g" id="rClear">Listeyi sil</button><button class="b" id="rDone">Çarka dön</button></div>
     </div>
   </div>
+</div>
+<div id="role" hidden>
+  <div class="rtop"><span class="t" id="roleT"></span><button id="roleX">Kapat</button></div>
+  <div class="rbody" id="roleBody"></div>
+  <div class="rfoot" id="roleFoot"></div>
 </div>
 <div id="toast" hidden></div>
 <div id="where" hidden>
@@ -562,6 +610,10 @@ function buildPage(book, n, inZoom){
       b.addEventListener('click', ev => { ev.stopPropagation(); openAudio(a, A.audio); });
       el.appendChild(b);
     }
+  }
+  if(inZoom) for(const [A, k, l] of roleLinesOn(book, n)){
+    const d = document.createElement('div'); d.className = 'rl'; d.dataset.a = A.id; d.dataset.k = k;
+    Object.assign(d.style, {left:l.r[0] + '%', top:l.r[1] + '%', width:l.r[2] + '%', height:l.r[3] + '%'}); el.appendChild(d);
   }
   if(!inZoom) for(const L of (P.links || [])){
     const [lx,ly,lw,lh] = L.rect, b = document.createElement('button');
@@ -785,10 +837,11 @@ function openZoom(o){
   requestAnimationFrame(() => z.classList.add('in'));
   const au = (o.A.audio || []).find(a => a.src);
   if(au) openAudio(au, o.A.audio); else if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
-  syncAll(); updNav();
+  syncAll(); updNav(); roleButtons();
 }
 function closeZoom(){
   const o = S.zoom; if(!o) return;
+  stopVoices();
   S.zoom = null;
   if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; syncPlayer(); }
   const z = $('#zoom'), board = $('#board'), s = srcRect(o), W = board.offsetWidth;
@@ -1039,7 +1092,8 @@ function startUnit(u){
 const ROSTER = store.get('roster', {});
 const WCOL = ['#00adb9','#f07d1a','#8e3fb0','#2e9e4f','#e0457b','#1d5fc0','#e0a800','#00838c','#c2410c','#6d2a8c'];
 let wAng = 0, wBusy = false;
-const roster = () => ROSTER[S.cls] || [];
+let wOverride = null, wCb = null;
+const roster = () => wOverride || ROSTER[S.cls] || [];
 function saveRoster(list){ if(list.length) ROSTER[S.cls] = list; else delete ROSTER[S.cls]; store.set('roster', ROSTER); }
 function parseList(t){
   const out = [];
@@ -1111,7 +1165,8 @@ function spin(){
     wAng = from + (to - from) * e; drawWheel();
     const s = Math.floor(wAng / a); if(s !== last){ last = s; if(C) tick(C); $('#wRes').textContent = L[under(n)]; }
     if(p < 1) requestAnimationFrame(step);
-    else { wAng %= Math.PI * 2; wBusy = false; $('#wSpin').disabled = false; $('#wRes').classList.remove('run'); $('#wRes').textContent = L[under(n)]; void $('#wRes').offsetWidth; $('#wRes').classList.add('pop'); chime(); }
+    else { wAng %= Math.PI * 2; wBusy = false; $('#wSpin').disabled = false; $('#wRes').classList.remove('run'); $('#wRes').textContent = L[under(n)]; void $('#wRes').offsetWidth; $('#wRes').classList.add('pop'); chime();
+      if(wCb){ const cb = wCb, nm = L[under(n)]; setTimeout(() => { $('#wheel').hidden = true; wOverride = null; wCb = null; cb(nm); }, 1400); } }
   })(T0);
 }
 function openWheel(edit){
@@ -1122,7 +1177,7 @@ function openWheel(edit){
   if(ed){ drawChips(); setTimeout(() => $('#rName').focus(), 50); } else { $('#wRes').textContent = ''; drawWheel(); }
 }
 $('#wheelBtn').addEventListener('click', () => openWheel(false));
-$('#wkClose').addEventListener('click', () => { if(!wBusy) $('#wheel').hidden = true; });
+$('#wkClose').addEventListener('click', () => { if(!wBusy){ $('#wheel').hidden = true; wOverride = null; wCb = null; } });
 $('#wheel').addEventListener('click', e => { if(e.target.id === 'wheel' && !wBusy) $('#wheel').hidden = true; });
 $('#wSpin').addEventListener('click', spin);
 $('#wEditBtn').addEventListener('click', () => openWheel(true));
@@ -1134,6 +1189,119 @@ $('#rClear').addEventListener('click', e => { const b = e.currentTarget;
   if(!b.classList.contains('sure')){ b.classList.add('sure'); b.textContent = 'Emin misin? Sil'; setTimeout(() => { b.classList.remove('sure'); b.textContent = 'Listeyi sil'; }, 3000); return; }
   b.classList.remove('sure'); b.textContent = 'Listeyi sil'; saveRoster([]); drawChips(); });
 $('#rDone').addEventListener('click', () => { if(roster().length < 2){ toast('Çark için en az 2 öğrenci gerekli'); return; } openWheel(false); });
+
+/* ---------- Rol yap: students read a dialogue from the book, each line is recorded,
+   then the dialogue plays on the book page in the class's own voices ---------- */
+const RCOL = ['#00adb9','#f07d1a','#8e3fb0','#2e9e4f','#e0457b','#1d5fc0'];
+const RIMG = {'Maviş':'assets/rol/mavis.jpg', 'Boncuk':'assets/rol/boncuk.jpg'};
+let R = null;          // {A, cast:{name→student}, cur, recs:[blob], stream?}
+let micStream = null, mrec = null, rchunks = [];
+const VOICE = new Audio();
+function roleLinesOn(book, n){
+  const B = S.books[book], out = [];
+  for(const k in B.pages) for(const A of B.pages[k].activities) if(A.role) A.role.lines.forEach((l, i) => { if(l.page === n) out.push([A, i, l]); });
+  return out;
+}
+const mainAct = o => o.A.alias ? (S.books[o.book].pages[o.A.alias.page].activities.find(x => x.id === o.A.alias.act) || o.A) : o.A;
+/* saved recordings live in this browser (IndexedDB), one set per class and dialogue */
+const idb = () => new Promise((ok, no) => { try{ const q = indexedDB.open('adk', 1); q.onupgradeneeded = () => q.result.createObjectStore('rec'); q.onsuccess = () => ok(q.result); q.onerror = () => no(q.error); }catch(e){ no(e); } });
+async function idbGet(k){ try{ const db = await idb(); return await new Promise(ok => { const r = db.transaction('rec').objectStore('rec').get(k); r.onsuccess = () => ok(r.result); r.onerror = () => ok(null); }); }catch(e){ return null; } }
+async function idbPut(k, v){ const db = await idb(); return new Promise((ok, no) => { const t = db.transaction('rec', 'readwrite'); t.objectStore('rec').put(v, k); t.oncomplete = ok; t.onerror = () => no(t.error); }); }
+const recKey = A => S.cls + '|' + A.id;
+async function roleButtons(){
+  const o = S.zoom, A = o && mainAct(o);
+  $('#zRole').hidden = !(A && A.role); $('#zVoice').hidden = true;
+  if(A && A.role){ const v = await idbGet(recKey(A)); if(v && S.zoom === o){ $('#zVoice').hidden = false; $('#zVoice').textContent = `▶ ${S.cls}'nın sesi`; } }
+}
+const avatar = (c, chars, big) => { const i = chars.indexOf(c); return RIMG[c] ? `<img class="rav" src="${RIMG[c]}" alt="" style="object-fit:cover">` : `<span class="rav" style="background:${RCOL[i % RCOL.length]}">${c[0]}</span>`; };
+function openRole(){
+  const A = mainAct(S.zoom); if(!A || !A.role) return;
+  audio.pause(); stopVoices();
+  R = {A, cast:{}, cur:-1, recs:[]};
+  $('#roleT').textContent = `🎭 Rol yap · ${bookName(S.zoom.book)} s.${S.zoom.n}`;
+  $('#role').hidden = false; drawCast();
+}
+function drawCast(){
+  const ch = R.A.role.chars, have = roster().length > 0 || (ROSTER[S.cls] || []).length > 0;
+  $('#roleBody').innerHTML = `<div class="rcast"><h2>Kim konuşacak?</h2><p>${have ? 'Çark her karaktere bir öğrenci seçsin.' : 'Bu sınıfın öğrenci listesi yok; isimsiz de başlayabilirsiniz.'}</p><div class="rchars"></div></div>`;
+  const box = $('#roleBody .rchars');
+  ch.forEach(c => { const d = document.createElement('div'); d.className = 'rch';
+    d.innerHTML = `${avatar(c, ch)}<b>${c}</b><div class="nm">${R.cast[c] || ''}</div>${have ? '<button>🎡 Çevir</button>' : ''}`;
+    const b = d.querySelector('button'); if(b) b.addEventListener('click', () => pickFor(c));
+    box.appendChild(d); });
+  $('#roleFoot').innerHTML = `<button class="big" id="rGo">Başla →</button>`;
+  $('#rGo').addEventListener('click', startReading);
+}
+function pickFor(c){
+  const used = new Set(Object.entries(R.cast).filter(([k]) => k !== c).map(([, v]) => v));
+  const pool = (ROSTER[S.cls] || []).filter(n => !used.has(n));
+  if(pool.length < 1){ toast('Listede seçilecek öğrenci kalmadı'); return; }
+  if(pool.length === 1){ R.cast[c] = pool[0]; drawCast(); return; }
+  wOverride = pool; wCb = nm => { R.cast[c] = nm; drawCast(); };
+  openWheel(false); $('#wkCls').textContent = `${S.cls} · ${c}`; $('#wRes').textContent = '';
+  setTimeout(spin, 350);
+}
+async function startReading(){
+  if(!micStream){ try{ micStream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true, noiseSuppression:true, autoGainControl:true}}); }
+    catch(e){ toast('Mikrofon açılamadı; kayıt yapılamıyor'); } }
+  R.cur = 0; R.recs = []; drawReading(); recLine(0);
+}
+function drawReading(){
+  const L = R.A.role.lines, ch = R.A.role.chars;
+  const body = $('#roleBody'); body.innerHTML = '<div class="rlist"></div>'; const list = body.firstChild;
+  L.forEach((l, i) => { const d = document.createElement('div');
+    d.className = 'rln' + (ch.indexOf(l.sp) % 2 ? ' R' : '') + (i === R.cur ? ' cur' : '') + (i > R.cur ? ' next' : '');
+    d.innerHTML = `${avatar(l.sp, ch)}<div class="bub"><small>${l.sp}${R.cast[l.sp] ? ' · ' + R.cast[l.sp] : ''}</small>${l.t}</div>`;
+    if(R.recs[i] && i < R.cur){ const b = document.createElement('button'); b.className = 'pl'; b.textContent = '▶'; b.onclick = () => { VOICE.src = URL.createObjectURL(R.recs[i]); VOICE.play(); }; d.appendChild(b); }
+    list.appendChild(d); });
+  const c = list.querySelector('.cur'); if(c) c.scrollIntoView({block:'center', behavior:'smooth'});
+  const l = L[R.cur];
+  $('#roleFoot').innerHTML = `<span class="rmic${micStream ? '' : ' off'}"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
+    <span class="who"><b>${R.cast[l.sp] || l.sp}</b>${R.cast[l.sp] ? ' (' + l.sp + ')' : ''} okuyor</span><span class="cnt">${R.cur + 1} / ${L.length}</span>
+    <button class="sm" id="rRedo">↺ Tekrar</button><button class="big rec" id="rNext">${R.cur + 1 < L.length ? 'Sonraki →' : 'Bitti ✓'}</button>`;
+  $('#rRedo').onclick = () => { stopLine(true); recLine(R.cur); toast('Bu satırı yeniden oku'); };
+  $('#rNext').onclick = nextLine;
+}
+function recLine(i){
+  if(!micStream || !window.MediaRecorder) return;
+  rchunks = []; const m = mrec = new MediaRecorder(micStream);
+  m.ondataavailable = e => e.data.size && rchunks.push(e.data);
+  m.onstop = () => { if(m._drop) return; R.recs[i] = new Blob(rchunks, {type: m.mimeType || 'audio/mp4'}); if(R.cur > i) drawReading(); if(m._then) m._then(); };
+  m.start();
+}
+function stopLine(drop, then){ if(mrec && mrec.state !== 'inactive'){ mrec._drop = !!drop; mrec._then = then; mrec.stop(); } else if(then) then(); }
+function nextLine(){
+  if(!R || R.cur < 0) return;
+  const last = R.cur + 1 >= R.A.role.lines.length;
+  if(last){ stopLine(false, () => finishReading()); if(!micStream) finishReading(); return; }
+  stopLine(false); R.cur++; drawReading(); recLine(R.cur);
+}
+function finishReading(){ $('#role').hidden = true; R.cur = -1; playVoices(R.A, R.recs, R.cast, false); }
+/* play a set of recordings on the book page: each line lights up while it is heard */
+let vRun = null;
+function stopVoices(){ VOICE.pause(); vRun = null; document.querySelectorAll('.rl.on').forEach(e => e.classList.remove('on')); $('#rbar').hidden = true; }
+function playVoices(A, recs, cast, saved){
+  stopVoices(); audio.pause(); const L = A.role.lines, run = vRun = {};
+  $('#rbar').hidden = false; $('#rSave').hidden = saved || !recs.some(Boolean);
+  $('#rSave').textContent = '💾 Kaydet';
+  $('#rAgain').onclick = () => playVoices(A, recs, cast, saved);
+  $('#rSave').onclick = async () => { try{ await idbPut(recKey(A), {cast, recs, at: Date.now()}); $('#rSave').textContent = '✓ Kaydedildi'; roleButtons(); }catch(e){ toast('Kaydedilemedi'); } };
+  const go = i => {
+    if(vRun !== run) return;
+    document.querySelectorAll('.rl.on').forEach(e => e.classList.remove('on'));
+    if(i >= L.length){ $('#rCap').innerHTML = 'Bitti 👏'; return; }
+    document.querySelectorAll(`.rl[data-a="${A.id}"][data-k="${i}"]`).forEach(e => { e.classList.add('on'); e.scrollIntoView && 0; });
+    const nm = cast[L[i].sp]; $('#rCap').innerHTML = `🎭 <b>${nm || L[i].sp}</b>${nm ? ' · ' + L[i].sp : ''}`;
+    if(!recs[i]){ setTimeout(() => go(i + 1), 900); return; }
+    VOICE.src = URL.createObjectURL(recs[i]); VOICE.onended = () => setTimeout(() => go(i + 1), 250);
+    VOICE.play().catch(() => setTimeout(() => go(i + 1), 500));
+  };
+  go(0);
+}
+$('#zRole').addEventListener('click', openRole);
+$('#zVoice').addEventListener('click', async () => { const A = mainAct(S.zoom), v = await idbGet(recKey(A)); if(v) playVoices(A, v.recs, v.cast || {}, true); });
+$('#rStop').addEventListener('click', stopVoices);
+$('#roleX').addEventListener('click', () => { stopLine(true); $('#role').hidden = true; R = null; });
 
 /* ---------- contents: jump straight to any page ---------- */
 let tocTab = null;
@@ -1217,6 +1385,7 @@ $('#end').addEventListener('click', e => { if(e.target.id === 'end') $('#end').h
 $('#where').addEventListener('click', () => $('#where').hidden = true);
 addEventListener('keydown', e => {
   if(!$('#picker').hidden) return;
+  if(!$('#role').hidden){ if(R && R.cur >= 0 && ['ArrowRight','PageDown','Enter',' '].includes(e.key)){ e.preventDefault(); nextLine(); } if(e.key === 'Escape') $('#roleX').click(); return; }
   if(!$('#wheel').hidden){ const ed = $('#wheel').classList.contains('edit');
     if(e.key === 'Escape' && !wBusy) $('#wheel').hidden = true;
     else if(!ed && ['Enter',' ','ArrowRight','PageDown'].includes(e.key)){ e.preventDefault(); spin(); }

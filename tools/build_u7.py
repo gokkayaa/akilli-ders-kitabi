@@ -4,6 +4,7 @@
 # teacher's guide and the pictures; where the slide had none (or a wrong one), from the book itself.
 import sys, math
 from kit import *
+from roles import ROLES
 from words import WB, words, clean
 W = sys.argv[1]
 load(f'{W}/auto-dk2.json', f'{W}/auto-dbt.json')
@@ -337,7 +338,7 @@ page(T, 'dbt', 113, [
     act('dbt113-3', '3. etkinlik', [8, 69.5, 84, 15.5], audio=AUD('dbt', 113, 'S.101')),
 ])
 page(T, 'dbt', 114, [
-    act('dbt114-4', '4. etkinlik', [10, 7.0, 80, 46.5], audio=AUD('dbt', 114, 'S.102')),
+    act('dbt114-4', '4. etkinlik', [10, 7.0, 80, 46.5], audio=AUD('dbt', 114, 'S.102')) | {'role': ROLES(('dbt', 114, [10, 7.0, 80, 46.5]))},
     act('dbt114-5a', '5. etkinlik (a)', [10, 55.0, 40, 22.5], [BT(114, 74.65, 'Mevsim.')], audio=AUD('dbt', 114, 'S.103')),
     act('dbt114-5b', '5. etkinlik (b)', [52, 55.0, 38, 22.5], [
         LB(54.7, 88.2, 66.4, 'Ne kar yağdırır, ne çiçek açtırır,', g='b'), LB(54.7, 88.2, 68.4, 'O sadece yaprakları sarartır.', g='b'),

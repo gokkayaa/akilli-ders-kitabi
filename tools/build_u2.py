@@ -4,6 +4,7 @@
 # ("Dil Bilgisi ve Telaffuz Kitabı … bölümüne bak") decide where the telaffuz book opens, never the slide notes.
 import sys
 from kit import *
+from roles import ROLES
 W = sys.argv[1]
 load(f'{W}/auto-dk.json', f'{W}/auto-dbt.json')
 D, T = {}, {}
@@ -136,7 +137,8 @@ page(D, 'dk', 50, [
     act('dk50-4', '4. etkinlik', [4, 60.5, 92, 35.0], [UL([29.0, 85.3], [32.7, 85.3]), UL([68.6, 86.9], [82.2, 86.9])]
         + ON(51, UL([36.4, 21.7], [44.3, 21.7]), UL([21.6, 23.3], [30.5, 23.3]), UL([31.8, 23.2], [39.7, 23.2]),
              UL([76.4, 42.7], [84.3, 42.7]), UL([78.4, 44.4], [86.3, 44.4])),
-        audio=AUD('dk', 50, 'S.035'), tiles=[[4, 60.5, 92, 35.0], {'r': [6, 2.0, 88, 47.0], 'page': 51}], cols=2, nums=False),
+        audio=AUD('dk', 50, 'S.035'), tiles=[[4, 60.5, 92, 35.0], {'r': [6, 2.0, 88, 47.0], 'page': 51}], cols=2, nums=False)
+        | {'role': ROLES(('dk', 50, [4, 60.5, 92, 35.0]), ('dk', 51, [6, 2.0, 88, 47.0]))},
 ])
 page(D, 'dk', 51, [
     dict(act('dk51-4', '4. etkinlik', [6, 2.0, 88, 47.0], skip=True), alias={'page': 50, 'act': 'dk50-4'}),
