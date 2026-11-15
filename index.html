@@ -181,6 +181,46 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 #picker .addf button{border:0;font-weight:800;font-size:18px;padding:8px 18px;border-radius:12px;background:var(--brand);color:#fff}
 #picker .addf button.no{background:#eef2f4;color:var(--text)}
 .addf small{flex-basis:100%;color:var(--muted);font-weight:600}
+/* İzo çarkı: per-class student lists, kept in this browser */
+#wheel{position:fixed;inset:0;z-index:63;background:var(--dim);display:grid;place-items:center;padding:16px;animation:fadein .25s ease}
+.wkc{position:relative;background:var(--paper);color:var(--text);border-radius:28px;box-shadow:0 30px 60px rgba(0,0,0,.5);padding:22px 26px;max-width:min(1100px,100%);max-height:100%;overflow:auto}
+.wkc .x{position:absolute;top:10px;right:12px;width:44px;height:44px;border-radius:12px;background:#eef2f4;color:var(--text);display:grid;place-items:center}
+.wkc .x svg{width:22px;height:22px}
+.wplay{display:flex;align-items:center;gap:3vw}
+.wwrap{position:relative;flex:none;width:min(66vh,52vw);height:min(66vh,52vw)}
+.wwrap canvas{width:100%;height:100%;display:block}
+.wwrap .ptr{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-top:34px solid #22262a;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.wwrap .hub{position:absolute;left:50%;top:50%;width:18%;height:18%;transform:translate(-50%,-50%);border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3);display:grid;place-items:center}
+.wwrap .hub img{width:78%;height:78%;object-fit:contain}
+.wside{display:flex;flex-direction:column;gap:2vh;min-width:220px;max-width:420px}
+.wside h2{margin:0;font-size:26px}
+.wside h2 b{color:var(--brand-deep)}
+.wres{font-size:min(4.4vw,52px);font-weight:800;line-height:1.08;min-height:1.1em;color:var(--brand-deep);word-break:normal;overflow-wrap:break-word}
+.wres.pop{animation:pop .5s ease}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+.wspin{align-self:flex-start;background:var(--brand);color:#fff;font-weight:800;font-size:28px;padding:12px 34px;border-radius:18px;box-shadow:0 6px 0 var(--brand-deep)}
+.wspin:disabled{opacity:.6}
+.wlink{align-self:flex-start;color:var(--muted);font-weight:700;text-decoration:underline;font-size:16px}
+.wedit{display:none;width:min(760px,90vw)}
+#wheel.edit .wplay{display:none}
+#wheel.edit .wedit{display:block}
+.wedit h2{margin:0 50px 10px 0;font-size:24px}
+.wedit h3{margin:16px 0 6px;font-size:16px;color:var(--muted)}
+.wrow2{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.wedit input,.wedit textarea{box-sizing:border-box;font:inherit;font-size:18px;font-weight:600;border:2px solid #cfd8dd;border-radius:12px;padding:8px 12px;background:#fff;color:var(--text)}
+.wedit input:focus,.wedit textarea:focus{border-color:var(--brand);outline:none}
+.wedit #rName{flex:1;min-width:180px}
+.wedit #rNum{width:5em}
+.wedit textarea{width:100%;height:110px;resize:vertical;font-size:16px}
+.wedit button.b{background:var(--brand);color:#fff;font-weight:800;font-size:17px;padding:9px 18px;border-radius:12px}
+.wedit button.g{background:#eef2f4;color:var(--text);font-weight:800;font-size:15px;padding:8px 14px;border-radius:12px}
+.wedit button.g.sure{background:#d0202a;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px;max-height:30vh;overflow:auto;padding:2px}
+.chips span{display:inline-flex;align-items:center;gap:4px;background:#e6f7f8;border-radius:99px;padding:4px 4px 4px 12px;font-weight:700}
+.chips span button{width:26px;height:26px;border-radius:50%;color:#7a858d;font-weight:800}
+.chips em{color:var(--muted);font-weight:600}
+.wbot{display:flex;justify-content:space-between;gap:8px;margin-top:16px;flex-wrap:wrap}
+@media (max-width:760px){.wplay{flex-direction:column}.wwrap{width:min(80vw,50vh);height:min(80vw,50vh)}}
 /* after choosing a class: go on where we left off, or start a unit */
 #units{position:fixed;inset:0;z-index:64;background:var(--dim);display:grid;place-items:center;padding:16px;animation:fadein .3s ease}
 .ucard{display:flex;align-items:flex-end;gap:2vw;background:var(--paper);color:var(--text);border-radius:28px;padding:3vh 3vw 3vh 1.5vw;box-shadow:0 30px 60px rgba(0,0,0,.5);max-width:min(1000px,100%);max-height:100%;overflow:auto}
@@ -246,6 +286,7 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
   <button class="tool txt" id="bookBtn" title="Kitap değiştir">DK</button>
   <button class="tool" id="tocBtn" title="İçindekiler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></button>
   <button class="tool izo" id="whereBtn" title="Neredeyiz?"><img src="assets/izo.png" alt="İzo"></button>
+  <button class="tool" id="wheelBtn" title="İzo Çarkı"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.5"/><path d="M12 13V4.5M12 13l7.4 4.2M12 13l-7.4 4.2"/><path d="M9.5 2h5l-2.5 3z" fill="currentColor"/></svg></button>
   <div class="sep"></div>
   <button class="tool" data-tool="pen" aria-pressed="false" title="Kalem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1.2-4.6L16.5 4.1a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/><path d="M14.5 6l3.5 3.5"/></svg><span class="cdot" id="penDot" style="background:#d0202a"></span></button>
   <button class="tool" data-tool="hl" aria-pressed="false" title="Fosforlu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M9 15l-3 3v2h4l3-3"/><path d="M9 15l7.5-9.5a2 2 0 013 0l1 1a2 2 0 010 3L13 17z"/><path d="M3 22h8" stroke-width="3" stroke="#ffd400"/></svg></button>
@@ -297,6 +338,33 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
       <p class="ulbl" id="uLbl">Ya da bir ünite seç:</p>
       <div class="ulist" id="uList"></div>
       <button class="uchg" id="uChg">Sınıfı değiştir</button>
+    </div>
+  </div>
+</div>
+<div id="wheel" hidden>
+  <div class="wkc" role="dialog" aria-label="İzo Çarkı">
+    <button class="x" id="wkClose" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="wplay">
+      <div class="wwrap"><canvas id="wCv" width="900" height="900"></canvas><div class="ptr"></div><div class="hub"><img src="assets/izo.png" alt=""></div></div>
+      <div class="wside">
+        <h2>İzo Çarkı · <b id="wkCls">8A</b></h2>
+        <div class="wres" id="wRes"></div>
+        <button class="wspin" id="wSpin">Çevir!</button>
+        <button class="wlink" id="wEditBtn">Öğrenci listesini düzenle</button>
+      </div>
+    </div>
+    <div class="wedit">
+      <h2><b id="rCls">8A</b> öğrencileri <span id="rCnt" style="color:var(--muted)"></span></h2>
+      <h3>Elle ekle</h3>
+      <form class="wrow2" id="rAdd"><input id="rName" placeholder="Öğrencinin adı" autocomplete="off"><button class="b">Ekle</button></form>
+      <h3>Excel'den ya da başka yerden yapıştır</h3>
+      <textarea id="rPaste" placeholder="Listeyi buraya yapıştır. Her satır bir öğrenci olur; sıra numaraları silinir."></textarea>
+      <div class="wrow2" style="margin-top:6px"><button class="b" id="rPasteGo">Listeye ekle</button></div>
+      <h3>İsim yerine numara</h3>
+      <div class="wrow2"><input id="rNum" type="number" min="2" max="60" inputmode="numeric" placeholder="24"><span>öğrenci</span><button class="g" id="rNumGo">Numaraları oluştur</button></div>
+      <h3>Liste</h3>
+      <div class="chips" id="rChips"></div>
+      <div class="wbot"><button class="g" id="rClear">Listeyi sil</button><button class="b" id="rDone">Çarka dön</button></div>
     </div>
   </div>
 </div>
@@ -931,7 +999,7 @@ function removeClass(c){
   const d = EXTRA[c]; if(!d) return;
   delete EXTRA[c]; store.set('extra', EXTRA);
   SERIES[d].classes = SERIES[d].classes.filter(x => x !== c);
-  delete pos[c]; store.set('pos', pos);
+  delete pos[c]; store.set('pos', pos); delete ROSTER[c]; store.set('roster', ROSTER);
   if(S.cls === c){ S.cls = null; store.set('cls', null); $('#clsBtn').textContent = '?'; }
   toast(c + ' silindi'); openPicker();
 }
@@ -974,6 +1042,96 @@ function startUnit(u){
   $('#units').hidden = true;
   S.back = []; S.revealed.clear(); go(S.ders, u.from); updNav(); savePos(); showWhere();
 }
+
+/* ---------- İzo çarkı: each class's list lives only in this browser ---------- */
+const ROSTER = store.get('roster', {});
+const WCOL = ['#00adb9','#f07d1a','#8e3fb0','#2e9e4f','#e0457b','#1d5fc0','#e0a800','#00838c','#c2410c','#6d2a8c'];
+let wAng = 0, wBusy = false;
+const roster = () => ROSTER[S.cls] || [];
+function saveRoster(list){ if(list.length) ROSTER[S.cls] = list; else delete ROSTER[S.cls]; store.set('roster', ROSTER); }
+function parseList(t){
+  const out = [];
+  for(let line of t.replace(/\r/g, '').split('\n')){
+    const parts = line.includes('\t') ? [line.split('\t')] : (line.split(/[,;]/).length > 2 && !/\s\S+\s/.test(line) ? line.split(/[,;]/).map(x => [x]) : [[line]]);
+    for(const cells of parts){
+      const HEAD = /^(no|nu|sıra|sira|s\.?\s?no|ad|adı|soyad|soyadı|adı soyadı|ad soyad|isim|öğrenci|öğrencinin adı|name|surname|ф\.?и\.?о\.?|имя|фамилия|аты|аты-жөнү)$/i;
+      const name = cells.map(c => c.trim().replace(/^\d+\s*[.)\-:]?\s*/, '')).filter(c => c && !/^\d+$/.test(c) && !HEAD.test(c)).join(' ').replace(/\s+/g, ' ').trim();
+      if(name && !HEAD.test(name)) out.push(name);
+    }
+  }
+  return out;
+}
+function addNames(names){
+  const list = roster().slice(), have = new Set(list.map(x => x.toLocaleLowerCase('tr')));
+  let n = 0; names.forEach(x => { const k = x.toLocaleLowerCase('tr'); if(!have.has(k)){ have.add(k); list.push(x); n++; } });
+  saveRoster(list); drawChips(); return n;
+}
+function drawChips(){
+  const L = roster(), box = $('#rChips'); box.innerHTML = '';
+  $('#rCnt').textContent = L.length ? `(${L.length})` : '';
+  if(!L.length){ box.innerHTML = '<em>Liste boş. Yukarıdaki yollardan biriyle öğrenci ekle.</em>'; return; }
+  L.forEach((x, i) => { const c = document.createElement('span'); c.textContent = x;
+    const d = document.createElement('button'); d.textContent = '×'; d.setAttribute('aria-label', x + ' sil');
+    d.addEventListener('click', () => { const l = roster().slice(); l.splice(i, 1); saveRoster(l); drawChips(); });
+    c.appendChild(d); box.appendChild(c); });
+}
+function drawWheel(){
+  const cv = $('#wCv'), c = cv.getContext('2d'), L = roster(), W = cv.width, R = W / 2 - 8, n = L.length;
+  c.clearRect(0, 0, W, W); if(!n) return;
+  const FF = getComputedStyle(document.body).fontFamily;
+  c.save(); c.translate(W / 2, W / 2); c.rotate(wAng);
+  const a = Math.PI * 2 / n, fs = Math.max(16, Math.min(56, 2.2 * R / Math.max(n, 6) * 1.6));
+  for(let i = 0; i < n; i++){
+    c.beginPath(); c.moveTo(0, 0); c.arc(0, 0, R, i * a, (i + 1) * a); c.closePath();
+    c.fillStyle = WCOL[(n % WCOL.length === 1 && i === n - 1) ? 1 : i % WCOL.length]; c.fill();
+    c.strokeStyle = '#fff'; c.lineWidth = 4; c.stroke();
+    c.save(); c.rotate((i + .5) * a); c.textAlign = 'right'; c.textBaseline = 'middle'; c.fillStyle = '#fff';
+    let f = fs; c.font = `800 ${f}px ${FF}`;
+    const max = R * .78, txt = L[i]; while(c.measureText(txt).width > max && f > 14){ f -= 2; c.font = `800 ${f}px ${FF}`; }
+    c.fillText(txt, R - 22, 0); c.restore();
+  }
+  c.restore();
+  c.beginPath(); c.arc(W / 2, W / 2, R, 0, Math.PI * 2); c.lineWidth = 8; c.strokeStyle = '#22262a'; c.stroke();
+}
+function tick(C){ try{ const o = C.createOscillator(), g = C.createGain(); o.frequency.value = 1400; g.gain.setValueAtTime(.08, C.currentTime); g.gain.exponentialRampToValueAtTime(.0001, C.currentTime + .04); o.connect(g).connect(C.destination); o.start(); o.stop(C.currentTime + .05); }catch(e){} }
+function spin(){
+  const L = roster(), n = L.length; if(wBusy || n < 2) return;
+  wBusy = true; $('#wSpin').disabled = true; $('#wRes').textContent = ''; $('#wRes').classList.remove('pop');
+  const k = Math.floor(Math.random() * n), a = Math.PI * 2 / n;
+  // pointer sits at the top (-90°): bring the middle of slice k there, plus a few full turns
+  const want = -Math.PI / 2 - (k + .5) * a + (Math.random() - .5) * a * .6;
+  const from = wAng, turns = 5 + Math.floor(Math.random() * 3);
+  let to = want; while(to < from + turns * Math.PI * 2) to += Math.PI * 2;
+  const T0 = performance.now(), dur = 4200; let C = null, last = Math.floor(from / a);
+  try{ C = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){}
+  (function step(t){
+    const p = Math.min(1, (t - T0) / dur), e = 1 - Math.pow(1 - p, 3);
+    wAng = from + (to - from) * e; drawWheel();
+    const s = Math.floor(wAng / a); if(C && s !== last){ last = s; tick(C); }
+    if(p < 1) requestAnimationFrame(step);
+    else { wAng %= Math.PI * 2; wBusy = false; $('#wSpin').disabled = false; $('#wRes').textContent = L[k]; void $('#wRes').offsetWidth; $('#wRes').classList.add('pop'); chime(); }
+  })(T0);
+}
+function openWheel(edit){
+  if(!S.cls){ openPicker(); return; }
+  $('#wkCls').textContent = $('#rCls').textContent = S.cls;
+  const w = $('#wheel'); w.hidden = false;
+  const ed = edit || roster().length < 2; w.classList.toggle('edit', ed);
+  if(ed){ drawChips(); setTimeout(() => $('#rName').focus(), 50); } else { $('#wRes').textContent = ''; drawWheel(); }
+}
+$('#wheelBtn').addEventListener('click', () => openWheel(false));
+$('#wkClose').addEventListener('click', () => { if(!wBusy) $('#wheel').hidden = true; });
+$('#wheel').addEventListener('click', e => { if(e.target.id === 'wheel' && !wBusy) $('#wheel').hidden = true; });
+$('#wSpin').addEventListener('click', spin);
+$('#wEditBtn').addEventListener('click', () => openWheel(true));
+$('#rAdd').addEventListener('submit', e => { e.preventDefault(); const v = $('#rName').value.trim(); if(v){ if(!addNames([v])) toast(v + ' zaten listede'); } $('#rName').value = ''; $('#rName').focus(); });
+$('#rPasteGo').addEventListener('click', () => { const n = addNames(parseList($('#rPaste').value)); $('#rPaste').value = ''; toast(n ? `${n} öğrenci eklendi` : 'Yeni isim bulunamadı'); });
+$('#rNumGo').addEventListener('click', () => { const n = Math.round(+$('#rNum').value); if(!(n >= 2 && n <= 60)){ toast('2 ile 60 arasında bir sayı yaz'); return; }
+  saveRoster(Array.from({length:n}, (_, i) => String(i + 1))); $('#rNum').value = ''; drawChips(); toast(`1–${n} numaraları hazır`); });
+$('#rClear').addEventListener('click', e => { const b = e.currentTarget;
+  if(!b.classList.contains('sure')){ b.classList.add('sure'); b.textContent = 'Emin misin? Sil'; setTimeout(() => { b.classList.remove('sure'); b.textContent = 'Listeyi sil'; }, 3000); return; }
+  b.classList.remove('sure'); b.textContent = 'Listeyi sil'; saveRoster([]); drawChips(); });
+$('#rDone').addEventListener('click', () => { if(roster().length < 2){ toast('Çark için en az 2 öğrenci gerekli'); return; } openWheel(false); });
 
 /* ---------- contents: jump straight to any page ---------- */
 let tocTab = null;
@@ -1057,6 +1215,10 @@ $('#end').addEventListener('click', e => { if(e.target.id === 'end') $('#end').h
 $('#where').addEventListener('click', () => $('#where').hidden = true);
 addEventListener('keydown', e => {
   if(!$('#picker').hidden) return;
+  if(!$('#wheel').hidden){ const ed = $('#wheel').classList.contains('edit');
+    if(e.key === 'Escape' && !wBusy) $('#wheel').hidden = true;
+    else if(!ed && ['Enter',' ','ArrowRight','PageDown'].includes(e.key)){ e.preventDefault(); spin(); }
+    return; }
   if(!$('#units').hidden){ if(['ArrowRight','PageDown','Enter',' ','Escape'].includes(e.key)){ e.preventDefault(); ($('#uCont').hidden ? $('#uList button') : $('#uCont')).click(); } return; }
   if(!$('#end').hidden && endNext && (e.key === 'ArrowRight' || e.key === 'PageDown')){ e.preventDefault(); $('#eNext').click(); return; }
   if(!$('#toc').hidden || !$('#end').hidden){ if(e.key === 'Escape'){ $('#toc').hidden = true; $('#end').hidden = true; } return; }
