@@ -331,6 +331,23 @@ page(T, 'dbt', 38, [
 ])
 
 U2 = lambda a, b: [{'no': 2, 'title': 'Haydi Okula', 'from': a, 'to': b}]
+# ---- Rol yap: the dialogues students can read aloud in roles (lines read from the book page)
+ROLESPEC = {
+    'dk40-4': ROLES(('dk', 40, [4, 51.0, 93, 44.5]), ('dk', 41, [6, 2.5, 88, 58.0])),
+    'dk55-4': ROLES(('dk', 55, [5, 2.0, 90, 88.5]), sp={'Mesut': 'Mehmet'},   # the book prints "Mesut" once
+                    fix={1: 'Tabii abla. Burası neresi?', 4: 'Okul 3 katlı. Okulda yirmi sınıf var.',
+                         13: 'Hmm. Burası neresi? Bunlar kim?', 16: 'Okulda 70 öğretmen var.', 21: 'Şurası neresi?'}),
+    'dbt26-1': ROLES(('dbt', 26, [10, 19.5, 82, 53.5])),
+    'dbt30-4': ROLES(('dbt', 30, [10, 6.0, 82, 59.5])),
+    'dbt34-1': ROLES(('dbt', 34, [10, 18.5, 82, 32.5])),
+    'dbt38-4': ROLES(('dbt', 38, [10, 6.0, 82, 61.0])),
+}
+for store in (D, T):
+    for pg in store.values():
+        for A in pg['activities']:
+            if A['id'] in ROLESPEC: A['role'] = ROLESPEC.pop(A['id'])
+assert not ROLESPEC, ROLESPEC
+
 dump('dk-u2', D, 0.7855, 'Ders Kitabı 1', U2(39, 64))
 dump('dbt-u2', T, 0.6669, 'Dil Bilgisi ve Telaffuz Kitabı', U2(22, 38))
 print('ok', len(D), len(T), sum(len(p['activities']) for p in D.values()), sum(len(p['activities']) for p in T.values()))

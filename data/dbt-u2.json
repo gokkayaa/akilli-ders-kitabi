@@ -350,7 +350,125 @@
        ],
        "src": "audio/dbt/S020.mp3"
       }
-     ]
+     ],
+     "role": {
+      "chars": [
+       "İzo",
+       "Temel"
+      ],
+      "lines": [
+       {
+        "sp": "İzo",
+        "t": "Temel, bu ne?",
+        "page": 26,
+        "r": [
+         15.73,
+         44.44,
+         16.5,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Bu kitap.",
+        "page": 26,
+        "r": [
+         15.73,
+         46.06,
+         14.85,
+         1.96
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Peki, bunlar ne?",
+        "page": 26,
+        "r": [
+         54.55,
+         40.76,
+         18.32,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Bunlar kalem.",
+        "page": 26,
+        "r": [
+         54.55,
+         42.23,
+         19.24,
+         1.96
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Oo! Kaç tane kalem var?",
+        "page": 26,
+        "r": [
+         54.55,
+         43.7,
+         25.75,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Bir, iki, üç, dört, beş. Beş tane kalem var.",
+        "page": 26,
+        "r": [
+         54.55,
+         45.17,
+         32.71,
+         3.43
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Kalemler burada. Silgiler nerede Temel?",
+        "page": 26,
+        "r": [
+         14.34,
+         66.82,
+         32.61,
+         3.58
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Silgiler, şurada.",
+        "page": 26,
+        "r": [
+         14.34,
+         70.06,
+         20.57,
+         1.96
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Haydi, silgilerle adımızı yazalım.",
+        "page": 26,
+        "r": [
+         54.55,
+         66.82,
+         32.63,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "İzo, kalemle yazarız. Silgiyle sileriz.",
+        "page": 26,
+        "r": [
+         54.55,
+         68.44,
+         31.76,
+         3.58
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "dbt26-2",
@@ -693,7 +811,125 @@
        ],
        "src": "audio/dbt/S026.mp3"
       }
-     ]
+     ],
+     "role": {
+      "chars": [
+       "Hacivat",
+       "Karagöz"
+      ],
+      "lines": [
+       {
+        "sp": "Hacivat",
+        "t": "Karagöz’üm, sana bir bilmecem var. Hazır mısın?",
+        "page": 30,
+        "r": [
+         17.46,
+         41.67,
+         51.61,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Haydi, sor bakalım Hacı Cavcav. Yazarım.",
+        "page": 30,
+        "r": [
+         17.46,
+         43.7,
+         45.56,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "“Yazar mısın?” demedim Karagöz’üm. “Hazır mısın?” dedim.",
+        "page": 30,
+        "r": [
+         17.46,
+         45.73,
+         61.46,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Tamam tamam, hazırım.",
+        "page": 30,
+        "r": [
+         17.46,
+         47.77,
+         30.59,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Ayakları var, insan değil. Sınıfta var, masa değil.",
+        "page": 30,
+        "r": [
+         17.46,
+         49.8,
+         48.72,
+         4.0
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Öğrenci.",
+        "page": 30,
+        "r": [
+         17.46,
+         53.87,
+         16.38,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Hayır Karagöz’üm. İnsan değil. İyi düşün, tekrar söyle.",
+        "page": 30,
+        "r": [
+         17.46,
+         55.9,
+         56.01,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Sıra!",
+        "page": 30,
+        "r": [
+         17.46,
+         57.93,
+         13.01,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Aferin Karagöz’üm. Tebrik ederim!",
+        "page": 30,
+        "r": [
+         17.46,
+         59.97,
+         38.55,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Teşekkür ederim Hacı Cavcav.",
+        "page": 30,
+        "r": [
+         17.46,
+         62.0,
+         35.55,
+         1.96
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "dbt30-5",
@@ -1021,7 +1257,136 @@
        ],
        "src": "audio/dbt/S031.mp3"
       }
-     ]
+     ],
+     "role": {
+      "chars": [
+       "İzo",
+       "Temel"
+      ],
+      "lines": [
+       {
+        "sp": "İzo",
+        "t": "Temel, burası neresi?",
+        "page": 34,
+        "r": [
+         13.43,
+         38.76,
+         23.08,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Burası kütüphane İzo.",
+        "page": 34,
+        "r": [
+         13.43,
+         40.79,
+         22.69,
+         3.58
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Kütüphanede ne var?",
+        "page": 34,
+        "r": [
+         13.43,
+         44.44,
+         23.07,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Kütüphanede kitaplar var.",
+        "page": 34,
+        "r": [
+         13.43,
+         46.48,
+         18.87,
+         3.58
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Peki, şurası neresi?",
+        "page": 34,
+        "r": [
+         39.52,
+         38.76,
+         21.39,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Orası sınıf.",
+        "page": 34,
+        "r": [
+         39.52,
+         40.79,
+         16.55,
+         1.96
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Sınıfta kim var?",
+        "page": 34,
+        "r": [
+         39.52,
+         42.83,
+         18.06,
+         1.96
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Sınıfta öğrenciler ve öğretmen var.",
+        "page": 34,
+        "r": [
+         39.52,
+         44.86,
+         22.14,
+         3.58
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Temel sınıfta çay var mı?",
+        "page": 34,
+        "r": [
+         65.51,
+         38.67,
+         22.7,
+         3.58
+        ]
+       },
+       {
+        "sp": "Temel",
+        "t": "Hayır, sınıfta çay yok. Çay kantinde.",
+        "page": 34,
+        "r": [
+         65.51,
+         42.32,
+         21.64,
+         3.58
+        ]
+       },
+       {
+        "sp": "İzo",
+        "t": "Haydi, kantine gidelim, çayımızı içelim.",
+        "page": 34,
+        "r": [
+         65.51,
+         45.97,
+         22.08,
+         3.58
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "dbt34-2",
@@ -1373,7 +1738,224 @@
        ],
        "src": "audio/dbt/S037.mp3"
       }
-     ]
+     ],
+     "role": {
+      "chars": [
+       "Karagöz",
+       "Hacivat"
+      ],
+      "lines": [
+       {
+        "sp": "Karagöz",
+        "t": "Merhaba Hacı Cavcav. Nereye gidiyorsun?",
+        "page": 38,
+        "r": [
+         14.8,
+         16.96,
+         40.05,
+         3.58
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Merhaba Karagöz’üm. Okula gidiyorum. Birlikte gidelim mi?",
+        "page": 38,
+        "r": [
+         14.8,
+         20.61,
+         40.43,
+         3.58
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Olur, Hacı Cavcav. Okulda kimler var?",
+        "page": 38,
+        "r": [
+         14.8,
+         24.26,
+         41.7,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Okulda öğretmenler ve öğrenciler var.",
+        "page": 38,
+        "r": [
+         14.8,
+         26.29,
+         41.47,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Okulda neler var Hacı Cavcav?",
+        "page": 38,
+        "r": [
+         14.8,
+         28.33,
+         35.75,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Okulda sınıflar, öğretmenler odası, yemekhane, laboratuvar, spor salonu ve kütüphane var.",
+        "page": 38,
+        "r": [
+         14.8,
+         30.36,
+         42.12,
+         5.2
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Hacivat, burası neresi?",
+        "page": 38,
+        "r": [
+         14.8,
+         39.55,
+         29.08,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Burası kütüphane Karagöz’üm.",
+        "page": 38,
+        "r": [
+         14.8,
+         41.59,
+         35.86,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Şurası neresi?",
+        "page": 38,
+        "r": [
+         14.8,
+         43.62,
+         21.51,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Orası laboratuvar.",
+        "page": 38,
+        "r": [
+         14.8,
+         45.65,
+         24.21,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Spor salonu nerede Hacı Cavcav?",
+        "page": 38,
+        "r": [
+         14.8,
+         47.69,
+         38.59,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Spor salonu 1. katta.",
+        "page": 38,
+        "r": [
+         14.8,
+         49.72,
+         26.81,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Sınıflar kaçıncı katta Hacı Cavcav?",
+        "page": 38,
+        "r": [
+         14.8,
+         51.75,
+         39.49,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Sınıflar, 1. katta, 2. katta ve 3. katta.",
+        "page": 38,
+        "r": [
+         14.8,
+         53.79,
+         39.94,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Okulda kaç sınıf var?",
+        "page": 38,
+        "r": [
+         14.8,
+         55.82,
+         27.36,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Yirmi sınıf var Karagöz’üm.",
+        "page": 38,
+        "r": [
+         14.8,
+         57.85,
+         32.45,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Okulda yemekhane var mı?",
+        "page": 38,
+        "r": [
+         14.8,
+         59.89,
+         32.83,
+         1.96
+        ]
+       },
+       {
+        "sp": "Hacivat",
+        "t": "Evet, okulda yemekhane var. Yemekhane 2. katta.",
+        "page": 38,
+        "r": [
+         14.8,
+         61.92,
+         52.04,
+         1.96
+        ]
+       },
+       {
+        "sp": "Karagöz",
+        "t": "Haydi Hacı Cavcav, yemekhaneye gidelim, yemek yiyelim.",
+        "page": 38,
+        "r": [
+         14.8,
+         63.95,
+         59.51,
+         1.96
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "dbt38-5a",
