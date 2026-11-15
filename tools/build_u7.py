@@ -131,8 +131,8 @@ page(D, 'dk2', 52, [
 ])
 page(D, 'dk2', 53, [
     act('dk2-53-7', '7. etkinlik', [5, 9.0, 91, 26.5], [
-        B2(53, 14.65, 'Pakistan’da'), B2(53, 19.29, 'Benim şehrimde dün hava sıcaktı.'), B2(53, 23.94, 'Ben dün okula gittim.'),
-        LB(45.3, 90.0, 28.60, 'Benim şehrimde bugün hava sıcak.'), B2(53, 33.24, 'Ben şimdi dersi dinliyorum.')]),
+        B2(53, 14.65, 'Bişkek’te'), B2(53, 19.29, 'Benim şehrimde dün hava soğuktu.'), B2(53, 23.94, 'Ben dün okula gittim.'),
+        LB(45.3, 90.0, 28.60, 'Benim şehrimde bugün hava güneşli.'), B2(53, 33.24, 'Ben şimdi dersi dinliyorum.')]),
     act('dk2-53-sv1a', 'Söz Varlığı 1 (a)', [5, 40.0, 91, 27.5]),
     act('dk2-53-sv1b', 'Söz Varlığı 1 (b)', [5, 68.5, 91, 21.0], [
         B2(53, 84.14, 'yağıyor.', x=17), B2(53, 84.13, 'yağıyor.', x=42), B2(53, 84.14, 'esiyor.', x=63), B2(53, 84.13, 'açıyor.', x=85)]),
@@ -238,9 +238,9 @@ page(D, 'dk2', 64, [
 ])
 page(D, 'dk2', 65, [
     act('dk2-65-4', '4. etkinlik', [5, 8.5, 91, 26.0], [
-        LB(35.7, 90.8, 14.18, 'Pakistan'), B2(65, 17.10, 'Muhammed Ali Cinnah'), B2(65, 20.06, 'İslamabad'), B2(65, 23.02, 'Pakistan rupisi'),
-        B2(65, 25.94, 'Yaklaşık 225 milyon'), LB(35.7, 90.8, 28.90, 'Dört mevsim yaşanır.'),
-        B2(65, 31.81, 'Bazı yerler çok sıcak olur, bazı yerler serindir.')]),
+        LB(35.7, 90.8, 14.18, 'Kırgızistan'), B2(65, 20.06, 'Bişkek'), B2(65, 23.02, 'Kırgız somu'),
+        B2(65, 25.94, 'Yaklaşık 7 milyon'), LB(35.7, 90.8, 28.90, 'Dört mevsim yaşanır.'),
+        B2(65, 31.81, 'Kışın soğuk ve karlı, yazın sıcak olur.')]),
     act('dk2-65-sv1a', 'Söz Varlığı 1 (a)', [5, 41.5, 91, 24.5]),
     act('dk2-65-sv1b', 'Söz Varlığı 1 (b)', [5, 66.0, 91, 28.5], audio=AUD('dk2', 65, 'M.021')),
 ])
@@ -248,8 +248,8 @@ page(D, 'dk2', 66, [
     act('dk2-66-2', 'Söz Varlığı 2', [5, 2.0, 91, 26.0], audio=AUD('dk2', 66, 'S.121')),
     act('dk2-66-3a', 'Söz Varlığı 3 (a)', [5, 28.5, 91, 45.0]),
     act('dk2-66-3b', 'Söz Varlığı 3 (b)', [5, 74.0, 91, 22.0], [
-        B2(66, 78.16, 'Pakistan’ın kuzeyinde Çin vardır.'), B2(66, 80.31, 'Pakistan’ın güneyinde Arap Denizi vardır.'),
-        B2(66, 82.45, 'Pakistan’ın batısında İran vardır.'), B2(66, 84.60, 'Pakistan’ın doğusunda Hindistan vardır.')]),
+        B2(66, 78.16, 'Kırgızistan’ın kuzeyinde Kazakistan vardır.'), B2(66, 80.31, 'Kırgızistan’ın güneyinde Tacikistan vardır.'),
+        B2(66, 82.45, 'Kırgızistan’ın batısında Özbekistan vardır.'), B2(66, 84.60, 'Kırgızistan’ın doğusunda Çin vardır.')]),
 ])
 page(D, 'dk2', 67, [
     act('dk2-67-s', 'Şarkı Zamanı', [5, 10.0, 91, 34.5], audio=AUD('dk2', 67, 'M.022')),
