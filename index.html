@@ -1086,6 +1086,20 @@ function drawWheel(){
     c.fillStyle = WCOL[(n % WCOL.length === 1 && i === n - 1) ? 1 : i % WCOL.length]; c.fill();
     c.strokeStyle = '#fff'; c.lineWidth = n > 30 ? 2 : 4; c.stroke();
   }
+  /* names on the wheel: one size and one style for every slice — full names if they all fit,
+     otherwise "Chyngyzov R." for everyone, otherwise initials. The full name appears big beside the wheel. */
+  const FF = getComputedStyle(document.body).fontFamily, room = R * .68, inner = R - 18;
+  const fmax = Math.round(Math.max(20, Math.min(40, R * Math.sin(a / 2) * 1.1)));
+  const modes = [t => t, t => { const w = t.split(' ').filter(Boolean); return w.length > 1 ? w[0] + ' ' + w.slice(1).map(v => v[0] + '.').join(' ') : t; },
+                 t => t.split(' ').filter(Boolean).map(v => v[0] + '.').join(' ')];
+  let pick = null;
+  for(const m of modes){ for(let f = fmax; f >= Math.min(fmax, 24) && !pick; f -= 2){ c.font = `700 ${f}px ${FF}`; if(L.every(t => c.measureText(m(t)).width <= room)) pick = [m, f]; } if(pick) break; }
+  if(!pick){ pick = [modes[2], 22]; }
+  c.font = `700 ${pick[1]}px ${FF}`;
+  for(let i = 0; i < n; i++){
+    c.save(); c.rotate((i + .5) * a); c.textAlign = 'right'; c.textBaseline = 'middle'; c.fillStyle = '#fff';
+    c.fillText(pick[0](L[i]), inner, 0); c.restore();
+  }
   c.restore();
   c.beginPath(); c.arc(W / 2, W / 2, R, 0, Math.PI * 2); c.lineWidth = 8; c.strokeStyle = '#22262a'; c.stroke();
 }
