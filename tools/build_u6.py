@@ -16,8 +16,7 @@ def OPT(x, y, g=None):
 page(D, 'dk2', 7, [act('dk2-7-h', 'Üniteye Hazırlık', [7, 86.5, 87, 10.5])])
 
 page(D, 'dk2', 8, [
-    act('dk2-8-1', '1. etkinlik', [5, 19.0, 45, 17.5], audio=AUD('dk2', 8, 'S.092')),
-    act('dk2-8-2', '2. etkinlik', [50, 19.0, 45, 17.5], audio=AUD('dk2', 8, 'S.093')),
+    act('dk2-8-1', '1. ve 2. etkinlik', [5, 19.0, 90.0, 17.5], audio=AUD('dk2', 8, 'S.092') + AUD('dk2', 8, 'S.093')),
     act('dk2-8-3', '3. etkinlik', [4, 37.5, 92, 55.5], [
         B2(8, 76.22, 'şeftali', x=18, g='r2'), B2(8, 76.22, '12', x=36, g='r2'),
         B2(8, 80.0, 'İki kilo patates', x=15, g='r3'), B2(8, 80.05, '8', x=36, g='r3'),

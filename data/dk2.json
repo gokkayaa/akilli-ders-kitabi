@@ -32,11 +32,11 @@
    "activities": [
     {
      "id": "dk2-8-1",
-     "label": "1. etkinlik",
+     "label": "1. ve 2. etkinlik",
      "rect": [
       5,
       19.0,
-      45,
+      90.0,
       17.5
      ],
      "items": [],
@@ -50,20 +50,7 @@
         2.05
        ],
        "src": "audio/dk2/S092.mp3"
-      }
-     ]
-    },
-    {
-     "id": "dk2-8-2",
-     "label": "2. etkinlik",
-     "rect": [
-      50,
-      19.0,
-      45,
-      17.5
-     ],
-     "items": [],
-     "audio": [
+      },
       {
        "code": "S.093",
        "rect": [

@@ -46,8 +46,7 @@ page(D, 'dk2', 43, [act('dk2-43-h', 'Üniteye Hazırlık', [7, 86.5, 87, 10.5])]
 
 # ---- A. Hava Nasıl? — Okuma. The story (4. etkinlik) runs over s.44 (panel 1) and s.45 (panels 2–6).
 page(D, 'dk2', 44, [
-    act('dk2-44-1', '1. etkinlik', [5, 16.0, 44, 21.5], audio=AUD('dk2', 44, 'S.110')),
-    act('dk2-44-2', '2. etkinlik', [48, 16.0, 48, 21.5], audio=AUD('dk2', 44, 'S.111')),
+    act('dk2-44-1', '1. ve 2. etkinlik', [5, 16.0, 91.0, 21.5], audio=AUD('dk2', 44, 'S.110') + AUD('dk2', 44, 'S.111')),
     act('dk2-44-3', '3. etkinlik', [5, 37.0, 92, 23.5], [
         CIRC('dk2', 44, 'ilkbahar', (33.7, 56)), CIRC('dk2', 44, 'yaz', (55.8, 56)), CIRC('dk2', 44, 'sonbahar', (83, 59.2))]),
     act('dk2-44-4', '4. etkinlik', [5, 61.0, 92, 35.5],
@@ -105,8 +104,7 @@ page(D, 'dk2', 49, [
 
 # ---- Dinleme
 page(D, 'dk2', 50, [
-    act('dk2-50-1', '1. etkinlik', [5, 18.5, 46, 21.5], audio=AUD('dk2', 50, 'S.114')),
-    act('dk2-50-2', '2. etkinlik', [48, 18.5, 48, 21.5], audio=AUD('dk2', 50, 'S.115')),
+    act('dk2-50-1', '1. ve 2. etkinlik', [5, 18.5, 91.0, 21.5], audio=AUD('dk2', 50, 'S.114') + AUD('dk2', 50, 'S.115')),
     act('dk2-50-3', '3. etkinlik', [5, 44.0, 91, 45.0]),
 ], [link([28.2, 7.6, 31.1, 2.4], 'dbt', 109, DBL(109), {'act': 'dbt111-5'}, 'dbt109-1')])
 page(D, 'dk2', 51, [act('dk2-51-4', '4. etkinlik', [5, 3.0, 91, 85.0], [

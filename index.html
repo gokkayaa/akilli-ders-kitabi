@@ -116,6 +116,11 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 #audio .t{font-variant-numeric:tabular-nums;font-size:12px;color:#aeb6bd;min-width:40px;text-align:center}
 #audio .pb{background:var(--brand);border-radius:50%}
 #audio .tool.slow{font-weight:800;font-size:14px}
+#audio .codes{display:flex;gap:4px}
+#audio .codes button{font-weight:800;font-size:13px;color:#cfd6db;background:var(--rail-hi);border-radius:8px;padding:2px 7px;white-space:nowrap}
+#audio .codes button.on{background:var(--brand);color:#fff}
+#audio .seek{width:clamp(120px,22vw,300px);height:28px;accent-color:var(--brand);margin:0 4px;touch-action:none}
+#audio .tool.b5{font-weight:800;font-size:13px}
 
 /* ---------- timer ---------- */
 #timer{position:fixed;left:12px;top:calc(12px + env(safe-area-inset-top,0px));z-index:45;background:var(--rail);color:#fff;border-radius:16px;padding:8px 12px 10px;box-shadow:0 10px 30px rgba(0,0,0,.5);
@@ -253,8 +258,10 @@ canvas.ink{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-ev
 <div id="bbar"><div id="zbar" hidden><span id="zLabel"></span><span class="cnt" id="zCount"></span>
   <button id="zEye" aria-pressed="false"></button>
   <button id="zClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Sayfaya dön</button></div><div id="audio" hidden>
-    <span class="code" id="pCode">S.000</span>
+    <span class="codes" id="pCodes"></span>
     <button class="tool pb" id="pPlay" aria-label="Çal / durdur"></button>
+    <button class="tool b5" id="pBack" title="5 saniye geri">−5</button>
+    <input class="seek" id="pSeek" type="range" min="0" max="1000" value="0" step="1" aria-label="Sesi ileri geri sar">
     <span class="t" id="pTime">0:00</span>
     <button class="tool" id="pAgain" title="Baştan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9.7 9.7 0 00-6.7 2.7L3 8"/><path d="M3 3v5h5"/></svg></button>
     <button class="tool slow" id="pSlow" aria-pressed="false" title="Yavaş">0.8×</button>
@@ -492,7 +499,7 @@ function buildPage(book, n, inZoom){
       const b = document.createElement('button');
       b.className = 'aud' + (a.src ? '' : ' miss'); b.dataset.src = a.src || ''; b.setAttribute('aria-label','Dinle ' + a.code);
       Object.assign(b.style,{left:ax+'%',top:ay+'%',width:aw+'%',height:ah+'%'});
-      b.addEventListener('click', ev => { ev.stopPropagation(); openAudio(a); });
+      b.addEventListener('click', ev => { ev.stopPropagation(); openAudio(a, A.audio); });
       el.appendChild(b);
     }
   }
@@ -717,7 +724,7 @@ function openZoom(o){
   board.style.transition = ''; board.style.transform = 'none';
   requestAnimationFrame(() => z.classList.add('in'));
   const au = (o.A.audio || []).find(a => a.src);
-  if(au) openAudio(au); else if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
+  if(au) openAudio(au, o.A.audio); else if(audio.dataset.src){ audio.pause(); $('#audio').hidden = true; }
   syncAll(); updNav();
 }
 function closeZoom(){
@@ -834,18 +841,28 @@ function placePens(){
 
 /* ---------- audio (in the rail) ---------- */
 const audio = new Audio(); audio.preload = 'auto'; audio.dataset.src = '';
-function openAudio(a){
+/* one activity may have several recordings (e.g. "1. ve 2. etkinlik"): each gets a chip to switch */
+function openAudio(a, list){
   if(!a.src){ toast(`${a.code} sesi henüz eklenmedi`); return; }
   if(audio.dataset.src !== a.src){ audio.src = a.src; audio.dataset.src = a.src; }
   audio.currentTime = 0;
   audio.playbackRate = $('#pSlow').getAttribute('aria-pressed') === 'true' ? .8 : 1;
-  $('#pCode').textContent = a.code; $('#audio').hidden = false;
+  const all = (list || [a]).filter(x => x.src), box = $('#pCodes'); box.innerHTML = '';
+  (all.length ? all : [a]).forEach(x => { const b = document.createElement('button'); b.textContent = x.code;
+    b.className = x.src === a.src ? 'on' : ''; b.addEventListener('click', () => openAudio(x, all)); box.appendChild(b); });
+  $('#audio').hidden = false;
   audio.play().catch(() => {});
 }
+let seeking = false;
+$('#pSeek').addEventListener('input', e => { if(!audio.duration) return; seeking = true; audio.currentTime = e.target.value / 1000 * audio.duration; $('#pTime').textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration); });
+$('#pSeek').addEventListener('change', () => { seeking = false; });
+['pointerup','touchend'].forEach(ev => $('#pSeek').addEventListener(ev, () => { seeking = false; }));
+$('#pBack').addEventListener('click', () => { audio.currentTime = Math.max(0, audio.currentTime - 5); if(audio.paused) audio.play(); });
 const fmt = t => { t = Math.max(0, Math.floor(t||0)); return Math.floor(t/60) + ':' + String(t%60).padStart(2,'0'); };
 function syncPlayer(){
   $('#pPlay').innerHTML = audio.paused ? ICON.play : ICON.pause;
-  $('#pTime').textContent = audio.duration ? fmt(audio.duration - audio.currentTime) : fmt(0);
+  $('#pTime').textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+  if(!seeking) $('#pSeek').value = audio.duration ? Math.round(audio.currentTime / audio.duration * 1000) : 0;
   document.querySelectorAll('.aud').forEach(b => b.classList.toggle('playing', !audio.paused && !!b.dataset.src && b.dataset.src === audio.dataset.src));
 }
 ['play','pause','timeupdate','loadedmetadata','ended'].forEach(e => audio.addEventListener(e, syncPlayer));

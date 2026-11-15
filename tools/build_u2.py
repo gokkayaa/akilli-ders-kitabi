@@ -27,8 +27,7 @@ page(D, 'dk', 39, [act('dk39-h', 'Üniteye Hazırlık', [8, 86.0, 84, 10.5])])
 
 # 4. etkinlik: the story runs over s.40 (panels 1–2) and s.41 (panels 3–6)
 page(D, 'dk', 40, [
-    act('dk40-1', '1. etkinlik', [5, 16.5, 44, 16.0], audio=AUD('dk', 40, 'S.024')),
-    act('dk40-2', '2. etkinlik', [49, 16.5, 47, 16.0], audio=AUD('dk', 40, 'S.025')),
+    act('dk40-1', '1. ve 2. etkinlik', [5, 16.5, 91.0, 16.0], audio=AUD('dk', 40, 'S.024') + AUD('dk', 40, 'S.025')),
     act('dk40-3', '3. etkinlik', [4, 32.5, 93, 18.0], [
         OPT(59.1, 38.9, g='y'), OPT(59.1, 43.3, w=14.5, g='y'),
         OPT(90.3, 38.9, g='p'), OPT(90.3, 43.3, g='p'), OPT(90.3, 47.6, g='p')]),
@@ -80,8 +79,7 @@ page(D, 'dk', 43, [
 # ---- Dinleme (listening scripts from the teacher's guide decide the answers)
 C44 = [17.1, 39.4, 61.4, 83.5]
 page(D, 'dk', 44, [
-    act('dk44-1', '1. etkinlik', [5, 8.0, 46, 32.0], audio=AUD('dk', 44, 'S.029')),
-    act('dk44-2', '2. etkinlik', [49, 8.0, 47, 32.0], audio=AUD('dk', 44, 'S.030')),
+    act('dk44-1', '1. ve 2. etkinlik', [5, 8.0, 91.0, 32.0], audio=AUD('dk', 44, 'S.029') + AUD('dk', 44, 'S.030')),
     act('dk44-3', '3. etkinlik', [5, 40.5, 90, 20.5], [B1(44, 59.69, 'sıra', x=15), B1(44, 59.70, 'sandalye', x=40)]),
     act('dk44-4', '4. etkinlik', [5, 61.0, 90, 34.5],
         [CK(C44[2], 79.4, 2.4), CK(C44[3], 79.4, 2.4), CK(C44[1], 93.7, 2.4), CK(C44[2], 93.7, 2.4), CK(C44[3], 93.7, 2.4)],
@@ -133,8 +131,7 @@ page(D, 'dk', 49, [
 
 # ---- B. Okulu Tanıyalım
 page(D, 'dk', 50, [
-    act('dk50-1', '1. etkinlik', [5, 18.5, 46, 15.5], audio=AUD('dk', 50, 'S.033')),
-    act('dk50-2', '2. etkinlik', [49, 18.5, 47, 15.5], audio=AUD('dk', 50, 'S.034')),
+    act('dk50-1', '1. ve 2. etkinlik', [5, 18.5, 91.0, 15.5], audio=AUD('dk', 50, 'S.033') + AUD('dk', 50, 'S.034')),
     act('dk50-3', '3. etkinlik', [5, 34.0, 90, 26.0], [CK(62.8, 45.8, 2.4), CK(92.8, 45.8, 2.4), CK(32.7, 51.3, 2.4), CK(62.8, 58.2, 2.4), CK(92.8, 54.8, 2.4)]),
     act('dk50-4', '4. etkinlik', [4, 60.5, 92, 35.0], [UL([29.0, 85.3], [32.7, 85.3]), UL([68.6, 86.9], [82.2, 86.9])]
         + ON(51, UL([36.4, 21.7], [44.3, 21.7]), UL([21.6, 23.3], [30.5, 23.3]), UL([31.8, 23.2], [39.7, 23.2]),
@@ -172,8 +169,7 @@ WX = lambda c: round(17.4 + 4.35 * (c - 1), 2)
 WY = [72.5, 75.9, 79.2, 82.6, 86.0, 89.4]
 def WORD(r, c0, c1, g): return FL([round(WX(c0) - 2.1, 2), round(WY[r - 1] - 1.6, 2), round(WX(c1) - WX(c0) + 4.2, 2), 3.2], g=g)
 page(D, 'dk', 54, [
-    act('dk54-1', '1. etkinlik', [5, 12.0, 46, 28.0], audio=AUD('dk', 54, 'S.037')),
-    act('dk54-2', '2. etkinlik', [49, 12.0, 47, 28.0], audio=AUD('dk', 54, 'S.038')),
+    act('dk54-1', '1. ve 2. etkinlik', [5, 12.0, 91.0, 28.0], audio=AUD('dk', 54, 'S.037') + AUD('dk', 54, 'S.038')),
     act('dk54-3', '3. etkinlik', [5, 41.0, 90, 51.0], [
         WORD(1, 4, 13, 'spor'), CK(79.9, 52.1, 2.4, g='spor'),
         WORD(2, 4, 10, 'tuvalet'), CK(57.9, 63.1, 2.4, g='tuvalet'),
