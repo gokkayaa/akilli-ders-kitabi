@@ -441,7 +441,7 @@ function buildPage(book, n, inZoom){
   for(const [A, items, own] of sets){
     const lineGroups = groupsOf(A).filter(G => G.items.some(i => i.type === 'line')).map(G => G.id);
     for(const G of groupsOf(A, items)){
-      let dotAt = null, keep = false;
+      let dotAt = null, keep = false, textAt = null, gives = false;
       const col = lineGroups.length > 1 ? LINE_COLORS[lineGroups.indexOf(G.id) % LINE_COLORS.length] : null;
       for(const it of G.items){
         const g = G.id;
@@ -451,14 +451,14 @@ function buildPage(book, n, inZoom){
           s.dataset.h = hh; s.dataset.ly = ly; s.dataset.a = A.id; s.dataset.x0 = x0; s.dataset.x1 = x1;
           Object.assign(s.style,{left:(x0 + .5)+'%', width:(x1 - x0 - .3)+'%', top:(ly - hh)+'%'});
           el.appendChild(s);
-          dotAt = dotAt || [x0 + .9, ly];
+          textAt = textAt || [x0 + .9, ly];
         } else if(it.type === 'text'){
           const [x,y,w,h] = it.rect;
           const s = ansSpan(it.text, g, inZoom); s.classList.add('box'); if(it.align === 'l') s.classList.add('l');
           s.dataset.box = h;
           Object.assign(s.style,{left:x+'%', top:y+'%', width:w+'%', height:h+'%'});
           el.appendChild(s);
-          dotAt = dotAt || (it.align === 'l' ? [x + .9, y + h/2] : [x + w/2, y + h/2]);
+          textAt = textAt || (it.align === 'l' ? [x + .9, y + h/2] : [x + w/2, y + h/2]);
         } else if(it.type === 'line' || it.type === 'uline'){
           const [x1,y1] = it.from, [x2,y2] = it.to;
           const d = it.type === 'line'
@@ -467,21 +467,24 @@ function buildPage(book, n, inZoom){
           const pe = mk('path', {d, pathLength:100}, g, it.type === 'uline' ? 'ul' : '');
           if(it.type === 'line' && col) pe.style.stroke = col;
           if(it.type === 'line'){ keep = true; dotAt = dotAt || it.dot || it.from; }
-          else dotAt = dotAt || it.dot || [x1 - .9, y1];
+          else gives = true;
         } else if(it.type === 'check'){
           const [x,y] = it.at, s = (it.s || 2.4) * ky;
           mk('path', {d:`M${x - .45*s} ${U(y)} l${.35*s} ${.4*s} l${.75*s} ${-.85*s}`}, g, 'rv mk');
-          dotAt = dotAt || it.dot || [x, y];
+          gives = true;
         } else if(it.type === 'ellipse'){
           const [x,y,w,h] = it.rect;
           mk('ellipse', {cx:x + w/2, cy:U(y + h/2), rx:w/2, ry:U(h/2)}, g, 'rv mk');
-          dotAt = dotAt || it.dot || [x - .9, y + h/2];
+          gives = true;
         } else if(it.type === 'fill'){
           const [x,y,w,h] = it.rect;
           mk('rect', {x, y:U(y), width:w, height:U(h), rx:.6}, g, 'rv fl');
-          dotAt = dotAt || it.dot || [x - .9, y + h/2];
+          gives = true;
         }
       }
+      /* a dot next to a circled word, a tick or an underline would give the answer away:
+         those answers come only with → or "Hepsini göster". Written answers keep their dot. */
+      dotAt = textAt || (gives ? null : dotAt);
       if(dotAt) addDot(el, G.id, dotAt[0], dotAt[1], keep);
     }
     if(own) for(const a of (A.audio || [])){
